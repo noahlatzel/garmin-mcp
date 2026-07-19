@@ -1,0 +1,18 @@
+# Managed by Ansible (roles/caddy).
+# Single-user garmin MCP: the whole domain proxies to the garmin backend.
+{
+{% if caddy_acme_email | length > 0 %}
+    email {{ caddy_acme_email }}
+{% endif %}
+}
+
+{{ app_domain }} {
+    encode gzip
+
+    # garmin MCP. Rewrite Host to the upstream so the MCP SDK's localhost
+    # DNS-rebinding protection accepts the proxied request (it rejects a
+    # localhost listener receiving a non-localhost Host header).
+    reverse_proxy 127.0.0.1:8082 {
+        header_up Host {upstream_hostport}
+    }
+}

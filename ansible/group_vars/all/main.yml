@@ -1,0 +1,52 @@
+---
+# Non-secret configuration for the garmin-mcp box. Secrets live in vault.yml
+# (ansible-vault encrypted) — see ../vault.example.yml. Never put a real
+# password, key, or token in this file.
+
+# --- Deploy user (provide the SSH public key) --------------------------------
+deploy_user: deploy
+# Public key (non-secret) for the deploy user. Private key lives on the control
+# workstation. Replace with your own before first provision.
+deploy_ssh_public_key: "ssh-ed25519 REPLACE_ME deploy@garmin-mcp"
+
+# --- SSH exposure ------------------------------------------------------------
+# "all" opens SSH to every IP (simpler, lockout-safe with dynamic IPs);
+# "restricted" limits to ssh_allowlist. Defaulting to "all" + fail2ban + key-only.
+ssh_exposure: all
+ssh_port: 22
+# Used only when ssh_exposure == "restricted". List of CIDRs/IPs.
+ssh_allowlist: []
+
+# --- Domain / TLS ------------------------------------------------------------
+# The whole domain proxies to the garmin MCP backend (e.g. garmin.easygoose.com).
+app_domain: garmin.easygoose.com
+# Email Caddy uses for the ACME account / cert expiry notices. CHANGE if desired.
+caddy_acme_email: ""
+
+# --- garmin service — secret from vault --------------------------------------
+# Single shared bearer token every MCP request must present. The Garmin account
+# link itself is bootstrapped by hand on the box (`garmin login`), so no Garmin
+# credentials are ever deployed.
+mcp_bearer_token: "{{ vault_mcp_bearer_token }}"
+
+# --- davidlloyd weight sync (optional) ---------------------------------------
+# Set true to also deploy the David Lloyd -> Garmin weigh-in sync (timer + binary).
+davidlloyd_enabled: false
+
+# --- DevSec os_hardening overrides for OpenVZ --------------------------------
+# auditd cannot run in an OpenVZ container (no access to the kernel audit
+# subsystem), and its restart handler aborts the play. Disable it; AIDE + lynis
+# cover host integrity instead.
+os_auditd_enabled: false
+
+# Core packages installed by roles/base.
+base_packages:
+  - ufw
+  - fail2ban
+  - unattended-upgrades
+  - aide
+  - lynis
+  - curl
+  - git
+  - ca-certificates
+  - python3

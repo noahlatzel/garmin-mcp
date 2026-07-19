@@ -1,0 +1,162 @@
+---
+# Deploy the garmin MCP binary (and, optionally, the davidlloyd weight-sync
+# timer) as managed, localhost-bound systemd units running as a dedicated,
+# non-login user, with secrets in 0600 EnvironmentFiles.
+
+- name: Create the app bin directory
+  ansible.builtin.file:
+    path: "{{ app_bin_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Create the app config directory
+  ansible.builtin.file:
+    path: "{{ app_etc_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+# --- garmin service -----------------------------------------------------------
+- name: Create the garmin service user (system, no login)
+  ansible.builtin.user:
+    name: "{{ garmin_service_user }}"
+    system: true
+    shell: /usr/sbin/nologin
+    create_home: false
+    home: "{{ app_prefix }}"
+    state: present
+
+- name: Create the garmin state directory (token store; garmin-owned, 0700)
+  ansible.builtin.file:
+    path: "{{ garmin_state_dir }}"
+    state: directory
+    owner: "{{ garmin_service_user }}"
+    group: "{{ garmin_service_user }}"
+    mode: "0700"
+
+- name: Fail if the staged garmin binary is missing
+  ansible.builtin.stat:
+    path: "{{ role_path }}/files/garmin"
+  register: garmin_bin
+  delegate_to: localhost
+  become: false
+
+- name: Assert the garmin binary was staged
+  ansible.builtin.assert:
+    that: garmin_bin.stat.exists
+    fail_msg: >-
+      ansible/roles/app/files/garmin is missing. Build it first:
+      `GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ansible/roles/app/files/garmin ./cmd/garmin`.
+
+- name: Install the garmin binary
+  ansible.builtin.copy:
+    src: garmin
+    dest: "{{ app_bin_dir }}/garmin"
+    owner: root
+    group: root
+    mode: "0755"
+  notify: Restart garmin
+
+- name: Install the garmin EnvironmentFile (0600; no login creds — login is manual)
+  ansible.builtin.copy:
+    dest: "{{ app_etc_dir }}/garmin.env"
+    owner: "{{ garmin_service_user }}"
+    group: "{{ garmin_service_user }}"
+    mode: "0600"
+    content: |
+      GARMIN_LISTEN_ADDR={{ garmin_listen_addr }}
+      MCP_BEARER_TOKEN={{ mcp_bearer_token }}
+      GARMIN_TOKEN_PATH={{ garmin_token_path }}
+  no_log: true
+  notify: Restart garmin
+
+- name: Install the garmin systemd unit
+  ansible.builtin.template:
+    src: garmin.service.j2
+    dest: /etc/systemd/system/garmin.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify:
+    - Reload systemd
+    - Restart garmin
+
+- name: Enable and start garmin
+  ansible.builtin.systemd:
+    name: garmin
+    enabled: true
+    state: started
+    daemon_reload: true
+
+# --- davidlloyd weight sync (optional; headless one-shot + daily timer) --------
+# Runs as the garmin user (shares the garmin state dir / token store). No service
+# user, no credentials in the env file: `davidlloyd login` is run by hand once.
+# Enable by setting davidlloyd_enabled: true.
+- name: Fail if the staged davidlloyd binary is missing
+  ansible.builtin.stat:
+    path: "{{ role_path }}/files/davidlloyd"
+  register: davidlloyd_bin
+  delegate_to: localhost
+  become: false
+  when: davidlloyd_enabled | bool
+
+- name: Assert the davidlloyd binary was staged
+  ansible.builtin.assert:
+    that: davidlloyd_bin.stat.exists
+    fail_msg: >-
+      davidlloyd_enabled is true but ansible/roles/app/files/davidlloyd is missing.
+      Build it: `GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ansible/roles/app/files/davidlloyd ./cmd/davidlloyd`.
+  when: davidlloyd_enabled | bool
+
+- name: Install the davidlloyd binary
+  ansible.builtin.copy:
+    src: davidlloyd
+    dest: "{{ app_bin_dir }}/davidlloyd"
+    owner: root
+    group: root
+    mode: "0755"
+  when: davidlloyd_enabled | bool
+
+- name: Install the davidlloyd EnvironmentFile (paths only; no credentials, 0600)
+  ansible.builtin.copy:
+    dest: "{{ app_etc_dir }}/davidlloyd.env"
+    owner: "{{ garmin_service_user }}"
+    group: "{{ garmin_service_user }}"
+    mode: "0600"
+    content: |
+      DAVIDLLOYD_SESSION_PATH={{ davidlloyd_session_path }}
+      GARMIN_TOKEN_PATH={{ garmin_token_path }}
+      DL_BRAND={{ davidlloyd_brand }}
+  no_log: true
+  when: davidlloyd_enabled | bool
+
+- name: Install the davidlloyd one-shot unit
+  ansible.builtin.template:
+    src: davidlloyd.service.j2
+    dest: /etc/systemd/system/davidlloyd.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Reload systemd
+  when: davidlloyd_enabled | bool
+
+- name: Install the davidlloyd timer
+  ansible.builtin.template:
+    src: davidlloyd.timer.j2
+    dest: /etc/systemd/system/davidlloyd.timer
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Reload systemd
+  when: davidlloyd_enabled | bool
+
+- name: Enable and start the davidlloyd timer
+  ansible.builtin.systemd:
+    name: davidlloyd.timer
+    enabled: true
+    state: started
+    daemon_reload: true
+  when: davidlloyd_enabled | bool

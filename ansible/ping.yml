@@ -1,0 +1,11 @@
+---
+# Connectivity smoke test. Run after filling in inventory.ini:
+#   ansible all -m ping
+# or:
+#   ansible-playbook ping.yml
+- name: Verify connectivity to the garmin_mcp box
+  hosts: garmin_mcp
+  gather_facts: false
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:

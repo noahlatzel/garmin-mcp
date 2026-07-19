@@ -1,0 +1,13 @@
+# Managed by Ansible (roles/app). Runs the David Lloyd -> Garmin weight sync daily.
+[Unit]
+Description=Daily David Lloyd weight sync
+
+[Timer]
+# Once a day, a little after the gym's overnight scale data is available, with
+# jitter to avoid hammering the backends on a fixed second.
+OnCalendar={{ davidlloyd_sync_oncalendar }}
+RandomizedDelaySec=1800
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,70 @@
+---
+# ufw: default-deny inbound, allow 80/443 and SSH (per ssh_exposure). fail2ban
+# for SSH brute-force protection. plan §1.4 / §1.5.
+
+# --- ufw ----------------------------------------------------------------------
+- name: Set ufw default policies (deny in, allow out)
+  community.general.ufw:
+    direction: "{{ item.direction }}"
+    policy: "{{ item.policy }}"
+  loop:
+    - { direction: incoming, policy: deny }
+    - { direction: outgoing, policy: allow }
+
+- name: Allow HTTP/HTTPS (Caddy is the only public listener)
+  community.general.ufw:
+    rule: allow
+    port: "{{ item }}"
+    proto: tcp
+  loop: ["80", "443"]
+
+- name: Allow SSH from anywhere (ssh_exposure == all)
+  community.general.ufw:
+    rule: allow
+    port: "{{ ssh_port }}"
+    proto: tcp
+  when: ssh_exposure == "all"
+
+- name: Allow SSH only from the allowlist (ssh_exposure == restricted)
+  community.general.ufw:
+    rule: allow
+    port: "{{ ssh_port }}"
+    proto: tcp
+    src: "{{ item }}"
+  loop: "{{ ssh_allowlist }}"
+  when: ssh_exposure == "restricted"
+
+- name: Guard against locking ourselves out
+  ansible.builtin.assert:
+    that:
+      - ssh_exposure != "restricted" or (ssh_allowlist | length > 0)
+    fail_msg: "ssh_exposure is 'restricted' but ssh_allowlist is empty — that would lock out SSH."
+
+- name: Enable ufw
+  community.general.ufw:
+    state: enabled
+
+# --- fail2ban -----------------------------------------------------------------
+- name: Configure fail2ban for SSH
+  ansible.builtin.copy:
+    dest: /etc/fail2ban/jail.local
+    content: |
+      [DEFAULT]
+      bantime  = 1h
+      findtime = 10m
+      maxretry = 5
+      backend  = systemd
+
+      [sshd]
+      enabled = true
+      port    = {{ ssh_port }}
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart fail2ban
+
+- name: Enable and start fail2ban
+  ansible.builtin.systemd:
+    name: fail2ban
+    enabled: true
+    state: started

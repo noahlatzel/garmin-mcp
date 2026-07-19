@@ -1,0 +1,50 @@
+# Managed by Ansible (roles/app). garmin-mcp service.
+[Unit]
+Description=garmin-mcp server (Garmin Connect strength + swim writer)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User={{ garmin_service_user }}
+Group={{ garmin_service_user }}
+ExecStart={{ app_bin_dir }}/garmin
+EnvironmentFile={{ app_etc_dir }}/garmin.env
+Restart=on-failure
+RestartSec=2
+
+# Hardening. ProtectSystem=full keeps /var writable so the token store under
+# {{ garmin_state_dir }} can be refreshed. The commented directives below need
+# on-box verification (`systemd-analyze security garmin`) on the OpenVZ kernel.
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectControlGroups=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectClock=true
+ProtectHostname=true
+ProtectProc=invisible
+ProcSubset=pid
+RestrictSUIDSGID=true
+RestrictRealtime=true
+RestrictNamespaces=true
+RestrictAddressFamilies=AF_INET AF_INET6
+LockPersonality=true
+RemoveIPC=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+SystemCallArchitectures=native
+UMask=0077
+# MemoryDenyWriteExecute=true
+# SystemCallFilter=@system-service
+# SystemCallFilter=~@privileged ~@resources
+# The MCP listener binds 127.0.0.1, but the service must reach Garmin's SSO and
+# connectapi hosts over HTTPS, so outbound egress is required (no IPAddressDeny).
+IPAddressAllow=any
+
+[Install]
+WantedBy=multi-user.target

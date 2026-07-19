@@ -1,0 +1,4 @@
+# Normalize line endings to LF in the repo and the working tree. Go tooling
+# (gofmt, `go mod tidy`) and templ always write LF; without this, core.autocrlf
+# on Windows expects CRLF and flags every Go-written file as modified.
+* text=auto eol=lf

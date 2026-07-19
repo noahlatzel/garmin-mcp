@@ -1,0 +1,12 @@
+# Copy to inventory.ini and fill in your box. inventory.ini is git-ignored
+# (the host IP and SSH details are local-only). HUMAN CHECKPOINT 1A supplies these.
+[garmin_mcp]
+# Replace with the VPS IP or hostname.
+box ansible_host=203.0.113.10
+
+[garmin_mcp:vars]
+# Bootstrap connects as root (or the provider's initial user) to create `deploy`.
+# After roles/base runs, switch ansible_user to deploy and rely on key auth.
+ansible_user=root
+ansible_port=22
+ansible_python_interpreter=/usr/bin/python3

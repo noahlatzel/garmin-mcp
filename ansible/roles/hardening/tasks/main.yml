@@ -1,0 +1,39 @@
+---
+# auditd cannot run in an OpenVZ container; os_hardening installs+enables it and
+# its restart handler then aborts the play. When os_auditd_enabled is false,
+# stop/disable/mask it so it doesn't sit in a failed state every boot.
+- name: Stop, disable and mask auditd (unusable on OpenVZ)
+  ansible.builtin.systemd:
+    name: auditd
+    state: stopped
+    enabled: false
+    masked: true
+  when: not os_auditd_enabled
+  failed_when: false
+
+# Apply each sysctl independently into a drop-in, tolerating OpenVZ read-only
+# keys. A rejected key is logged and skipped, never fatal.
+
+- name: Apply transferable sysctl hardening (skip kernel-rejected keys)
+  ansible.posix.sysctl:
+    name: "{{ item.key }}"
+    value: "{{ item.value }}"
+    sysctl_set: true
+    sysctl_file: /etc/sysctl.d/99-garmin_mcp-hardening.conf
+    reload: true
+    state: present
+  loop: "{{ hardening_sysctl | dict2items }}"
+  loop_control:
+    label: "{{ item.key }}"
+  register: sysctl_results
+  failed_when: false
+
+- name: Collect sysctl keys the kernel rejected (likely OpenVZ read-only)
+  ansible.builtin.set_fact:
+    sysctl_skipped: "{{ sysctl_results.results | selectattr('failed', 'defined') | selectattr('failed') | map(attribute='item.key') | list }}"
+
+- name: Report skipped sysctl keys (KVM-deferred — note in README)
+  ansible.builtin.debug:
+    msg: >-
+      The kernel rejected these sysctls (expected on OpenVZ; defer to KVM):
+      {{ sysctl_skipped | join(', ') if sysctl_skipped | length > 0 else 'none — all applied' }}

@@ -1,0 +1,28 @@
+---
+# Filesystem layout for the garmin-mcp service on the box.
+app_prefix: /opt/garmin-mcp
+app_bin_dir: "{{ app_prefix }}/bin"
+app_etc_dir: /etc/garmin-mcp
+
+# garmin service. Single-user: one deployment serves one linked Garmin account,
+# gated by a single shared bearer token (MCP_BEARER_TOKEN).
+garmin_service_user: garmin
+garmin_listen_addr: "127.0.0.1:8082"
+# State directory + token store (the garmin user owns these; the OAuth tokens
+# minted by the human-gated `garmin login` bootstrap persist here, 0600).
+garmin_state_dir: /var/lib/garmin-mcp
+garmin_token_path: "{{ garmin_state_dir }}/garmin-tokens.json"
+
+# davidlloyd weight sync (optional). Off by default; set true to deploy the
+# headless David Lloyd -> Garmin weigh-in sync (one-shot binary + daily timer,
+# run as the garmin user so it can refresh the garmin token store). No MCP, no
+# listener, no credentials deployed — `davidlloyd login` is run by hand.
+davidlloyd_enabled: false
+davidlloyd_session_path: "{{ garmin_state_dir }}/davidlloyd-session.json"
+# Optional Netpulse brand slug; defaults in-binary to "davidlloydclubs".
+davidlloyd_brand: ""
+# When the daily sync runs (systemd OnCalendar).
+davidlloyd_sync_oncalendar: "*-*-* 08:30:00"
+
+# Secrets resolve from vault (group_vars/all/vault.yml):
+#   mcp_bearer_token -> vault_mcp_bearer_token

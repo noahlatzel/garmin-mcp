@@ -1,0 +1,7637 @@
+[
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "AB_TWIST",
+  "name": "Banded Ab Twist"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "BACK_EXTENSION",
+  "name": "Banded Back Extension"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "BANDED_EXERCISES",
+  "name": "Banded Exercises"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "BICYCLE_CRUNCH",
+  "name": "Banded Bicycle Crunch"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "CALF_RAISES",
+  "name": "Banded Calf Raises"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "CLAM_SHELLS",
+  "name": "Banded Clam Shells"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "CURL",
+  "name": "Banded Curl"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "DEADBUG",
+  "name": "Banded Deadbug"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "DEADLIFT",
+  "name": "Banded Deadlift"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "DONKEY_KICK",
+  "name": "Banded Donkey Kick"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "EXTERNAL_ROTATION",
+  "name": "Banded External Rotation"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "EXTERNAL_ROTATION_AT_90_DEGREE_ABDUCTION",
+  "name": "Banded External Rotation at 90-Degree Abduction"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "FIRE_HYDRANT",
+  "name": "Banded Fire Hydrant"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "FLY",
+  "name": "Banded Fly"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "FRONT_RAISE",
+  "name": "Banded Front Raise"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "GLUTE_BRIDGE",
+  "name": "Banded Glute Bridge"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "HAMSTRING_CURLS",
+  "name": "Banded Hamstring Curls"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "HIGH_PLANK_LEG_LIFTS",
+  "name": "Banded High Plank Leg Lifts"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "HIP_EXTENSION",
+  "name": "Banded Hip Extension"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "INTERNAL_ROTATION",
+  "name": "Banded Internal Rotation"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "JUMPING_JACK",
+  "name": "Banded Jumping Jack"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "KNEELING_CRUNCH",
+  "name": "Banded Kneeling Crunch"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LATERAL_BAND_WALKS",
+  "name": "Banded Lateral Band Walks"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LATERAL_RAISE",
+  "name": "Banded Lateral Raise"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LATPULL",
+  "name": "Banded Latpull"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LEG_ABDUCTION",
+  "name": "Banded Leg Abduction"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LEG_ADDUCTION",
+  "name": "Banded Leg Adduction"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LEG_EXTENSION",
+  "name": "Banded Leg Extension"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "LUNGE",
+  "name": "Banded Lunge"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "PLANK",
+  "name": "Banded Plank"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "PULL_APART",
+  "name": "Banded Pull Apart"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "PUSH_UPS",
+  "name": "Banded Push-ups"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "REVERSE_CRUNCH",
+  "name": "Banded Reverse Crunch"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "ROW",
+  "name": "Banded Row"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SHOULDER_ABDUCTION",
+  "name": "Banded Shoulder Abduction"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SHOULDER_EXTENSION",
+  "name": "Banded Shoulder Extension"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SHOULDER_EXTERNAL_ROTATION",
+  "name": "Banded Shoulder External Rotation"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SHOULDER_FLEXION_TO_90_DEGREES",
+  "name": "Banded Shoulder Flexion to 90-Degrees"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SIDE_PLANK_LEG_LIFTS",
+  "name": "Banded Side Plank Leg Lifts"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SQUAT",
+  "name": "Banded Squat"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "SQUAT_TO_PRESS",
+  "name": "Banded Squat to Press"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "TRICEP_EXTENSION",
+  "name": "Banded Tricep Extension"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "TRICEP_KICKBACK",
+  "name": "Banded Tricep Kick-back"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "UPRIGHT_ROW",
+  "name": "Banded Upright Row"
+ },
+ {
+  "category": "BANDED_EXERCISES",
+  "exercise": "WALL_CRAWL_WITH_EXTERNAL_ROTATION",
+  "name": "Banded Wall Crawl with External Rotation"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_FIGURE_EIGHT",
+  "name": "Battle Rope Alternating Figure Eight"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_JUMP_WAVE",
+  "name": "Battle Rope Alternating Jump Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_KNEELING_TO_STANDING_WAVE",
+  "name": "Battle Rope Alternating Kneeling to Standing Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_LUNGE_WAVE",
+  "name": "Battle Rope Alternating Lunge Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_SQUAT_WAVE",
+  "name": "Battle Rope Alternating Squat Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_WAVE",
+  "name": "Battle Rope Alternating Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ALTERNATING_WAVE_WITH_LATERAL_SHUFFLE",
+  "name": "Battle Rope Alternating Wave with Lateral Shuffle"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "BATTLE_ROPE",
+  "name": "Battle Rope"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "CLAP_WAVE",
+  "name": "Battle Rope Clap Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "DOUBLE_ARM_FIGURE_EIGHT",
+  "name": "Battle Rope Double-arm Figure Eight"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "DOUBLE_ARM_SIDE_TO_SIDE_SNAKE",
+  "name": "Battle Rope Double Arm Side-to-Side Snake"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "DOUBLE_ARM_SIDE_WAVE",
+  "name": "Battle Rope Double-arm Side Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "DOUBLE_ARM_SLAM",
+  "name": "Battle Rope Double-arm Slam"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "DOUBLE_ARM_WAVE",
+  "name": "Battle Rope Double-arm Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "GRAPPLER_TOSS",
+  "name": "Battle Rope Grappler Toss"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "HIP_TOSS",
+  "name": "Battle Rope Hip Toss"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "INSIDE_CIRCLE",
+  "name": "Battle Rope Inside Circle"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "IN_AND_OUT_WAVE",
+  "name": "Battle Rope In and Out Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "JUMPING_JACKS",
+  "name": "Battle Rope Jumping Jacks"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "OUTSIDE_CIRCLE",
+  "name": "Battle Rope Outside Circle"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "RAINBOW",
+  "name": "Battle Rope Rainbow"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "SIDEWINDER",
+  "name": "Battle Rope Sidewinder"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "SIDE_PLANK_WAVE",
+  "name": "Battle Rope Side Plank Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "SITTING_RUSSIAN_TWIST",
+  "name": "Battle Rope Sitting Russian Twist"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "SNAKE_WAVE",
+  "name": "Battle Rope Snake Wave"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "SPLIT_JACK",
+  "name": "Battle Rope Split Jack"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "STAGE_COACH",
+  "name": "Battle Rope Stage Coach"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "ULTIMATE_WARRIOR",
+  "name": "Battle Rope Ultimate Warrior"
+ },
+ {
+  "category": "BATTLE_ROPE",
+  "exercise": "UPPER_CUTS",
+  "name": "Battle Rope Upper Cuts"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "ALTERNATING_DUMBBELL_CHEST_PRESS",
+  "name": "Alternating Dumbbell Chest Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "ALTERNATING_DUMBBELL_CHEST_PRESS_ON_SWISS_BALL",
+  "name": "Alternating Dumbbell Chest Press on Swiss Ball"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "BARBELL_BENCH_PRESS",
+  "name": "Barbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "BARBELL_BOARD_BENCH_PRESS",
+  "name": "Barbell Board Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "BARBELL_FLOOR_PRESS",
+  "name": "Barbell Floor Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "BENCH_PRESS",
+  "name": "Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "CLOSE_GRIP_BARBELL_BENCH_PRESS",
+  "name": "Close-grip Barbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "DECLINE_DUMBBELL_BENCH_PRESS",
+  "name": "Decline Dumbbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "DUMBBELL_BENCH_PRESS",
+  "name": "Dumbbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "DUMBBELL_FLOOR_PRESS",
+  "name": "Dumbbell Floor Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "INCLINE_BARBELL_BENCH_PRESS",
+  "name": "Incline Barbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "INCLINE_DUMBBELL_BENCH_PRESS",
+  "name": "Incline Dumbbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "INCLINE_SMITH_MACHINE_BENCH_PRESS",
+  "name": "Incline Smith Machine Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "ISOMETRIC_BARBELL_BENCH_PRESS",
+  "name": "Isometric Barbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "KETTLEBELL_CHEST_PRESS",
+  "name": "Kettlebell Chest Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "NEUTRAL_GRIP_DUMBBELL_BENCH_PRESS",
+  "name": "Neutral-grip Dumbbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "NEUTRAL_GRIP_DUMBBELL_INCLINE_BENCH_PRESS",
+  "name": "Neutral-grip Dumbbell Incline Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "ONE_ARM_FLOOR_PRESS",
+  "name": "One-arm Floor Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "PARTIAL_LOCKOUT",
+  "name": "Partial Lockout"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "REVERSE_GRIP_BARBELL_BENCH_PRESS",
+  "name": "Reverse-grip Barbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "REVERSE_GRIP_INCLINE_BENCH_PRESS",
+  "name": "Reverse-grip Incline Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "SINGLE_ARM_CABLE_CHEST_PRESS",
+  "name": "Single-arm Cable Chest Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "SINGLE_ARM_DUMBBELL_BENCH_PRESS",
+  "name": "Single-arm Dumbbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "SMITH_MACHINE_BENCH_PRESS",
+  "name": "Smith Machine Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "SWISS_BALL_DUMBBELL_CHEST_PRESS",
+  "name": "Swiss Ball Dumbbell Chest Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "TRIPLE_STOP_BARBELL_BENCH_PRESS",
+  "name": "Triple-stop Barbell Bench Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "WEIGHTED_ONE_ARM_FLOOR_PRESS",
+  "name": "Weighted One-arm Floor Press"
+ },
+ {
+  "category": "BENCH_PRESS",
+  "exercise": "WIDE_GRIP_BARBELL_BENCH_PRESS",
+  "name": "Wide-grip Barbell Bench Press"
+ },
+ {
+  "category": "BIKE_OUTDOOR",
+  "exercise": "BIKE",
+  "name": "Bike"
+ },
+ {
+  "category": "BIKE_OUTDOOR",
+  "exercise": "BIKE_OUTDOOR",
+  "name": "Bike Outdoor"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "CALF_RAISE",
+  "name": "Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "DONKEY_CALF_RAISE",
+  "name": "Donkey Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SEATED_CALF_RAISE",
+  "name": "Seated Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SEATED_DUMBBELL_TOE_RAISE",
+  "name": "Seated Dumbbell Toe Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SINGLE_LEG_BENT_KNEE_CALF_RAISE",
+  "name": "Single-leg Bent-knee Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SINGLE_LEG_DECLINE_PUSH_UP",
+  "name": "Single-leg Decline Push-up"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SINGLE_LEG_DONKEY_CALF_RAISE",
+  "name": "Single-leg Donkey Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE_WITH_KNEE_HOLD",
+  "name": "Single-leg Hip Raise with Knee Hold"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SINGLE_LEG_STANDING_CALF_RAISE",
+  "name": "Single-leg Standing Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "SINGLE_LEG_STANDING_DUMBBELL_CALF_RAISE",
+  "name": "Single-leg Standing Dumbbell Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "STANDING_BARBELL_CALF_RAISE",
+  "name": "Standing Barbell Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "STANDING_CALF_RAISE",
+  "name": "Standing Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "STANDING_DUMBBELL_CALF_RAISE",
+  "name": "Standing Dumbbell Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "WEIGHTED_DONKEY_CALF_RAISE",
+  "name": "Weighted Donkey Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "WEIGHTED_SEATED_CALF_RAISE",
+  "name": "Weighted Seated Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_BENT_KNEE_CALF_RAISE",
+  "name": "Weighted Single-leg Bent-knee Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_DONKEY_CALF_RAISE",
+  "name": "Weighted Single-leg Donkey Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "WEIGHTED_STANDING_CALF_RAISE",
+  "name": "Weighted Standing Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "_3_WAY_CALF_RAISE",
+  "name": "3-way Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "_3_WAY_SINGLE_LEG_CALF_RAISE",
+  "name": "3-way Single-leg Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "_3_WAY_WEIGHTED_CALF_RAISE",
+  "name": "3-way Weighted Calf Raise"
+ },
+ {
+  "category": "CALF_RAISE",
+  "exercise": "_3_WAY_WEIGHTED_SINGLE_LEG_CALF_RAISE",
+  "name": "3-way Weighted Single-leg Calf Raise"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "BOB_AND_WEAVE_CIRCLE",
+  "name": "Bob and Weave Circle"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "CARDIO",
+  "name": "Cardio"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "CARDIO_CORE_CRAWL",
+  "name": "Cardio Core Crawl"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "DOUBLE_UNDER",
+  "name": "Double Under"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "JUMPING_JACKS",
+  "name": "Jumping Jacks"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "JUMP_ROPE",
+  "name": "Jump Rope"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "JUMP_ROPE_CROSSOVER",
+  "name": "Jump Rope Crossover"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "JUMP_ROPE_JOG",
+  "name": "Jump Rope Jog"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "SKI_MOGULS",
+  "name": "Ski Moguls"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "SPLIT_JACKS",
+  "name": "Split Jacks"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "SQUAT_JACKS",
+  "name": "Squat Jacks"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "TRIPLE_UNDER",
+  "name": "Triple Under"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_BOB_AND_WEAVE_CIRCLE",
+  "name": "Weighted Bob and Weave Circle"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_CARDIO_CORE_CRAWL",
+  "name": "Weighted Cardio Core Crawl"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_DOUBLE_UNDER",
+  "name": "Weighted Double Under"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_JUMPING_JACKS",
+  "name": "Weighted Jumping Jacks"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_JUMP_ROPE",
+  "name": "Weighted Jump Rope"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_JUMP_ROPE_CROSSOVER",
+  "name": "Weighted Jump Rope Crossover"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_JUMP_ROPE_JOG",
+  "name": "Weighted Jump Rope Jog"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_SKI_MOGULS",
+  "name": "Weighted Ski Moguls"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_SPLIT_JACKS",
+  "name": "Weighted Split Jacks"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_SQUAT_JACKS",
+  "name": "Weighted Squat Jacks"
+ },
+ {
+  "category": "CARDIO",
+  "exercise": "WEIGHTED_TRIPLE_UNDER",
+  "name": "Weighted Triple Under"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "BAR_HOLDS",
+  "name": "Bar Holds"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "CARRY",
+  "name": "Carry"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "DUMBBELL_WAITER_CARRY",
+  "name": "Dumbbell Waiter Carry"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "FARMERS_CARRY",
+  "name": "Farmer's Carry"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "FARMERS_CARRY_ON_TOES",
+  "name": "Farmer's Carry on Toes"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "FARMERS_CARRY_WALK_LUNGE",
+  "name": "Farmer's Carry Walk Lunge"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "FARMERS_WALK",
+  "name": "Farmer's Walk"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "FARMERS_WALK_ON_TOES",
+  "name": "Farmer's Walk on Toes"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "HEX_DUMBBELL_HOLD",
+  "name": "Hex Dumbbell Hold"
+ },
+ {
+  "category": "CARRY",
+  "exercise": "OVERHEAD_CARRY",
+  "name": "Overhead Carry"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "CABLE_PULL_THROUGH",
+  "name": "Cable Pull-through"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "CABLE_ROTATIONAL_LIFT",
+  "name": "Cable Rotational Lift"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "CABLE_WOODCHOP",
+  "name": "Cable Woodchop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "CHOP",
+  "name": "Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "CROSS_CHOP_TO_KNEE",
+  "name": "Cross Chop to Knee"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "DUMBBELL_CHOP",
+  "name": "Dumbbell Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "HALF_KNEELING_ROTATION",
+  "name": "Half-kneeling Rotation"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "HALF_KNEELING_ROTATIONAL_CHOP",
+  "name": "Half-kneeling Rotational Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "HALF_KNEELING_ROTATIONAL_REVERSE_CHOP",
+  "name": "Half-kneeling Rotational Reverse Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "HALF_KNEELING_STABILITY_CHOP",
+  "name": "Half-kneeling Stability Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "HALF_KNEELING_STABILITY_REVERSE_CHOP",
+  "name": "Half-kneeling Stability Reverse Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "KNEELING_ROTATIONAL_CHOP",
+  "name": "Kneeling Rotational Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "KNEELING_ROTATIONAL_REVERSE_CHOP",
+  "name": "Kneeling Rotational Reverse Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "KNEELING_STABILITY_CHOP",
+  "name": "Kneeling Stability Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "KNEELING_WOODCHOPPER",
+  "name": "Kneeling Woodchopper"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "MEDICINE_BALL_WOOD_CHOPS",
+  "name": "Medicine Ball Wood Chops"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "POWER_SQUAT_CHOPS",
+  "name": "Power Squat Chops"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "STANDING_ROTATIONAL_CHOP",
+  "name": "Standing Rotational Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "STANDING_SPLIT_ROTATIONAL_CHOP",
+  "name": "Standing Split Rotational Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "STANDING_SPLIT_ROTATIONAL_REVERSE_CHOP",
+  "name": "Standing Split Rotational Reverse Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "STANDING_STABILITY_REVERSE_CHOP",
+  "name": "Standing Stability Reverse Chop"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "WEIGHTED_CROSS_CHOP_TO_KNEE",
+  "name": "Weighted Cross Chop to Knee"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "WEIGHTED_HALF_KNEELING_ROTATION",
+  "name": "Weighted Half-kneeling Rotation"
+ },
+ {
+  "category": "CHOP",
+  "exercise": "WEIGHTED_POWER_SQUAT_CHOPS",
+  "name": "Weighted Power Squat Chops"
+ },
+ {
+  "category": "CORE",
+  "exercise": "ABS_JABS",
+  "name": "Abs Jabs"
+ },
+ {
+  "category": "CORE",
+  "exercise": "ALTERNATING_PLATE_REACH",
+  "name": "Alternating Plate Reach"
+ },
+ {
+  "category": "CORE",
+  "exercise": "ALTERNATING_SLIDE_OUT",
+  "name": "Alternating Slide-out"
+ },
+ {
+  "category": "CORE",
+  "exercise": "BARBELL_ROLLOUT",
+  "name": "Barbell Roll-out"
+ },
+ {
+  "category": "CORE",
+  "exercise": "BODY_BAR_OBLIQUE_TWIST",
+  "name": "Body Bar Oblique Twist"
+ },
+ {
+  "category": "CORE",
+  "exercise": "CABLE_CORE_PRESS",
+  "name": "Cable Core Press"
+ },
+ {
+  "category": "CORE",
+  "exercise": "CABLE_SIDE_BEND",
+  "name": "Cable Side Bend"
+ },
+ {
+  "category": "CORE",
+  "exercise": "CORE",
+  "name": "Core"
+ },
+ {
+  "category": "CORE",
+  "exercise": "CRESCENT_CIRCLE",
+  "name": "Crescent Circle"
+ },
+ {
+  "category": "CORE",
+  "exercise": "CYCLING_RUSSIAN_TWIST",
+  "name": "Cycling Russian Twist"
+ },
+ {
+  "category": "CORE",
+  "exercise": "ELEVATED_FEET_RUSSIAN_TWIST",
+  "name": "Elevated-feet Russian Twist"
+ },
+ {
+  "category": "CORE",
+  "exercise": "GHD_BACK_EXTENSIONS",
+  "name": "GHD Back Extensions"
+ },
+ {
+  "category": "CORE",
+  "exercise": "HALF_TURKISH_GET_UP",
+  "name": "Half-Turkish Get-up"
+ },
+ {
+  "category": "CORE",
+  "exercise": "HANGING_L_SIT",
+  "name": "Hanging L Sit"
+ },
+ {
+  "category": "CORE",
+  "exercise": "INCHWORM",
+  "name": "Inchworm"
+ },
+ {
+  "category": "CORE",
+  "exercise": "KETTLEBELL_WINDMILL",
+  "name": "Kettlebell Windmill"
+ },
+ {
+  "category": "CORE",
+  "exercise": "KNEELING_AB_WHEEL",
+  "name": "Kneeling Ab Wheel"
+ },
+ {
+  "category": "CORE",
+  "exercise": "L_SIT",
+  "name": "L Sit"
+ },
+ {
+  "category": "CORE",
+  "exercise": "MODIFIED_FRONT_LEVER",
+  "name": "Modified Front Lever"
+ },
+ {
+  "category": "CORE",
+  "exercise": "OPEN_KNEE_TUCKS",
+  "name": "Open Knee Tucks"
+ },
+ {
+  "category": "CORE",
+  "exercise": "OVERHEAD_WALK",
+  "name": "Overhead Walk"
+ },
+ {
+  "category": "CORE",
+  "exercise": "RING_L_SIT",
+  "name": "Ring L Sit"
+ },
+ {
+  "category": "CORE",
+  "exercise": "RUSSIAN_TWIST",
+  "name": "Russian Twist"
+ },
+ {
+  "category": "CORE",
+  "exercise": "SIDE_ABS_LEG_LIFT",
+  "name": "Side Abs Leg Lift"
+ },
+ {
+  "category": "CORE",
+  "exercise": "SIDE_BEND",
+  "name": "Side Bend"
+ },
+ {
+  "category": "CORE",
+  "exercise": "SWISS_BALL_JACKKNIFE",
+  "name": "Swiss Ball Jackknife"
+ },
+ {
+  "category": "CORE",
+  "exercise": "SWISS_BALL_PIKE",
+  "name": "Swiss Ball Pike"
+ },
+ {
+  "category": "CORE",
+  "exercise": "SWISS_BALL_ROLLOUT",
+  "name": "Swiss Ball Roll-out"
+ },
+ {
+  "category": "CORE",
+  "exercise": "TOES_TO_ELBOWS",
+  "name": "Toes to Elbows"
+ },
+ {
+  "category": "CORE",
+  "exercise": "TRIANGLE_HIP_PRESS",
+  "name": "Triangle Hip Press"
+ },
+ {
+  "category": "CORE",
+  "exercise": "TRX_SUSPENDED_JACKKNIFE",
+  "name": "TRX Suspended Jackknife"
+ },
+ {
+  "category": "CORE",
+  "exercise": "TURKISH_GET_UP",
+  "name": "Turkish Get-up"
+ },
+ {
+  "category": "CORE",
+  "exercise": "U_BOAT",
+  "name": "U-Boat"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_ABS_JABS",
+  "name": "Weighted Abs Jabs"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_ALTERNATING_SLIDE_OUT",
+  "name": "Weighted Alternating Slide-out"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_BARBELL_ROLLOUT",
+  "name": "Weighted Barbell Roll-out"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_CRESCENT_CIRCLE",
+  "name": "Weighted Crescent Circle"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_CYCLING_RUSSIAN_TWIST",
+  "name": "Weighted Cycling Russian Twist"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_ELEVATED_FEET_RUSSIAN_TWIST",
+  "name": "Weighted Elevated-feet Russian Twist"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_GHD_BACK_EXTENSIONS",
+  "name": "Weighted GHD Back Extensions"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_HANGING_L_SIT",
+  "name": "Weighted Hanging L Sit"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_KNEELING_AB_WHEEL",
+  "name": "Weighted Kneeling Ab Wheel"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_L_SIT",
+  "name": "Weighted L Sit"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_MODIFIED_FRONT_LEVER",
+  "name": "Weighted Modified Front Lever"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_OPEN_KNEE_TUCKS",
+  "name": "Weighted Open Knee Tucks"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_RING_L_SIT",
+  "name": "Weighted Ring L Sit"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_SIDE_ABS_LEG_LIFT",
+  "name": "Weighted Side Abs Leg Lift"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_SIDE_BEND",
+  "name": "Weighted Side Bend"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_SWISS_BALL_JACKKNIFE",
+  "name": "Weighted Swiss Ball Jackknife"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_SWISS_BALL_PIKE",
+  "name": "Weighted Swiss Ball Pike"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_SWISS_BALL_ROLLOUT",
+  "name": "Weighted Swiss Ball Roll-out"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_TRIANGLE_HIP_PRESS",
+  "name": "Weighted Triangle Hip Press"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_TRX_SUSPENDED_JACKKNIFE",
+  "name": "Weighted TRX Suspended Jackknife"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_U_BOAT",
+  "name": "Weighted U-Boat"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WEIGHTED_WINDMILL_SWITCHES",
+  "name": "Weighted Windmill Switches"
+ },
+ {
+  "category": "CORE",
+  "exercise": "WINDMILL_SWITCHES",
+  "name": "Windmill Switches"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "BICYCLE_CRUNCH",
+  "name": "Bicycle Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "CABLE_CRUNCH",
+  "name": "Cable Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "CIRCULAR_ARM_CRUNCH",
+  "name": "Circular Arm Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "CROSSED_ARMS_CRUNCH",
+  "name": "Crossed-arms Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "CROSS_LEG_REVERSE_CRUNCH",
+  "name": "Crossed-leg Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "CRUNCH",
+  "name": "Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "CRUNCH_CHOP",
+  "name": "Crunch Chop"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "DOUBLE_CRUNCH",
+  "name": "Double Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "ELBOW_TO_KNEE_CRUNCH",
+  "name": "Elbow-to-Knee Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "FLUTTER_KICKS",
+  "name": "Flutter Kicks"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "FOAM_ROLLER_REVERSE_CRUNCH_ON_BENCH",
+  "name": "Foam Roller Reverse Crunch on Bench"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "FOAM_ROLLER_REVERSE_CRUNCH_WITH_DUMBBELL",
+  "name": "Foam Roller Reverse Crunch with Dumbbell"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "FOAM_ROLLER_REVERSE_CRUNCH_WITH_MEDICINE_BALL",
+  "name": "Foam Roller Reverse Crunch with Medicine Ball"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "FROG_PRESS",
+  "name": "Frog Press"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "HANGING_KNEE_RAISE_OBLIQUE_CRUNCH",
+  "name": "Hanging Knee Raise Oblique Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "HIP_CROSSOVER",
+  "name": "Hip Crossover"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "HOLLOW_ROCK",
+  "name": "Hollow Rock"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "INCLINE_REVERSE_CRUNCH",
+  "name": "Incline Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "KNEELING_CABLE_CRUNCH",
+  "name": "Kneeling Cable Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "KNEELING_CROSS_CRUNCH",
+  "name": "Kneeling Cross Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "KNEELING_OBLIQUE_CABLE_CRUNCH",
+  "name": "Kneeling Oblique Cable Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "KNEES_TO_ELBOW",
+  "name": "Knees-to-Elbow"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "LEG_CLIMB_CRUNCH",
+  "name": "Leg Climb Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "LEG_EXTENSIONS",
+  "name": "Leg Extensions"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "LEG_LEVERS",
+  "name": "Leg Levers"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "MCGILL_CURL_UP",
+  "name": "McGill Curl-up"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "MODIFIED_PILATES_ROLL_UP_WITH_BALL",
+  "name": "Modified Pilates Roll-up with Ball"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "PILATES_CRUNCH",
+  "name": "Pilates Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "PILATES_ROLL_UP_WITH_BALL",
+  "name": "Pilates Roll-up with Ball"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "RAISED_LEGS_CRUNCH",
+  "name": "Raised-legs Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "REVERSE_CRUNCH",
+  "name": "Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "REVERSE_CRUNCH_ON_A_BENCH",
+  "name": "Reverse Crunch on a Bench"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "REVERSE_CURL_AND_LIFT",
+  "name": "Reverse Curl and Lift"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "ROTATIONAL_LIFT",
+  "name": "Rotational Lift"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SEATED_ALTERNATING_REVERSE_CRUNCH",
+  "name": "Seated Alternating Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SEATED_LEG_U",
+  "name": "Seated Leg U"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SIDE_TO_SIDE_CRUNCH_AND_WEAVE",
+  "name": "Side-to-Side Crunch and Weave"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SINGLE_LEG_REVERSE_CRUNCH",
+  "name": "Single-leg Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SKATER_CRUNCH_CROSS",
+  "name": "Skater Crunch Cross"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "STANDING_CABLE_CRUNCH",
+  "name": "Standing Cable Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "STANDING_SIDE_CRUNCH",
+  "name": "Standing Side Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "STEP_CLIMB",
+  "name": "Step Climb"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "STRAIGHT_LEG_CRUNCH_WITH_BALL",
+  "name": "Straight-leg Crunch with Ball"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SWISS_BALL_CRUNCH",
+  "name": "Swiss Ball Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SWISS_BALL_REVERSE_CRUNCH",
+  "name": "Swiss Ball Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SWISS_BALL_RUSSIAN_TWIST",
+  "name": "Swiss Ball Russian Twist"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "SWISS_BALL_SIDE_CRUNCH",
+  "name": "Swiss Ball Side Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "THORACIC_CRUNCHES_ON_FOAM_ROLLER",
+  "name": "Thoracic Crunches on Foam Roller"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "TOES_TO_BAR",
+  "name": "Toes to Bar"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "TRICEPS_CRUNCH",
+  "name": "Triceps Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_BICYCLE_CRUNCH",
+  "name": "Weighted Bicycle Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_CROSSED_ARMS_CRUNCH",
+  "name": "Weighted Crossed-arms Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_CROSS_LEG_REVERSE_CRUNCH",
+  "name": "Weighted Crossed-leg Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_CRUNCH",
+  "name": "Weighted Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_CRUNCH_CHOP",
+  "name": "Weighted Crunch Chop"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_DOUBLE_CRUNCH",
+  "name": "Weighted Double Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_ELBOW_TO_KNEE_CRUNCH",
+  "name": "Weighted Elbow-to-Knee Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_FLUTTER_KICKS",
+  "name": "Weighted Flutter Kicks"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_FOAM_ROLLER_REVERSE_CRUNCH_ON_BENCH",
+  "name": "Weighted Foam Roller Reverse Crunch on Bench"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_HANGING_KNEE_RAISE_OBLIQUE_CRUNCH",
+  "name": "Weighted Hanging Knee Raise Oblique Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_HIP_CROSSOVER",
+  "name": "Weighted Hip Crossover"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_HOLLOW_ROCK",
+  "name": "Weighted Hollow Rock"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_INCLINE_REVERSE_CRUNCH",
+  "name": "Weighted Incline Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_KNEELING_CROSS_CRUNCH",
+  "name": "Weighted Kneeling Cross Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_LEG_EXTENSIONS",
+  "name": "Weighted Leg Extensions"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_MCGILL_CURL_UP",
+  "name": "Weighted McGill Curl-up"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_MODIFIED_PILATES_ROLL_UP_WITH_BALL",
+  "name": "Weighted Modified Pilates Roll-up with Ball"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_PILATES_CRUNCH",
+  "name": "Weighted Pilates Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_PILATES_ROLL_UP_WITH_BALL",
+  "name": "Weighted Pilates Roll-up with Ball"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_RAISED_LEGS_CRUNCH",
+  "name": "Weighted Raised-legs Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_REVERSE_CRUNCH",
+  "name": "Weighted Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_REVERSE_CRUNCH_ON_A_BENCH",
+  "name": "Weighted Reverse Crunch on a Bench"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_REVERSE_CURL_AND_LIFT",
+  "name": "Weighted Reverse Curl and Lift"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_ROTATIONAL_LIFT",
+  "name": "Weighted Rotational Lift"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SEATED_ALTERNATING_REVERSE_CRUNCH",
+  "name": "Weighted Seated Alternating Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SEATED_LEG_U",
+  "name": "Weighted Seated Leg U"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SIDE_TO_SIDE_CRUNCH_AND_WEAVE",
+  "name": "Weighted Side-to-Side Crunch and Weave"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SINGLE_LEG_REVERSE_CRUNCH",
+  "name": "Weighted Single-leg Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SKATER_CRUNCH_CROSS",
+  "name": "Weighted Skater Crunch Cross"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_STEP_CLIMB",
+  "name": "Weighted Step Climb"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SWISS_BALL_CRUNCH",
+  "name": "Weighted Swiss Ball Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SWISS_BALL_REVERSE_CRUNCH",
+  "name": "Weighted Swiss Ball Reverse Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SWISS_BALL_RUSSIAN_TWIST",
+  "name": "Weighted Swiss Ball Russian Twist"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_SWISS_BALL_SIDE_CRUNCH",
+  "name": "Weighted Swiss Ball Side Crunch"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_THORACIC_CRUNCHES_ON_FOAM_ROLLER",
+  "name": "Weighted Thoracic Crunches on Foam Roller"
+ },
+ {
+  "category": "CRUNCH",
+  "exercise": "WEIGHTED_TOES_TO_BAR",
+  "name": "Weighted Toes to Bar"
+ },
+ {
+  "category": "CURL",
+  "exercise": "ALTERNATING_DUMBBELL_BICEPS_CURL",
+  "name": "Alternating Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "ALTERNATING_DUMBBELL_BICEPS_CURL_ON_SWISS_BALL",
+  "name": "Alternating Dumbbell Biceps Curl on Swiss Ball"
+ },
+ {
+  "category": "CURL",
+  "exercise": "ALTERNATING_INCLINE_DUMBBELL_BICEPS_CURL",
+  "name": "Alternating Incline Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "BARBELL_BICEPS_CURL",
+  "name": "Barbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "BARBELL_REVERSE_WRIST_CURL",
+  "name": "Barbell Reverse Wrist Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "BARBELL_WRIST_CURL",
+  "name": "Barbell Wrist Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "BEHIND_THE_BACK_BARBELL_REVERSE_WRIST_CURL",
+  "name": "Behind-the-Back Barbell Reverse Wrist Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "BEHIND_THE_BACK_ONE_ARM_CABLE_CURL",
+  "name": "Behind-the-Back One-arm Cable Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "CABLE_BICEPS_CURL",
+  "name": "Cable Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "CABLE_HAMMER_CURL",
+  "name": "Cable Hammer Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "CHEATING_BARBELL_BICEPS_CURL",
+  "name": "Cheating Barbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "CLOSE_GRIP_EZ_BAR_BICEPS_CURL",
+  "name": "Close-grip EZ-Bar Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "CROSS_BODY_DUMBBELL_HAMMER_CURL",
+  "name": "Cross-body Dumbbell Hammer Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "CURL",
+  "name": "Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DEAD_HANG_BICEPS_CURL",
+  "name": "Dead-hang Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DECLINE_HAMMER_CURL",
+  "name": "Decline Hammer Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DUMBBELL_BICEPS_CURL",
+  "name": "Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DUMBBELL_BICEPS_CURL_WITH_STATIC_HOLD",
+  "name": "Dumbbell Biceps Curl with Static Hold"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DUMBBELL_HAMMER_CURL",
+  "name": "Dumbbell Hammer Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DUMBBELL_REVERSE_WRIST_CURL",
+  "name": "Dumbbell Reverse Wrist Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "DUMBBELL_WRIST_CURL",
+  "name": "Dumbbell Wrist Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "EZ_BAR_PREACHER_CURL",
+  "name": "EZ-Bar Preacher Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "FORWARD_BEND_BICEPS_CURL",
+  "name": "Forward Bend Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "HAMMER_CURL_TO_PRESS",
+  "name": "Hammer Curl to Press"
+ },
+ {
+  "category": "CURL",
+  "exercise": "INCLINE_DUMBBELL_BICEPS_CURL",
+  "name": "Incline Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "INCLINE_OFFSET_THUMB_DUMBBELL_CURL",
+  "name": "Incline Offset Thumb Dumbbell Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "KETTLEBELL_BICEPS_CURL",
+  "name": "Kettlebell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "LYING_CONCENTRATION_CABLE_CURL",
+  "name": "Lying Concentration Cable Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "ONE_ARM_CONCENTRATION_CURL",
+  "name": "One-arm Concentration Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "ONE_ARM_PREACHER_CURL",
+  "name": "One-arm Preacher Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "PLATE_PINCH_CURL",
+  "name": "Plate Pinch Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "PREACHER_CURL_WITH_CABLE",
+  "name": "Preacher Curl with Cable"
+ },
+ {
+  "category": "CURL",
+  "exercise": "REVERSE_EZ_BAR_CURL",
+  "name": "Reverse EZ-Bar Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "REVERSE_GRIP_BARBELL_BICEPS_CURL",
+  "name": "Reverse-grip Barbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "REVERSE_GRIP_WRIST_CURL",
+  "name": "Reverse-grip Wrist Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "SEATED_ALTERNATING_DUMBBELL_BICEPS_CURL",
+  "name": "Seated Alternating Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "SEATED_DUMBBELL_BICEPS_CURL",
+  "name": "Seated Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "SEATED_REVERSE_DUMBBELL_CURL",
+  "name": "Seated Reverse Dumbbell Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "SPLIT_STANCE_OFFSET_PINKY_DUMBBELL_CURL",
+  "name": "Split-stance Offset Pinky Dumbbell Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "STANDING_ALTERNATING_DUMBBELL_CURLS",
+  "name": "Standing Alternating Dumbbell Curls"
+ },
+ {
+  "category": "CURL",
+  "exercise": "STANDING_DUMBBELL_BICEPS_CURL",
+  "name": "Standing Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "STANDING_EZ_BAR_BICEPS_CURL",
+  "name": "Standing EZ-Bar Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "STANDING_ZOTTMAN_BICEPS_CURL",
+  "name": "Standing Zottman Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "STATIC_CURL",
+  "name": "Static Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "SWISS_BALL_DUMBBELL_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Swiss Ball Dumbbell Overhead Triceps Extension"
+ },
+ {
+  "category": "CURL",
+  "exercise": "SWISS_BALL_EZ_BAR_PREACHER_CURL",
+  "name": "Swiss Ball EZ-Bar Preacher Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "TWISTING_STANDING_DUMBBELL_BICEPS_CURL",
+  "name": "Twisting Standing Dumbbell Biceps Curl"
+ },
+ {
+  "category": "CURL",
+  "exercise": "WIDE_GRIP_EZ_BAR_BICEPS_CURL",
+  "name": "Wide-grip EZ-Bar Biceps Curl"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "BARBELL_DEADLIFT",
+  "name": "Barbell Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "BARBELL_STRAIGHT_LEG_DEADLIFT",
+  "name": "Barbell Straight-leg Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "DEADLIFT",
+  "name": "Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "DUMBBELL_DEADLIFT",
+  "name": "Dumbbell Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "DUMBBELL_SINGLE_LEG_DEADLIFT_TO_ROW",
+  "name": "Dumbbell Single-leg Deadlift to Row"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "DUMBBELL_STRAIGHT_LEG_DEADLIFT",
+  "name": "Dumbbell Straight-leg Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "KETTLEBELL_DEADLIFT",
+  "name": "Kettlebell Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "KETTLEBELL_FLOOR_TO_SHELF",
+  "name": "Kettlebell Floor to Shelf"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "KETTLEBELL_SUMO_DEADLIFT",
+  "name": "Kettlebell Sumo Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "ONE_ARM_ONE_LEG_DEADLIFT",
+  "name": "One-arm One-leg Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "RACK_PULL",
+  "name": "Rack Pull"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "ROMANIAN_DEADLIFT",
+  "name": "Romanian Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "ROTATIONAL_DUMBBELL_STRAIGHT_LEG_DEADLIFT",
+  "name": "Rotational Dumbbell Straight-leg Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_ARM_DEADLIFT",
+  "name": "Single-arm Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_LEG_BARBELL_DEADLIFT",
+  "name": "Single-leg Barbell Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_LEG_BARBELL_STRAIGHT_LEG_DEADLIFT",
+  "name": "Single-leg Barbell Straight-leg Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_LEG_DEADLIFT_WITH_BARBELL",
+  "name": "Single-leg Deadlift with Barbell"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_LEG_RDL_CIRCUIT",
+  "name": "Single-leg RDL Circuit"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_LEG_ROMANIAN_DEADLIFT_CIRCUIT",
+  "name": "Single-leg Romanian Deadlift Circuit"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SINGLE_LEG_ROMANIAN_DEADLIFT_WITH_DUMBBELL",
+  "name": "Single-leg Romanian Deadlift with Dumbbell"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "STRAIGHT_LEG_DEADLIFT",
+  "name": "Straight-leg Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SUMO_DEADLIFT",
+  "name": "Sumo Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "SUMO_DEADLIFT_HIGH_PULL",
+  "name": "Sumo Deadlift High Pull"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "TRAP_BAR_DEADLIFT",
+  "name": "Trap-bar Deadlift"
+ },
+ {
+  "category": "DEADLIFT",
+  "exercise": "WIDE_GRIP_BARBELL_DEADLIFT",
+  "name": "Wide-grip Barbell Deadlift"
+ },
+ {
+  "category": "ELLIPTICAL",
+  "exercise": "ELLIPTICAL",
+  "name": "Elliptical"
+ },
+ {
+  "category": "FLOOR_CLIMB",
+  "exercise": "FLOOR_CLIMB",
+  "name": "Floor Climb"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "CABLE_CROSSOVER",
+  "name": "Cable Crossover"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "DECLINE_DUMBBELL_FLYE",
+  "name": "Decline Dumbbell Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "DUMBBELL_FLYE",
+  "name": "Dumbbell Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "FLYE",
+  "name": "Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "INCLINE_DUMBBELL_FLYE",
+  "name": "Incline Dumbbell Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "INCLINE_REVERSE_FLYE",
+  "name": "Incline Reverse Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "KETTLEBELL_FLYE",
+  "name": "Kettlebell Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "KNEELING_REAR_FLYE",
+  "name": "Kneeling Rear Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "SINGLE_ARM_STANDING_CABLE_REVERSE_FLYE",
+  "name": "Single-arm Standing Cable Reverse Fly"
+ },
+ {
+  "category": "FLYE",
+  "exercise": "SWISS_BALL_DUMBBELL_FLYE",
+  "name": "Swiss Ball Dumbbell Fly"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "BARBELL_HIP_THRUST_ON_FLOOR",
+  "name": "Barbell Hip Thrust on Floor"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "BARBELL_HIP_THRUST_WITH_BENCH",
+  "name": "Barbell Hip Thrust with Bench"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "BENT_KNEE_SWISS_BALL_REVERSE_HIP_RAISE",
+  "name": "Bent-knee Swiss Ball Reverse Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "BRIDGE_WITH_LEG_EXTENSION",
+  "name": "Bridge with Leg Extension"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "CLAM_BRIDGE",
+  "name": "Clam Bridge"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "FRONT_KICK_TABLETOP",
+  "name": "Front Kick Tabletop"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "HIP_EXTENSION_AND_CROSS",
+  "name": "Hip Extension and Cross"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "HIP_RAISE",
+  "name": "Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "HIP_RAISE_WITH_FEET_ON_SWISS_BALL",
+  "name": "Hip Raise with Feet on Swiss Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "HIP_RAISE_WITH_HEAD_ON_BOSU_BALL",
+  "name": "Hip Raise with Head on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "HIP_RAISE_WITH_HEAD_ON_SWISS_BALL",
+  "name": "Hip Raise with Head on Swiss Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "HIP_RAISE_WITH_KNEE_SQUEEZE",
+  "name": "Hip Raise with Knee Squeeze"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "INCLINE_REAR_LEG_EXTENSION",
+  "name": "Incline Rear-leg Extension"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "KETTLEBELL_SWING",
+  "name": "Kettlebell Swing"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "MARCHING_HIP_RAISE",
+  "name": "Marching Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "MARCHING_HIP_RAISE_WITH_FEET_ON_A_SWISS_BALL",
+  "name": "Marching Hip Raise with Feet on a Swiss Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "REVERSE_HIP_RAISE",
+  "name": "Reverse Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE",
+  "name": "Single-leg Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_BENCH",
+  "name": "Single-leg Hip Raise with Foot on Bench"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_BOSU_BALL",
+  "name": "Single-leg Hip Raise with Foot on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_FOAM_ROLLER",
+  "name": "Single-leg Hip Raise with Foot on Foam Roller"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_MEDICINE_BALL",
+  "name": "Single-leg Hip Raise with Foot on Medicine Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_HIP_RAISE_WITH_HEAD_ON_BOSU_BALL",
+  "name": "Single-leg Hip Raise with Head on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "SINGLE_LEG_SWISS_BALL_HIP_RAISE_AND_LEG_CURL",
+  "name": "Single-leg Swiss Ball Hip Raise and Leg Curl"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_BENT_KNEE_SWISS_BALL_REVERSE_HIP_RAISE",
+  "name": "Weighted Bent-knee Swiss Ball Reverse Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_BRIDGE_WITH_LEG_EXTENSION",
+  "name": "Weighted Bridge with Leg Extension"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_CLAM_BRIDGE",
+  "name": "Weighted Clam Bridge"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_FRONT_KICK_TABLETOP",
+  "name": "Weighted Front Kick Tabletop"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_HIP_EXTENSION_AND_CROSS",
+  "name": "Weighted Hip Extension and Cross"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_HIP_RAISE",
+  "name": "Weighted Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_HIP_RAISE_WITH_FEET_ON_SWISS_BALL",
+  "name": "Weighted Hip Raise with Feet on Swiss Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_HIP_RAISE_WITH_HEAD_ON_BOSU_BALL",
+  "name": "Weighted Hip Raise with Head on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_HIP_RAISE_WITH_HEAD_ON_SWISS_BALL",
+  "name": "Weighted Hip Raise with Head on Swiss Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_HIP_RAISE_WITH_KNEE_SQUEEZE",
+  "name": "Weighted Hip Raise with Knee Squeeze"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_INCLINE_REAR_LEG_EXTENSION",
+  "name": "Weighted Incline Rear-leg Extension"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_MARCHING_HIP_RAISE",
+  "name": "Weighted Marching Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_MARCHING_HIP_RAISE_WITH_FEET_ON_A_SWISS_BALL",
+  "name": "Weighted Marching Hip Raise with Feet on a Swiss Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_REVERSE_HIP_RAISE",
+  "name": "Weighted Reverse Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_HIP_RAISE",
+  "name": "Weighted Single-leg Hip Raise"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_BENCH",
+  "name": "Weighted Single-leg Hip Raise with Foot on Bench"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_BOSU_BALL",
+  "name": "Weighted Single-leg Hip Raise with Foot on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_FOAM_ROLLER",
+  "name": "Weighted Single-leg Hip Raise with Foot on Foam Roller"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_HIP_RAISE_WITH_FOOT_ON_MEDICINE_BALL",
+  "name": "Weighted Single-leg Hip Raise with Foot on Medicine Ball"
+ },
+ {
+  "category": "HIP_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_HIP_RAISE_WITH_HEAD_ON_BOSU_BALL",
+  "name": "Weighted Single-leg Hip Raise with Head on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "BAND_SIDE_LYING_LEG_RAISE",
+  "name": "Band Side-lying Leg Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "DEAD_BUG",
+  "name": "Dead Bug"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "EXTERNAL_HIP_RAISE",
+  "name": "External Hip Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "FIRE_HYDRANT_KICKS",
+  "name": "Fire Hydrant Kicks"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "HIP_CIRCLES",
+  "name": "Hip Circles"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "HIP_STABILITY",
+  "name": "Hip Stability"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "INNER_THIGH_LIFT",
+  "name": "Inner-thigh Lift"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "LATERAL_WALKS_WITH_BAND_AT_ANKLES",
+  "name": "Lateral Walks with Band at Ankles"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "LYING_ABDUCTION_STRETCH",
+  "name": "Lying Abduction Stretch"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "PRETZEL_SIDE_KICK",
+  "name": "Pretzel Side Kick"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "PRONE_HIP_INTERNAL_ROTATION",
+  "name": "Prone Hip Internal Rotation"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "QUADRUPED",
+  "name": "Quadruped"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "QUADRUPED_HIP_EXTENSION",
+  "name": "Quadruped Hip Extension"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "QUADRUPED_WITH_LEG_LIFT",
+  "name": "Quadruped with Leg Lift"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "SIDE_LYING_LEG_RAISE",
+  "name": "Side-lying Leg Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "SLIDING_HIP_ADDUCTION",
+  "name": "Sliding Hip Adduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "STANDING_ADDUCTION",
+  "name": "Standing Adduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "STANDING_CABLE_HIP_ABDUCTION",
+  "name": "Standing Cable Hip Abduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "STANDING_HIP_ABDUCTION",
+  "name": "Standing Hip Abduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "STANDING_REAR_LEG_RAISE",
+  "name": "Standing Rear-leg Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "SUPINE_HIP_INTERNAL_ROTATION",
+  "name": "Supine Hip Internal Rotation"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_DEAD_BUG",
+  "name": "Weighted Dead Bug"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_EXTERNAL_HIP_RAISE",
+  "name": "Weighted External Hip Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_FIRE_HYDRANT_KICKS",
+  "name": "Weighted Fire Hydrant Kicks"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_HIP_CIRCLES",
+  "name": "Weighted Hip Circles"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_INNER_THIGH_LIFT",
+  "name": "Weighted Inner-thigh Lift"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_PRETZEL_SIDE_KICK",
+  "name": "Weighted Pretzel Side Kick"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_PRONE_HIP_INTERNAL_ROTATION",
+  "name": "Weighted Prone Hip Internal Rotation"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_QUADRUPED_HIP_EXTENSION",
+  "name": "Weighted Quadruped Hip Extension"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_QUADRUPED_WITH_LEG_LIFT",
+  "name": "Weighted Quadruped with Leg Lift"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_SIDE_LYING_LEG_RAISE",
+  "name": "Weighted Side-lying Leg Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_SLIDING_HIP_ADDUCTION",
+  "name": "Weighted Sliding Hip Adduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_STANDING_ADDUCTION",
+  "name": "Weighted Standing Adduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_STANDING_HIP_ABDUCTION",
+  "name": "Weighted Standing Hip Abduction"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_STANDING_REAR_LEG_RAISE",
+  "name": "Weighted Standing Rear-leg Raise"
+ },
+ {
+  "category": "HIP_STABILITY",
+  "exercise": "WEIGHTED_SUPINE_HIP_INTERNAL_ROTATION",
+  "name": "Weighted Supine Hip Internal Rotation"
+ },
+ {
+  "category": "HIP_SWING",
+  "exercise": "HIP_SWING",
+  "name": "Hip Swing"
+ },
+ {
+  "category": "HIP_SWING",
+  "exercise": "ONE_ARM_SWING",
+  "name": "One-arm Swing"
+ },
+ {
+  "category": "HIP_SWING",
+  "exercise": "SINGLE_ARM_DUMBBELL_SWING",
+  "name": "Single-arm Dumbbell Swing"
+ },
+ {
+  "category": "HIP_SWING",
+  "exercise": "SINGLE_ARM_KETTLEBELL_SWING",
+  "name": "Single-arm Kettlebell Swing"
+ },
+ {
+  "category": "HIP_SWING",
+  "exercise": "STEP_OUT_SWING",
+  "name": "Step-out Swing"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "BACK_EXTENSION_WITH_OPPOSITE_ARM_AND_LEG_REACH",
+  "name": "Back Extension with Opposite Arm and Leg Reach"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "BASE_ROTATIONS",
+  "name": "Base Rotations"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "BENT_KNEE_REVERSE_HYPEREXTENSION",
+  "name": "Bent-knee Reverse Hyperextension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "HOLLOW_HOLD_AND_ROLL",
+  "name": "Hollow, Hold, and Roll"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "HYPEREXTENSION",
+  "name": "Hyperextension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "KICKS",
+  "name": "Kicks"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "KNEELING_SUPERMAN",
+  "name": "Kneeling Superman"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "KNEE_RAISES",
+  "name": "Knee Raises"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "LAT_PULL_DOWN_WITH_ROW",
+  "name": "Lat Pull-down with Row"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "MEDICINE_BALL_DEADLIFT_TO_REACH",
+  "name": "Medicine Ball Deadlift-to-Reach"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "ONE_ARM_ONE_LEG_ROW",
+  "name": "One-arm One-leg Row"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "ONE_ARM_ROW_WITH_BAND",
+  "name": "One-arm Row with Band"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "OVERHEAD_LUNGE_WITH_MEDICINE_BALL",
+  "name": "Overhead Lunge with Medicine Ball"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "PLANK_KNEE_TUCKS",
+  "name": "Plank Knee Tucks"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SIDE_STEP",
+  "name": "Side Step"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SINGLE_LEG_BACK_EXTENSION",
+  "name": "Single-leg Back Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SPINE_EXTENSION",
+  "name": "Spine Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "STATIC_BACK_EXTENSION",
+  "name": "Static Back Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SUPERMAN_FROM_FLOOR",
+  "name": "Superman from Floor"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SUPERMAN_ON_SWISS_BALL",
+  "name": "Superman on Swiss Ball"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SWISS_BALL_BACK_EXTENSION",
+  "name": "Swiss Ball Back Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SWISS_BALL_HYPEREXTENSION",
+  "name": "Swiss Ball Hyperextension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "SWISS_BALL_OPPOSITE_ARM_AND_LEG_LIFT",
+  "name": "Swiss Ball Opposite Arm and Leg Lift"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_BACK_EXTENSION_WITH_OPPOSITE_ARM_AND_LEG_REACH",
+  "name": "Weighted Back Extension with Opposite Arm and Leg Reach"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_BASE_ROTATIONS",
+  "name": "Weighted Base Rotations"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_BENT_KNEE_REVERSE_HYPEREXTENSION",
+  "name": "Weighted Bent-knee Reverse Hyperextension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_HOLLOW_HOLD_AND_ROLL",
+  "name": "Weighted Hollow, Hold, and Roll"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_KICKS",
+  "name": "Weighted Kicks"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_KNEELING_SUPERMAN",
+  "name": "Weighted Kneeling Superman"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_KNEE_RAISES",
+  "name": "Weighted Knee Raises"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_PLANK_KNEE_TUCKS",
+  "name": "Weighted Plank Knee Tucks"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SIDE_STEP",
+  "name": "Weighted Side Step"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SINGLE_LEG_BACK_EXTENSION",
+  "name": "Weighted Single-leg Back Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SPINE_EXTENSION",
+  "name": "Weighted Spine Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_STATIC_BACK_EXTENSION",
+  "name": "Weighted Static Back Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SUPERMAN_FROM_FLOOR",
+  "name": "Weighted Superman from Floor"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SWISS_BALL_BACK_EXTENSION",
+  "name": "Weighted Swiss Ball Back Extension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SWISS_BALL_HYPEREXTENSION",
+  "name": "Weighted Swiss Ball Hyperextension"
+ },
+ {
+  "category": "HYPEREXTENSION",
+  "exercise": "WEIGHTED_SWISS_BALL_OPPOSITE_ARM_AND_LEG_LIFT",
+  "name": "Weighted Swiss Ball Opposite Arm and Leg Lift"
+ },
+ {
+  "category": "INDOOR_BIKE",
+  "exercise": "AIR_BIKE",
+  "name": "Air Bike"
+ },
+ {
+  "category": "INDOOR_BIKE",
+  "exercise": "ASSAULT_BIKE",
+  "name": "Assault Bike"
+ },
+ {
+  "category": "INDOOR_BIKE",
+  "exercise": "INDOOR_BIKE",
+  "name": "Indoor Bike"
+ },
+ {
+  "category": "INDOOR_BIKE",
+  "exercise": "STATIONARY_BIKE",
+  "name": "Stationary Bike"
+ },
+ {
+  "category": "LADDER",
+  "exercise": "AGILITY",
+  "name": "Agility Ladder"
+ },
+ {
+  "category": "LADDER",
+  "exercise": "LADDER",
+  "name": "Ladder"
+ },
+ {
+  "category": "LADDER",
+  "exercise": "SPEED",
+  "name": "Speed Ladder"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "ALTERNATING_LATERAL_RAISE_WITH_STATIC_HOLD",
+  "name": "Alternating Lateral Raise with Static Hold"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "BAR_MUSCLE_UP",
+  "name": "Bar Muscle-up"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "BENT_OVER_LATERAL_RAISE",
+  "name": "Bent-over Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "CABLE_DIAGONAL_RAISE",
+  "name": "Cable Diagonal Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "CABLE_FRONT_RAISE",
+  "name": "Cable Front Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "CALORIE_ROW",
+  "name": "Calorie Row"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "COMBO_SHOULDER_RAISE",
+  "name": "Combo Shoulder Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "DUMBBELL_DIAGONAL_RAISE",
+  "name": "Dumbbell Diagonal Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "DUMBBELL_LATERAL_RAISE",
+  "name": "Dumbbell Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "DUMBBELL_V_RAISE",
+  "name": "Dumbbell V Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "FRONT_RAISE",
+  "name": "Front Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "LATERAL_RAISE",
+  "name": "Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "LEANING_DUMBBELL_LATERAL_RAISE",
+  "name": "Leaning Dumbbell Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "LYING_DUMBBELL_RAISE",
+  "name": "Lying Dumbbell Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "MUSCLE_UP",
+  "name": "Muscle-up (progression)"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "ONE_ARM_CABLE_LATERAL_RAISE",
+  "name": "One-arm Cable Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "OVERHAND_GRIP_REAR_LATERAL_RAISE",
+  "name": "Overhand-grip Rear Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "PLATE_RAISES",
+  "name": "Plate Raises"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "RING_DIP",
+  "name": "Ring Dip"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "RING_DIP_KIPPING",
+  "name": "Kipping Ring Dip"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "RING_MUSCLE_UP",
+  "name": "Ring Muscle-up"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "ROPE_CLIMB",
+  "name": "Rope Climb"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "SCAPTION",
+  "name": "Scaption"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "SEATED_LATERAL_RAISE",
+  "name": "Seated Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "SEATED_REAR_LATERAL_RAISE",
+  "name": "Seated Rear Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "SIDE_LYING_LATERAL_RAISE",
+  "name": "Side-lying Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "STANDING_LIFT",
+  "name": "Standing Lift"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "SUSPENDED_ROW",
+  "name": "Suspended Row"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "UNDERHAND_GRIP_REAR_LATERAL_RAISE",
+  "name": "Underhand-grip Rear Lateral Raise"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "WALL_SLIDE",
+  "name": "Wall Slide"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "WALL_WALK",
+  "name": "Wall Walk"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "WEIGHTED_RING_DIP",
+  "name": "Weighted Ring Dip"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "WEIGHTED_RING_MUSCLE_UP",
+  "name": "Weighted Ring Muscle-up"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "WEIGHTED_ROPE_CLIMB",
+  "name": "Weighted Rope Climb"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "WEIGHTED_WALL_SLIDE",
+  "name": "Weighted Wall Slide"
+ },
+ {
+  "category": "LATERAL_RAISE",
+  "exercise": "_45_DEGREE_CABLE_EXTERNAL_ROTATION",
+  "name": "45-degree Cable External Rotation"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "BAND_GOOD_MORNING",
+  "name": "Band Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "BAR_GOOD_MORNING",
+  "name": "Bar Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "GOOD_MORNING",
+  "name": "Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "LEG_CURL",
+  "name": "Leg Curl"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SEATED_BARBELL_GOOD_MORNING",
+  "name": "Seated Barbell Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SINGLE_LEG_BARBELL_GOOD_MORNING",
+  "name": "Single-leg Barbell Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SINGLE_LEG_SLIDING_LEG_CURL",
+  "name": "Single-leg Sliding Leg Curl"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SLIDING_LEG_CURL",
+  "name": "Sliding Leg Curl"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SPLIT_BARBELL_GOOD_MORNING",
+  "name": "Split Barbell Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SPLIT_STANCE_EXTENSION",
+  "name": "Split-stance Extension"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "STAGGERED_STANCE_GOOD_MORNING",
+  "name": "Staggered-stance Good Morning"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "SWISS_BALL_HIP_RAISE_AND_LEG_CURL",
+  "name": "Swiss Ball Hip Raise and Leg Curl"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "WEIGHTED_LEG_CURL",
+  "name": "Weighted Leg Curl"
+ },
+ {
+  "category": "LEG_CURL",
+  "exercise": "ZERCHER_GOOD_MORNING",
+  "name": "Zercher Good Morning"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "HANGING_KNEE_RAISE",
+  "name": "Hanging Knee Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "HANGING_LEG_RAISE",
+  "name": "Hanging Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "HANGING_SINGLE_LEG_RAISE",
+  "name": "Hanging Single-leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "KETTLEBELL_LEG_RAISES",
+  "name": "Kettlebell Leg Raises"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "LATERAL_STEPOVER",
+  "name": "Lateral Step-over"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "LEG_LOWERING_DRILL",
+  "name": "Leg Lowering Drill"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "LEG_RAISE",
+  "name": "Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "LYING_STRAIGHT_LEG_RAISE",
+  "name": "Lying Straight-leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "MEDICINE_BALL_LEG_DROPS",
+  "name": "Medicine Ball Leg Drops"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "QUADRUPED_LEG_RAISE",
+  "name": "Quadruped Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "REVERSE_LEG_RAISE",
+  "name": "Reverse Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "REVERSE_LEG_RAISE_ON_SWISS_BALL",
+  "name": "Reverse Leg Raise on Swiss Ball"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "SINGLE_LEG_LOWERING_DRILL",
+  "name": "Single-leg Lowering Drill"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_HANGING_KNEE_RAISE",
+  "name": "Weighted Hanging Knee Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_HANGING_LEG_RAISE",
+  "name": "Weighted Hanging Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_HANGING_SINGLE_LEG_RAISE",
+  "name": "Weighted Hanging Single-leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_LATERAL_STEPOVER",
+  "name": "Weighted Lateral Step-over"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_LEG_LOWERING_DRILL",
+  "name": "Weighted Leg Lowering Drill"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_LYING_STRAIGHT_LEG_RAISE",
+  "name": "Weighted Lying Straight-leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_QUADRUPED_LEG_RAISE",
+  "name": "Weighted Quadruped Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_REVERSE_LEG_RAISE",
+  "name": "Weighted Reverse Leg Raise"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_REVERSE_LEG_RAISE_ON_SWISS_BALL",
+  "name": "Weighted Reverse Leg Raise on Swiss Ball"
+ },
+ {
+  "category": "LEG_RAISE",
+  "exercise": "WEIGHTED_SINGLE_LEG_LOWERING_DRILL",
+  "name": "Weighted Single-leg Lowering Drill"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "ALTERNATING_BARBELL_FORWARD_LUNGE",
+  "name": "Alternating Barbell Forward Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "ALTERNATING_DUMBBELL_LUNGE",
+  "name": "Alternating Dumbbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "ALTERNATING_DUMBBELL_LUNGE_WITH_REACH",
+  "name": "Alternating Dumbbell Lunge with Reach"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BACK_FOOT_ELEVATED_DUMBBELL_SPLIT_SQUAT",
+  "name": "Back-foot Elevated Dumbbell Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_BOX_LUNGE",
+  "name": "Barbell Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_BULGARIAN_SPLIT_SQUAT",
+  "name": "Barbell Bulgarian Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_CROSSOVER_LUNGE",
+  "name": "Barbell Crossover Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_FRONT_SPLIT_SQUAT",
+  "name": "Barbell Front Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_LUNGE",
+  "name": "Barbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_REVERSE_LUNGE",
+  "name": "Barbell Reverse Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_SIDE_LUNGE",
+  "name": "Barbell Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "BARBELL_SPLIT_SQUAT",
+  "name": "Barbell Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "CORE_CONTROL_REAR_LUNGE",
+  "name": "Core Control Rear Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "CURTSY_LUNGE",
+  "name": "Curtsy Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DIAGONAL_LUNGE",
+  "name": "Diagonal Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DROP_LUNGE",
+  "name": "Drop Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_BOX_LUNGE",
+  "name": "Dumbbell Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_BULGARIAN_SPLIT_SQUAT",
+  "name": "Dumbbell Bulgarian Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_CROSSOVER_LUNGE",
+  "name": "Dumbbell Crossover Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_DIAGONAL_LUNGE",
+  "name": "Dumbbell Diagonal Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_LUNGE",
+  "name": "Dumbbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_LUNGE_AND_ROTATION",
+  "name": "Dumbbell Lunge and Rotation"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_OVERHEAD_BULGARIAN_SPLIT_SQUAT",
+  "name": "Dumbbell Overhead Bulgarian Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_OVERHEAD_WALKING_LUNGE",
+  "name": "Dumbbell Overhead Walking Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_REVERSE_LUNGE",
+  "name": "Dumbbell Reverse Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_REVERSE_LUNGE_TO_HIGH_KNEE_AND_PRESS",
+  "name": "Dumbbell Reverse Lunge to High Knee and Press"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "DUMBBELL_SIDE_LUNGE",
+  "name": "Dumbbell Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "ELEVATED_FRONT_FOOT_BARBELL_SPLIT_SQUAT",
+  "name": "Elevated Front-foot Barbell Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "FRONT_FOOT_ELEVATED_DUMBBELL_SPLIT_SQUAT",
+  "name": "Elevated Front-foot Dumbbell Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "GUNSLINGER_LUNGE",
+  "name": "Gunslinger Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LAWNMOWER_LUNGE",
+  "name": "Lawnmower Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LOW_LUNGE_WITH_ISOMETRIC_ADDUCTION",
+  "name": "Low Lunge with Isometric Adduction"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LOW_SIDE_TO_SIDE_LUNGE",
+  "name": "Low Side-to-Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LUNGE",
+  "name": "Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LUNGE_MATRIX",
+  "name": "Lunge Matrix"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LUNGE_WITH_ARM_REACH",
+  "name": "Lunge with Arm Reach"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LUNGE_WITH_DIAGONAL_REACH",
+  "name": "Lunge with Diagonal Reach"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "LUNGE_WITH_SIDE_BEND",
+  "name": "Lunge with Side Bend"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OFFSET_DUMBBELL_LUNGE",
+  "name": "Offset Dumbbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OFFSET_DUMBBELL_REVERSE_LUNGE",
+  "name": "Offset Dumbbell Reverse Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OVERHEAD_BULGARIAN_SPLIT_SQUAT",
+  "name": "Overhead Bulgarian Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OVERHEAD_DUMBBELL_LUNGE",
+  "name": "Overhead Dumbbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OVERHEAD_DUMBBELL_REVERSE_LUNGE",
+  "name": "Overhead Dumbbell Reverse Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OVERHEAD_DUMBBELL_SPLIT_SQUAT",
+  "name": "Overhead Dumbbell Split Squat"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OVERHEAD_LUNGE",
+  "name": "Overhead Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "OVERHEAD_LUNGE_WITH_ROTATION",
+  "name": "Overhead Lunge with Rotation"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_BARBELL_BOX_LUNGE",
+  "name": "Reverse Barbell Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_BOX_LUNGE",
+  "name": "Reverse Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_DUMBBELL_BOX_LUNGE",
+  "name": "Reverse Dumbbell Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_DUMBBELL_CROSSOVER_LUNGE",
+  "name": "Reverse Dumbbell Crossover Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_DUMBBELL_DIAGONAL_LUNGE",
+  "name": "Reverse Dumbbell Diagonal Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_LUNGE_WITH_REACH_BACK",
+  "name": "Reverse Lunge with Reach Back"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_LUNGE_WITH_TWIST_AND_OVERHEAD_REACH",
+  "name": "Reverse Lunge with Twist and Overhead Reach"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_SLIDING_BOX_LUNGE",
+  "name": "Reverse Sliding Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "REVERSE_SLIDING_LUNGE",
+  "name": "Reverse Sliding Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "RUNNERS_LUNGE_TO_BALANCE",
+  "name": "Runner's Lunge to Balance"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SCISSOR_POWER_SWITCH",
+  "name": "Scissor Power Switch"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SHIFTING_SIDE_LUNGE",
+  "name": "Shifting Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_AND_CROSSOVER_LUNGE",
+  "name": "Side and Crossover Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_LUNGE",
+  "name": "Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_LUNGE_AND_PRESS",
+  "name": "Side Lunge and Press"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_LUNGE_JUMP_OFF",
+  "name": "Side Lunge Jump Off"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_LUNGE_SWEEP",
+  "name": "Side Lunge Sweep"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_LUNGE_TO_CROSSOVER_TAP",
+  "name": "Side Lunge to Crossover Tap"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIDE_TO_SIDE_LUNGE_CHOPS",
+  "name": "Side-to-Side Lunge Chops"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SIFF_JUMP_LUNGE",
+  "name": "Siff Jump Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SINGLE_ARM_REVERSE_LUNGE_AND_PRESS",
+  "name": "Single-arm Reverse Lunge and Press"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "SLIDING_LATERAL_LUNGE",
+  "name": "Sliding Lateral Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WALKING_BARBELL_LUNGE",
+  "name": "Walking Barbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WALKING_DUMBBELL_LUNGE",
+  "name": "Walking Dumbbell Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WALKING_LUNGE",
+  "name": "Walking Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_CURTSY_LUNGE",
+  "name": "Weighted Curtsy Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_LUNGE",
+  "name": "Weighted Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_LUNGE_MATRIX",
+  "name": "Weighted Lunge Matrix"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_REVERSE_LUNGE_WITH_REACH_BACK",
+  "name": "Weighted Reverse Lunge with Reach Back"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_REVERSE_LUNGE_WITH_TWIST_AND_OVERHEAD_REACH",
+  "name": "Weighted Reverse Lunge with Twist and Overhead Reach"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_REVERSE_SLIDING_BOX_LUNGE",
+  "name": "Weighted Reverse Sliding Box Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_REVERSE_SLIDING_LUNGE",
+  "name": "Weighted Reverse Sliding Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_RUNNERS_LUNGE_TO_BALANCE",
+  "name": "Weighted Runner's Lunge to Balance"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SHIFTING_SIDE_LUNGE",
+  "name": "Weighted Shifting Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_AND_CROSSOVER_LUNGE",
+  "name": "Weighted Side and Crossover Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_LUNGE",
+  "name": "Weighted Side Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_LUNGE_AND_PRESS",
+  "name": "Weighted Side Lunge and Press"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_LUNGE_JUMP_OFF",
+  "name": "Weighted Side Lunge Jump Off"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_LUNGE_SWEEP",
+  "name": "Weighted Side Lunge Sweep"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_LUNGE_TO_CROSSOVER_TAP",
+  "name": "Weighted Side Lunge to Crossover Tap"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIDE_TO_SIDE_LUNGE_CHOPS",
+  "name": "Weighted Side-to-Side Lunge Chops"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SIFF_JUMP_LUNGE",
+  "name": "Weighted Siff Jump Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_SLIDING_LATERAL_LUNGE",
+  "name": "Weighted Sliding Lateral Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WEIGHTED_WALKING_LUNGE",
+  "name": "Weighted Walking Lunge"
+ },
+ {
+  "category": "LUNGE",
+  "exercise": "WIDE_GRIP_OVERHEAD_BARBELL_SPLIT_SQUAT",
+  "name": "Wide-grip Overhead Barbell Split Squat"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_HANG_POWER_CLEAN",
+  "name": "Barbell Hang Power Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_HANG_POWER_SNATCH",
+  "name": "Barbell Hang Power Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_HANG_PULL",
+  "name": "Barbell Hang Pull"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_HANG_SQUAT_CLEAN",
+  "name": "Barbell Hang Squat Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_HIGH_PULL",
+  "name": "Barbell High Pull"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_POWER_CLEAN",
+  "name": "Barbell Power Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_POWER_SNATCH",
+  "name": "Barbell Power Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_SNATCH",
+  "name": "Barbell Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_SPLIT_JERK",
+  "name": "Barbell Split Jerk"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "BARBELL_SQUAT_CLEAN",
+  "name": "Barbell Squat Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "CLEAN",
+  "name": "Barbell Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "CLEAN_AND_JERK",
+  "name": "Clean and Jerk"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "CLEAN_AND_PRESS",
+  "name": "Clean and Press"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_CLEAN",
+  "name": "Dumbbell Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_HANG_PULL",
+  "name": "Dumbbell Hang Pull"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_HANG_SNATCH",
+  "name": "Dumbbell Hang Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_POWER_CLEAN_AND_JERK",
+  "name": "Dumbbell Power Clean and Jerk"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_POWER_CLEAN_AND_PUSH_PRESS",
+  "name": "Dumbbell Power Clean and Push Press"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_POWER_CLEAN_AND_STRICT_PRESS",
+  "name": "Dumbbell Power Clean and Strict Press"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "DUMBBELL_SNATCH",
+  "name": "Dumbbell Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "MEDICINE_BALL_CLEAN",
+  "name": "Medicine Ball Clean"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "OLYMPIC_LIFT",
+  "name": "Olympic Lift"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "ONE_HAND_DUMBBELL_SPLIT_SNATCH",
+  "name": "One-hand Dumbbell Split Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "PUSH_JERK",
+  "name": "Push Jerk"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "SINGLE_ARM_DUMBBELL_SNATCH",
+  "name": "Single-arm Dumbbell Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "SINGLE_ARM_HANG_SNATCH",
+  "name": "Single-arm Hang Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "SINGLE_ARM_KETTLEBELL_SNATCH",
+  "name": "Single-arm Kettlebell Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "SNATCH",
+  "name": "Snatch"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "SPLIT_JERK",
+  "name": "Split Jerk"
+ },
+ {
+  "category": "OLYMPIC_LIFT",
+  "exercise": "SQUAT_CLEAN_AND_JERK",
+  "name": "Squat Clean and Jerk"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "BEAR_CRAWL",
+  "name": "Bear Crawl"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "CROSS_BODY_MOUNTAIN_CLIMBER",
+  "name": "Cross-body Mountain Climber"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "ELBOW_PLANK_PIKE_JACKS",
+  "name": "Elbow Plank Pike Jacks"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "ELEVATED_FEET_PLANK",
+  "name": "Elevated-feet Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "ELEVATOR_ABS",
+  "name": "Elevator Abs"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "EXTENDED_PLANK",
+  "name": "Extended Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "FULL_PLANK_PASSE_TWIST",
+  "name": "Full Plank Pass\u00c3\u00a9 Twist"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "INCHING_ELBOW_PLANK",
+  "name": "Inching Elbow Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "INCHWORM_TO_SIDE_PLANK",
+  "name": "Inchworm to Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "KNEELING_PLANK",
+  "name": "Kneeling Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "KNEELING_SIDE_PLANK_WITH_LEG_LIFT",
+  "name": "Kneeling Side Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "LATERAL_ROLL",
+  "name": "Lateral Roll"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "LYING_REVERSE_PLANK",
+  "name": "Lying Reverse Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MEDICINE_BALL_MOUNTAIN_CLIMBER",
+  "name": "Medicine Ball Mountain Climber"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MODIFIED_MOUNTAIN_CLIMBER_AND_EXTENSION",
+  "name": "Modified Mountain Climber and Extension"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MOUNTAIN_CLIMBER",
+  "name": "Mountain Climber"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MOUNTAIN_CLIMBER_ON_SLIDING_DISCS",
+  "name": "Mountain Climber on Sliding Discs"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MOUNTAIN_CLIMBER_WITH_FEET_ON_BOSU_BALL",
+  "name": "Mountain Climber with Feet on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MOUNTAIN_CLIMBER_WITH_HANDS_ON_BENCH",
+  "name": "Mountain Climber with Hands on Bench"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "MOUNTAIN_CLIMBER_WITH_HANDS_ON_SWISS_BALL",
+  "name": "Mountain Climber with Hands on Swiss Ball"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK",
+  "name": "Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_JACKS_WITH_FEET_ON_SLIDING_DISCS",
+  "name": "Plank Jacks with Feet on Sliding Discs"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_KNEE_TWIST",
+  "name": "Plank Knee Twist"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_PIKES",
+  "name": "Plank Pikes"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_PIKE_JUMPS",
+  "name": "Plank Pike Jumps"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_TO_STAND_UP",
+  "name": "Plank to Stand-up"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_WITH_ARM_RAISE",
+  "name": "Plank with Arm Raise"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_WITH_FEET_ON_SWISS_BALL",
+  "name": "Plank with Feet on Swiss Ball"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_WITH_KNEE_TO_ELBOW",
+  "name": "Plank with Knee-to-Elbow"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_WITH_LEG_LIFT",
+  "name": "Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLANK_WITH_OBLIQUE_CRUNCH",
+  "name": "Plank with Oblique Crunch"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "PLYOMETRIC_SIDE_PLANK",
+  "name": "Plyometric Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "RING_PLANK_SPRAWLS",
+  "name": "Ring Plank Sprawls"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "ROLLING_SIDE_PLANK",
+  "name": "Rolling Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_KICK_PLANK",
+  "name": "Side Kick Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK",
+  "name": "Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_AND_ROW",
+  "name": "Side Plank and Row"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_LIFT",
+  "name": "Side Plank Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_TO_PLANK_WITH_REACH_UNDER",
+  "name": "Side Plank to Plank with Reach Under"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_WITH_ELBOW_ON_BOSU_BALL",
+  "name": "Side Plank with Elbow on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_WITH_FEET_ON_BENCH",
+  "name": "Side Plank with Feet on Bench"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_WITH_KNEE_CIRCLE",
+  "name": "Side Plank with Knee Circle"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_WITH_KNEE_TUCK",
+  "name": "Side Plank with Knee Tuck"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_WITH_LEG_LIFT",
+  "name": "Side Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SIDE_PLANK_WITH_REACH_UNDER",
+  "name": "Side Plank with Reach Under"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SINGLE_LEG_ELEVATED_FEET_PLANK",
+  "name": "Single-leg Elevated-feet Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SINGLE_LEG_FLEX_AND_EXTEND",
+  "name": "Single-leg Flex and Extend"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SINGLE_LEG_SIDE_PLANK",
+  "name": "Single-leg Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SPIDERMAN_PLANK",
+  "name": "Spiderman Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "STRAIGHT_ARM_PLANK",
+  "name": "Straight-arm Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "STRAIGHT_ARM_PLANK_WITH_SHOULDER_TOUCH",
+  "name": "Straight-arm Plank with Shoulder Touch"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SWISS_BALL_PLANK",
+  "name": "Swiss Ball Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SWISS_BALL_PLANK_LEG_LIFT",
+  "name": "Swiss Ball Plank Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SWISS_BALL_PLANK_LEG_LIFT_AND_HOLD",
+  "name": "Swiss Ball Plank Leg Lift and Hold"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SWISS_BALL_PLANK_WITH_FEET_ON_BENCH",
+  "name": "Swiss Ball Plank with Feet on Bench"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SWISS_BALL_PRONE_JACKKNIFE",
+  "name": "Swiss Ball Prone Jackknife"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "SWISS_BALL_SIDE_PLANK",
+  "name": "Swiss Ball Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "THREE_WAY_PLANK",
+  "name": "Three-way Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "TOWEL_PLANK_AND_KNEE_IN",
+  "name": "Towel Plank and Knee-in"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "TURKISH_GET_UP_TO_SIDE_PLANK",
+  "name": "Turkish Get-up to Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "TWO_POINT_PLANK",
+  "name": "Two-Point Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "T_STABILIZATION",
+  "name": "T-Stabilization"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_45_DEGREE_PLANK",
+  "name": "Weighted 45-degree Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_90_DEGREE_STATIC_HOLD",
+  "name": "Weighted 90-degree Static Hold"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_BEAR_CRAWL",
+  "name": "Weighted Bear Crawl"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_CROSS_BODY_MOUNTAIN_CLIMBER",
+  "name": "Weighted Cross-body Mountain Climber"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_ELBOW_PLANK_PIKE_JACKS",
+  "name": "Weighted Elbow Plank Pike Jacks"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_ELEVATED_FEET_PLANK",
+  "name": "Weighted Elevated-feet Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_ELEVATOR_ABS",
+  "name": "Weighted Elevator Abs"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_EXTENDED_PLANK",
+  "name": "Weighted Extended Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_FULL_PLANK_PASSE_TWIST",
+  "name": "Weighted Full Plank Pass\u00c3\u00a9 Twist"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_INCHING_ELBOW_PLANK",
+  "name": "Weighted Inching Elbow Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_INCHWORM_TO_SIDE_PLANK",
+  "name": "Weighted Inchworm to Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_KNEELING_PLANK",
+  "name": "Weighted Kneeling Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_KNEELING_SIDE_PLANK_WITH_LEG_LIFT",
+  "name": "Weighted Kneeling Side Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_LATERAL_ROLL",
+  "name": "Weighted Lateral Roll"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_LYING_REVERSE_PLANK",
+  "name": "Weighted Lying Reverse Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MEDICINE_BALL_MOUNTAIN_CLIMBER",
+  "name": "Weighted Medicine Ball Mountain Climber"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MODIFIED_MOUNTAIN_CLIMBER_AND_EXTENSION",
+  "name": "Weighted Modified Mountain Climber and Extension"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MOUNTAIN_CLIMBER",
+  "name": "Weighted Mountain Climber"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MOUNTAIN_CLIMBER_ON_SLIDING_DISCS",
+  "name": "Weighted Mountain Climber on Sliding Discs"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MOUNTAIN_CLIMBER_WITH_FEET_ON_BOSU_BALL",
+  "name": "Weighted Mountain Climber with Feet on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MOUNTAIN_CLIMBER_WITH_HANDS_ON_BENCH",
+  "name": "Weighted Mountain Climber with Hands on Bench"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_MOUNTAIN_CLIMBER_WITH_HANDS_ON_SWISS_BALL",
+  "name": "Weighted Mountain Climber with Hands on Swiss Ball"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK",
+  "name": "Weighted Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_JACKS_WITH_FEET_ON_SLIDING_DISCS",
+  "name": "Weighted Plank Jacks with Feet on Sliding Discs"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_KNEE_TWIST",
+  "name": "Weighted Plank Knee Twist"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_PIKES",
+  "name": "Weighted Plank Pikes"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_PIKE_JUMPS",
+  "name": "Weighted Plank Pike Jumps"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_TO_STAND_UP",
+  "name": "Weighted Plank to Stand-up"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_WITH_ARM_RAISE",
+  "name": "Weighted Plank with Arm Raise"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_WITH_KNEE_TO_ELBOW",
+  "name": "Weighted Plank with Knee-to-Elbow"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLANK_WITH_OBLIQUE_CRUNCH",
+  "name": "Weighted Plank with Oblique Crunch"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_PLYOMETRIC_SIDE_PLANK",
+  "name": "Weighted Plyometric Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_ROLLING_SIDE_PLANK",
+  "name": "Weighted Rolling Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_KICK_PLANK",
+  "name": "Weighted Side Kick Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK",
+  "name": "Weighted Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_AND_ROW",
+  "name": "Weighted Side Plank and Row"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_LIFT",
+  "name": "Weighted Side Plank Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_WITH_ELBOW_ON_BOSU_BALL",
+  "name": "Weighted Side Plank with Elbow on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_WITH_FEET_ON_BENCH",
+  "name": "Weighted Side Plank with Feet on Bench"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_WITH_KNEE_CIRCLE",
+  "name": "Weighted Side Plank with Knee Circle"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_WITH_KNEE_TUCK",
+  "name": "Weighted Side Plank with Knee Tuck"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_WITH_LEG_LIFT",
+  "name": "Weighted Side Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SIDE_PLANK_WITH_REACH_UNDER",
+  "name": "Weighted Side Plank with Reach Under"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SINGLE_LEG_ELEVATED_FEET_PLANK",
+  "name": "Weighted Single-leg Elevated-feet Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SINGLE_LEG_FLEX_AND_EXTEND",
+  "name": "Weighted Single-leg Flex and Extend"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SINGLE_LEG_SIDE_PLANK",
+  "name": "Weighted Single-leg Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SPIDERMAN_PLANK",
+  "name": "Weighted Spiderman Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_STRAIGHT_ARM_PLANK",
+  "name": "Weighted Straight-arm Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_STRAIGHT_ARM_PLANK_WITH_SHOULDER_TOUCH",
+  "name": "Weighted Straight-arm Plank with Shoulder Touch"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SWISS_BALL_PLANK",
+  "name": "Weighted Swiss Ball Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SWISS_BALL_PLANK_LEG_LIFT",
+  "name": "Weighted Swiss Ball Plank Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SWISS_BALL_PLANK_LEG_LIFT_AND_HOLD",
+  "name": "Weighted Swiss Ball Plank Leg Lift and Hold"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SWISS_BALL_PLANK_WITH_FEET_ON_BENCH",
+  "name": "Weighted Swiss Ball Plank with Feet on Bench"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SWISS_BALL_PRONE_JACKKNIFE",
+  "name": "Weighted Swiss Ball Prone Jackknife"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_SWISS_BALL_SIDE_PLANK",
+  "name": "Weighted Swiss Ball Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_THREE_WAY_PLANK",
+  "name": "Weighted Three-way Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_TOWEL_PLANK_AND_KNEE_IN",
+  "name": "Weighted Towel Plank and Knee-in"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_TURKISH_GET_UP_TO_SIDE_PLANK",
+  "name": "Weighted Turkish Get-up to Side Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_TWO_POINT_PLANK",
+  "name": "Weighted Two-Point Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_T_STABILIZATION",
+  "name": "Weighted T-Stabilization"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_WIDE_STANCE_PLANK_WITH_DIAGONAL_ARM_LIFT",
+  "name": "Weighted Wide-stance Plank with Diagonal Arm Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_WIDE_STANCE_PLANK_WITH_DIAGONAL_LEG_LIFT",
+  "name": "Weighted Wide-stance Plank with Diagonal Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WEIGHTED_WIDE_STANCE_PLANK_WITH_LEG_LIFT",
+  "name": "Weighted Wide-stance Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WIDE_STANCE_PLANK_WITH_DIAGONAL_ARM_LIFT",
+  "name": "Wide-stance Plank with Diagonal Arm Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WIDE_STANCE_PLANK_WITH_DIAGONAL_LEG_LIFT",
+  "name": "Wide-stance Plank with Diagonal Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WIDE_STANCE_PLANK_WITH_LEG_LIFT",
+  "name": "Wide-stance Plank with Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "WIDE_STANCE_PLANK_WITH_OPPOSITE_ARM_AND_LEG_LIFT",
+  "name": "Wide-stance Plank with Opposite Arm and Leg Lift"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "_45_DEGREE_PLANK",
+  "name": "45-degree Plank"
+ },
+ {
+  "category": "PLANK",
+  "exercise": "_90_DEGREE_STATIC_HOLD",
+  "name": "90-degree Static Hold"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "ALTERNATING_JUMP_LUNGE",
+  "name": "Alternating Jump Lunge"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "BARBELL_JUMP_SQUAT",
+  "name": "Barbell Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "BODY_WEIGHT_JUMP_SQUAT",
+  "name": "Body-weight Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "BOX_JUMP",
+  "name": "Box Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "BOX_JUMP_OVERS",
+  "name": "Box Jump Overs"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "BOX_JUMP_OVERS_OVER_THE_BOX",
+  "name": "Box Jump Overs Over the Box"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "CROSS_KNEE_STRIKE",
+  "name": "Cross Knee Strike"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "DEPTH_JUMP",
+  "name": "Depth Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "DUMBBELL_JUMP_SQUAT",
+  "name": "Dumbbell Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "DUMBBELL_SPLIT_JUMP",
+  "name": "Dumbbell Split Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "FRONT_KNEE_STRIKE",
+  "name": "Front Knee Strike"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "HIGH_BOX_JUMP",
+  "name": "High Box Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "ISOMETRIC_EXPLOSIVE_BODY_WEIGHT_JUMP_SQUAT",
+  "name": "Isometric-explosive Body-weight Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "JUMP_SQUAT",
+  "name": "Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "LATERAL_LEAP_AND_HOP",
+  "name": "Lateral Leap and Hop"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "LATERAL_PLYO_SQUATS",
+  "name": "Lateral Plyo Squats"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "LATERAL_SLIDE",
+  "name": "Lateral Slide"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "MEDICINE_BALL_OVERHEAD_THROWS",
+  "name": "Medicine Ball Overhead Throws"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "MEDICINE_BALL_SIDE_THROW",
+  "name": "Medicine Ball Side Throw"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "MEDICINE_BALL_SLAM",
+  "name": "Medicine Ball Slam"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "PLYO",
+  "name": "Plyo"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "SIDE_TO_SIDE_MEDICINE_BALL_THROWS",
+  "name": "Side-to-Side Medicine Ball Throws"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "SIDE_TO_SIDE_SHUFFLE_JUMP",
+  "name": "Side-to-Side Shuffle Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "SQUAT_JUMPS_IN_AND_OUT",
+  "name": "Squat Jumps In and Out"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "SQUAT_JUMP_ONTO_BOX",
+  "name": "Squat Jump Onto Box"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "STAR_JUMP_SQUATS",
+  "name": "Star Jump Squats"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_ALTERNATING_JUMP_LUNGE",
+  "name": "Weighted Alternating Jump Lunge"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_CROSS_KNEE_STRIKE",
+  "name": "Weighted Cross Knee Strike"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_DEPTH_JUMP",
+  "name": "Weighted Depth Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_FRONT_KNEE_STRIKE",
+  "name": "Weighted Front Knee Strike"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_HIGH_BOX_JUMP",
+  "name": "Weighted High Box Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_ISOMETRIC_EXPLOSIVE_JUMP_SQUAT",
+  "name": "Weighted Isometric-explosive Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_JUMP_SQUAT",
+  "name": "Weighted Jump Squat"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_LATERAL_LEAP_AND_HOP",
+  "name": "Weighted Lateral Leap and Hop"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_LATERAL_PLYO_SQUATS",
+  "name": "Weighted Lateral Plyo Squats"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_LATERAL_SLIDE",
+  "name": "Weighted Lateral Slide"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_SIDE_TO_SIDE_SHUFFLE_JUMP",
+  "name": "Weighted Side-to-Side Shuffle Jump"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_SQUAT_JUMPS_IN_AND_OUT",
+  "name": "Weighted Squat Jumps In and Out"
+ },
+ {
+  "category": "PLYO",
+  "exercise": "WEIGHTED_SQUAT_JUMP_ONTO_BOX",
+  "name": "Weighted Squat Jump Onto Box"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "BANDED_PULL_UPS",
+  "name": "Banded Pull-ups (Progression)"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "BAND_ASSISTED_CHIN_UP",
+  "name": "Band-assisted Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "BAND_ASSISTED_PULL_UP",
+  "name": "Band-assisted Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "BURPEE_PULL_UP",
+  "name": "Burpee Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "CHIN_UP",
+  "name": "Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "CLOSE_GRIP_CHIN_UP",
+  "name": "Close-grip Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "CLOSE_GRIP_LAT_PULLDOWN",
+  "name": "Close-grip Lat Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "CROSSOVER_CHIN_UP",
+  "name": "Crossover Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "EZ_BAR_PULLOVER",
+  "name": "EZ-Bar Pull-over"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "HANGING_HURDLE",
+  "name": "Hanging Hurdle"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "JUMPING_PULL_UPS",
+  "name": "Jumping Pull-ups"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "KIPPING_PULL_UP",
+  "name": "Kipping Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "KNEELING_LAT_PULLDOWN",
+  "name": "Kneeling Lat Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "KNEELING_UNDERHAND_GRIP_LAT_PULLDOWN",
+  "name": "Kneeling Underhand-grip Lat Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "LAT_PULLDOWN",
+  "name": "Lat Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "L_PULL_UP",
+  "name": "L Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "MIXED_GRIP_CHIN_UP",
+  "name": "Mixed-grip Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "MIXED_GRIP_PULL_UP",
+  "name": "Mixed-grip Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "NEUTRAL_GRIP_CHIN_UP",
+  "name": "Neutral-grip Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "NEUTRAL_GRIP_PULL_UP",
+  "name": "Neutral-grip Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "PULL_UP",
+  "name": "Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "REVERSE_GRIP_PULLDOWN",
+  "name": "Reverse-grip Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "STANDING_CABLE_PULLOVER",
+  "name": "Standing Cable Pull-over"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "STRAIGHT_ARM_PULLDOWN",
+  "name": "Straight-arm Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "SUSPENDED_CHIN_UP",
+  "name": "Suspended Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "SWISS_BALL_EZ_BAR_PULLOVER",
+  "name": "Swiss Ball EZ-Bar Pull-over"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "TOWEL_PULL_UP",
+  "name": "Towel Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_BURPEE_PULL_UP",
+  "name": "Weighted Burpee Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_CHIN_UP",
+  "name": "Weighted Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_CLOSE_GRIP_CHIN_UP",
+  "name": "Weighted Close-grip Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_CROSSOVER_CHIN_UP",
+  "name": "Weighted Crossover Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_HANGING_HURDLE",
+  "name": "Weighted Hanging Hurdle"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_JUMPING_PULL_UPS",
+  "name": "Weighted Jumping Pull-ups"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_KIPPING_PULL_UP",
+  "name": "Weighted Kipping Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_L_PULL_UP",
+  "name": "Weighted L Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_MIXED_GRIP_CHIN_UP",
+  "name": "Weighted Mixed-grip Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_MIXED_GRIP_PULL_UP",
+  "name": "Weighted Mixed-grip Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_NEUTRAL_GRIP_CHIN_UP",
+  "name": "Weighted Neutral-grip Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_NEUTRAL_GRIP_PULL_UP",
+  "name": "Weighted Neutral-grip Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_PULL_UP",
+  "name": "Weighted Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_SUSPENDED_CHIN_UP",
+  "name": "Weighted Suspended Chin-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_TOWEL_PULL_UP",
+  "name": "Weighted Towel Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WEIGHTED_WIDE_GRIP_PULL_UP",
+  "name": "Weighted Wide-grip Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WIDE_GRIP_LAT_PULLDOWN",
+  "name": "Wide-grip Lat Pull-down"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "WIDE_GRIP_PULL_UP",
+  "name": "Wide-grip Pull-up"
+ },
+ {
+  "category": "PULL_UP",
+  "exercise": "_30_DEGREE_LAT_PULLDOWN",
+  "name": "30-degree Lat Pull-down"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "ALTERNATING_HANDS_MEDICINE_BALL_PUSH_UP",
+  "name": "Alternating-hands Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "ALTERNATING_STAGGERED_PUSH_UP",
+  "name": "Alternating Staggered Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "BICEPS_PUSH_UP",
+  "name": "Biceps Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "BOSU_BALL_PUSH_UP",
+  "name": "Push-up on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "CHEST_PRESS_WITH_BAND",
+  "name": "Chest Press with Band"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "CLAPPING_PUSH_UP",
+  "name": "Clapping Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "CLOSE_GRIP_MEDICINE_BALL_PUSH_UP",
+  "name": "Close-grip Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "CLOSE_HANDS_PUSH_UP",
+  "name": "Close-hands Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "DECLINE_PUSH_UP",
+  "name": "Decline Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "DIAMOND_PUSH_UP",
+  "name": "Diamond Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "DYNAMIC_PUSH_UP",
+  "name": "Dynamic Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "EXPLOSIVE_CROSSOVER_PUSH_UP",
+  "name": "Explosive Crossover Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "EXPLOSIVE_PUSH_UP",
+  "name": "Explosive Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "FEET_ELEVATED_SIDE_TO_SIDE_PUSH_UP",
+  "name": "Feet-elevated Side-to-Side Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "HANDSTAND_PUSH_UP",
+  "name": "Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "HAND_RELEASE_PUSH_UP",
+  "name": "Hand Release Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "HINDU_PUSH_UP",
+  "name": "Hindu Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "INCLINE_PUSH_UP",
+  "name": "Incline Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "ISOMETRIC_EXPLOSIVE_PUSH_UP",
+  "name": "Isometric-explosive Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "JUDO_PUSH_UP",
+  "name": "Judo Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "KIPPING_HANDSTAND_PUSH_UP",
+  "name": "Kipping Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "KIPPING_PARALLETTE_HANDSTAND_PUSH_UP",
+  "name": "Kipping Parallette Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "KNEELING_PUSH_UP",
+  "name": "Kneeling Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "MEDICINE_BALL_CHEST_PASS",
+  "name": "Medicine Ball Chest Pass"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "MEDICINE_BALL_PUSH_UP",
+  "name": "Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "ONE_ARM_PUSH_UP",
+  "name": "One-arm Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PARALLETTE_HANDSTAND_PUSH_UP",
+  "name": "Parallette Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PIKE_PUSH_UP",
+  "name": "Pike Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PUSH_UP",
+  "name": "Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PUSH_UP_AND_ROW",
+  "name": "Push-up and Row"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PUSH_UP_PLUS",
+  "name": "Push-up Plus"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PUSH_UP_WITH_FEET_ON_SWISS_BALL",
+  "name": "Push-up with Feet on Swiss Ball"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "PUSH_UP_WITH_ONE_HAND_ON_MEDICINE_BALL",
+  "name": "Push-up with One Hand on Medicine Ball"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "RING_HANDSTAND_PUSH_UP",
+  "name": "Ring Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "RING_PUSH_UP",
+  "name": "Ring Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SHOULDER_PUSH_UP",
+  "name": "Shoulder Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SHOULDER_TAPPING_PUSH_UP",
+  "name": "Shoulder Tapping Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SINGLE_ARM_MEDICINE_BALL_PUSH_UP",
+  "name": "Single-arm Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SPIDERMAN_PUSH_UP",
+  "name": "Spiderman Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "STACKED_FEET_PUSH_UP",
+  "name": "Stacked-feet Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "STAGGERED_HANDS_PUSH_UP",
+  "name": "Staggered-hands Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SUSPENDED_PUSH_UP",
+  "name": "Suspended Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SWISS_BALL_PUSH_UP",
+  "name": "Swiss Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "SWISS_BALL_PUSH_UP_PLUS",
+  "name": "Swiss Ball Push-up Plus"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "TRIPLE_STOP_PUSH_UP",
+  "name": "Triple-stop Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "T_PUSH_UP",
+  "name": "T Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_ALTERNATING_HANDS_MEDICINE_BALL_PUSH_UP",
+  "name": "Weighted Alternating-hands Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_ALTERNATING_STAGGERED_PUSH_UP",
+  "name": "Weighted Alternating Staggered Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_BICEPS_PUSH_UP",
+  "name": "Weighted Biceps Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_BOSU_BALL_PUSH_UP",
+  "name": "Weighted Push-up on Bosu\u00c2\u00ae Balance Trainer"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_CLAPPING_PUSH_UP",
+  "name": "Weighted Clapping Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_CLOSE_GRIP_MEDICINE_BALL_PUSH_UP",
+  "name": "Weighted Close-grip Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_CLOSE_HANDS_PUSH_UP",
+  "name": "Weighted Close-hands Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_DECLINE_PUSH_UP",
+  "name": "Weighted Decline Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_DIAMOND_PUSH_UP",
+  "name": "Weighted Diamond Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_EXPLOSIVE_CROSSOVER_PUSH_UP",
+  "name": "Weighted Explosive Crossover Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_EXPLOSIVE_PUSH_UP",
+  "name": "Weighted Explosive Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_FEET_ELEVATED_SIDE_TO_SIDE_PUSH_UP",
+  "name": "Weighted Feet-elevated Side-to-Side Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_HANDSTAND_PUSH_UP",
+  "name": "Weighted Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_HAND_RELEASE_PUSH_UP",
+  "name": "Weighted Hand Release Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_HINDU_PUSH_UP",
+  "name": "Weighted Hindu Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_INCLINE_PUSH_UP",
+  "name": "Weighted Incline Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_ISOMETRIC_EXPLOSIVE_PUSH_UP",
+  "name": "Weighted Isometric-explosive Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_JUDO_PUSH_UP",
+  "name": "Weighted Judo Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_KNEELING_PUSH_UP",
+  "name": "Weighted Kneeling Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_MEDICINE_BALL_PUSH_UP",
+  "name": "Weighted Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_ONE_ARM_PUSH_UP",
+  "name": "Weighted One-arm Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PARALLETTE_HANDSTAND_PUSH_UP",
+  "name": "Weighted Parallette Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PIKE_PUSH_UP",
+  "name": "Weighted Pike Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PUSH_UP",
+  "name": "Weighted Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PUSH_UP_AND_ROW",
+  "name": "Weighted Push-up and Row"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PUSH_UP_PLUS",
+  "name": "Weighted Push-up Plus"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PUSH_UP_WITH_FEET_ON_SWISS_BALL",
+  "name": "Weighted Push-up with Feet on Swiss Ball"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_PUSH_UP_WITH_ONE_HAND_ON_MEDICINE_BALL",
+  "name": "Weighted Push-up with One Hand on Medicine Ball"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_RING_HANDSTAND_PUSH_UP",
+  "name": "Weighted Ring Handstand Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_RING_PUSH_UP",
+  "name": "Weighted Ring Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_SHOULDER_PUSH_UP",
+  "name": "Weighted Shoulder Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_SINGLE_ARM_MEDICINE_BALL_PUSH_UP",
+  "name": "Weighted Single-arm Medicine Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_SPIDERMAN_PUSH_UP",
+  "name": "Weighted Spiderman Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_STACKED_FEET_PUSH_UP",
+  "name": "Weighted Stacked-feet Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_STAGGERED_HANDS_PUSH_UP",
+  "name": "Weighted Staggered-hands Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_SUSPENDED_PUSH_UP",
+  "name": "Weighted Suspended Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_SWISS_BALL_PUSH_UP",
+  "name": "Weighted Swiss Ball Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_SWISS_BALL_PUSH_UP_PLUS",
+  "name": "Weighted Swiss Ball Push-up Plus"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_TRIPLE_STOP_PUSH_UP",
+  "name": "Weighted Triple-stop Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_T_PUSH_UP",
+  "name": "Weighted T Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WEIGHTED_WIDE_HANDS_PUSH_UP",
+  "name": "Weighted Wide-hands Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WIDE_GRIP_PUSH_UP",
+  "name": "Wide-grip Push-up"
+ },
+ {
+  "category": "PUSH_UP",
+  "exercise": "WIDE_HANDS_PUSH_UP",
+  "name": "Wide-hands Push-up"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ALTERNATING_DUMBBELL_ROW",
+  "name": "Alternating Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "BANDED_FACE_PULLS",
+  "name": "Banded Face Pulls"
+ },
+ {
+  "category": "ROW",
+  "exercise": "BARBELL_ROW",
+  "name": "Barbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "BARBELL_STRAIGHT_LEG_DEADLIFT_TO_ROW",
+  "name": "Barbell Straight-leg Deadlift to Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "BENT_OVER_ROW_WITH_BARBELL",
+  "name": "Bent-over Row with Barbell"
+ },
+ {
+  "category": "ROW",
+  "exercise": "BENT_OVER_ROW_WITH_DUMBELL",
+  "name": "Bent-over Row with Dumbbell"
+ },
+ {
+  "category": "ROW",
+  "exercise": "CABLE_ROW_STANDING",
+  "name": "Cable Row Standing"
+ },
+ {
+  "category": "ROW",
+  "exercise": "CHEST_SUPPORTED_DUMBBELL_ROW",
+  "name": "Chest Supported Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "DECLINE_RING_ROW",
+  "name": "Decline Ring Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "DUMBBELL_ROW",
+  "name": "Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ELEVATED_FEET_INVERTED_ROW",
+  "name": "Elevated-feet Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ELEVATED_RING_ROW",
+  "name": "Elevated Ring Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "FACE_PULL",
+  "name": "Face Pull"
+ },
+ {
+  "category": "ROW",
+  "exercise": "FACE_PULL_WITH_EXTERNAL_ROTATION",
+  "name": "Face Pull with External Rotation"
+ },
+ {
+  "category": "ROW",
+  "exercise": "INDOOR_ROW",
+  "name": "Rowing Machine"
+ },
+ {
+  "category": "ROW",
+  "exercise": "INVERTED_ROW",
+  "name": "Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "INVERTED_ROW_WITH_FEET_ON_SWISS_BALL",
+  "name": "Inverted Row with Feet on Swiss Ball"
+ },
+ {
+  "category": "ROW",
+  "exercise": "KETTLEBELL_ROW",
+  "name": "Kettlebell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "MODIFIED_INVERTED_ROW",
+  "name": "Modified Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "NEUTRAL_GRIP_ALTERNATING_DUMBBELL_ROW",
+  "name": "Neutral-grip Alternating Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ONE_ARM_BENT_OVER_ROW",
+  "name": "One-arm Bent-over Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ONE_LEGGED_DUMBBELL_ROW",
+  "name": "One-legged Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "RENEGADE_ROW",
+  "name": "Renegade Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "REVERSE_GRIP_BARBELL_ROW",
+  "name": "Reverse-grip Barbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "RING_ROW",
+  "name": "Ring Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ROPE_HANDLE_CABLE_ROW",
+  "name": "Rope-handle Cable Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "ROW",
+  "name": "Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SEATED_CABLE_ROW",
+  "name": "Seated Cable Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SEATED_DUMBBELL_ROW",
+  "name": "Seated Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SEATED_UNDERHAND_GRIP_CABLE_ROW",
+  "name": "Seated Underhand-grip Cable Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SINGLE_ARM_CABLE_ROW",
+  "name": "Single-arm Cable Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SINGLE_ARM_CABLE_ROW_AND_ROTATION",
+  "name": "Single-arm Cable Row and Rotation"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SINGLE_ARM_INVERTED_ROW",
+  "name": "Single-arm Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SINGLE_ARM_NEUTRAL_GRIP_DUMBBELL_ROW",
+  "name": "Single-arm Neutral-grip Dumbbell Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SINGLE_ARM_NEUTRAL_GRIP_DUMBBELL_ROW_AND_ROTATION",
+  "name": "Single-arm Neutral-grip Dumbbell Row and Rotation"
+ },
+ {
+  "category": "ROW",
+  "exercise": "SUSPENDED_INVERTED_ROW",
+  "name": "Suspended Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "TOWEL_GRIP_INVERTED_ROW",
+  "name": "Towel-grip Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "TRX_INVERTED_ROW",
+  "name": "TRX Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "T_BAR_ROW",
+  "name": "T-Bar Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "UNDERHAND_GRIP_CABLE_ROW",
+  "name": "Underhand-grip Cable Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "V_GRIP_CABLE_ROW",
+  "name": "V-grip Cable Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_ELEVATED_FEET_INVERTED_ROW",
+  "name": "Weighted Elevated-feet Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_INVERTED_ROW",
+  "name": "Weighted Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_INVERTED_ROW_WITH_FEET_ON_SWISS_BALL",
+  "name": "Weighted Inverted Row with Feet on Swiss Ball"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_MODIFIED_INVERTED_ROW",
+  "name": "Weighted Modified Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_ROW",
+  "name": "Weighted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_SINGLE_ARM_INVERTED_ROW",
+  "name": "Weighted Single-arm Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_SUSPENDED_INVERTED_ROW",
+  "name": "Weighted Suspended Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_TOWEL_GRIP_INVERTED_ROW",
+  "name": "Weighted Towel-grip Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WEIGHTED_TRX_INVERTED_ROW",
+  "name": "Weighted TRX Inverted Row"
+ },
+ {
+  "category": "ROW",
+  "exercise": "WIDE_GRIP_SEATED_CABLE_ROW",
+  "name": "Wide-grip Seated Cable Row"
+ },
+ {
+  "category": "RUN",
+  "exercise": "JOG",
+  "name": "Jog"
+ },
+ {
+  "category": "RUN",
+  "exercise": "RUN",
+  "name": "Run"
+ },
+ {
+  "category": "RUN",
+  "exercise": "RUN_OR_WALK",
+  "name": "Run or Walk"
+ },
+ {
+  "category": "RUN",
+  "exercise": "SPRINT",
+  "name": "Sprint"
+ },
+ {
+  "category": "RUN",
+  "exercise": "WALK",
+  "name": "Walk"
+ },
+ {
+  "category": "RUN_INDOOR",
+  "exercise": "INDOOR_TRACK_RUN",
+  "name": "Indoor Track Run"
+ },
+ {
+  "category": "RUN_INDOOR",
+  "exercise": "RUN_INDOOR",
+  "name": "Run Indoor"
+ },
+ {
+  "category": "RUN_INDOOR",
+  "exercise": "TREADMILL",
+  "name": "Treadmill"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "AROUND_THE_WORLD",
+  "name": "Sandbag Around the World"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "BACK_SQUAT",
+  "name": "Sandbag Back Squat"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "BEAR_CRAWL_PULL_THROUGH",
+  "name": "Sandbag Bear Crawl Pull-through"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "BEAR_HUG_SQUAT",
+  "name": "Sandbag Bear Hug Squat"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "CLEAN",
+  "name": "Sandbag Clean"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "CLEAN_AND_PRESS",
+  "name": "Sandbag Clean and Press"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "CURL",
+  "name": "Sandbag Curl"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "FRONT_CARRY",
+  "name": "Sandbag Front Carry"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "FRONT_SQUAT",
+  "name": "Sandbag Front Squat"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "LUNGE",
+  "name": "Sandbag Lunge"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "OVERHEAD_PRESS",
+  "name": "Sandbag Overhead Press"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "PLANK_PULL_THROUGH",
+  "name": "Sandbag Plank Pull-through"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "ROTATIONAL_LUNGE",
+  "name": "Sandbag Rotational Lunge"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "ROW",
+  "name": "Sandbag Row"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "RUSSIAN_TWIST",
+  "name": "Sandbag Russian Twist"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "SANDBAG",
+  "name": "Sandbag"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "SHOULDERING",
+  "name": "Sandbag Shouldering"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "SHOVELING",
+  "name": "Sandbag Shoveling"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "SIDE_LUNGE",
+  "name": "Sandbag Side Lunge"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "SPRINT",
+  "name": "Sandbag Sprint"
+ },
+ {
+  "category": "SANDBAG",
+  "exercise": "ZERCHER_SQUAT",
+  "name": "Sandbag Zercher Squat"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "ALTERNATING_DUMBBELL_SHOULDER_PRESS",
+  "name": "Alternating Dumbbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "ARNOLD_PRESS",
+  "name": "Arnold Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "BARBELL_FRONT_SQUAT_TO_PUSH_PRESS",
+  "name": "Barbell Front Squat to Push Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "BARBELL_PUSH_PRESS",
+  "name": "Barbell Push Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "BARBELL_SHOULDER_PRESS",
+  "name": "Barbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "DEAD_CURL_PRESS",
+  "name": "Dead-curl Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "DUMBBELL_ALTERNATING_SHOULDER_PRESS_AND_TWIST",
+  "name": "Dumbbell Alternating Shoulder Press and Twist"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "DUMBBELL_FRONT_RAISE",
+  "name": "Dumbbell Front Raise"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "DUMBBELL_HAMMER_CURL_TO_LUNGE_TO_PRESS",
+  "name": "Dumbbell Hammer Curl to Lunge to Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "DUMBBELL_PUSH_PRESS",
+  "name": "Dumbbell Push Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "DUMBBELL_SHOULDER_PRESS",
+  "name": "Dumbbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "FLOOR_INVERTED_SHOULDER_PRESS",
+  "name": "Floor Inverted Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "INVERTED_SHOULDER_PRESS",
+  "name": "Inverted Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "MILITARY_PRESS",
+  "name": "Military Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "ONE_ARM_PUSH_PRESS",
+  "name": "One-arm Push Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "OVERHEAD_BARBELL_PRESS",
+  "name": "Barbell Overhead Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "OVERHEAD_DUMBBELL_PRESS",
+  "name": "Overhead Dumbbell Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SEATED_BARBELL_SHOULDER_PRESS",
+  "name": "Seated Barbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SEATED_DUMBBELL_SHOULDER_PRESS",
+  "name": "Seated Dumbbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SHOULDER_PRESS",
+  "name": "Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SINGLE_ARM_DUMBBELL_SHOULDER_PRESS",
+  "name": "Single-arm Dumbbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SINGLE_ARM_STEP_UP_AND_PRESS",
+  "name": "Single-arm Step-up and Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SMITH_MACHINE_OVERHEAD_PRESS",
+  "name": "Smith Machine Overhead Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SPLIT_STANCE_HAMMER_CURL_TO_PRESS",
+  "name": "Split-stance Hammer Curl to Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "STRICT_PRESS",
+  "name": "Strict Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "SWISS_BALL_DUMBBELL_SHOULDER_PRESS",
+  "name": "Swiss Ball Dumbbell Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "WEIGHTED_FLOOR_INVERTED_SHOULDER_PRESS",
+  "name": "Weighted Floor Inverted Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "WEIGHTED_INVERTED_SHOULDER_PRESS",
+  "name": "Weighted Inverted Shoulder Press"
+ },
+ {
+  "category": "SHOULDER_PRESS",
+  "exercise": "WEIGHT_PLATE_FRONT_RAISE",
+  "name": "Weight-plate Front Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "BAND_EXTERNAL_ROTATION",
+  "name": "Band External Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "BAND_INTERNAL_ROTATION",
+  "name": "Band Internal Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "BENT_ARM_LATERAL_RAISE_AND_EXTERNAL_ROTATION",
+  "name": "Bent-arm Lateral Raise and External Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "CABLE_EXTERNAL_ROTATION",
+  "name": "Cable External Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "CABLE_INTERNAL_ROTATION",
+  "name": "Cable Internal Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "DUMBBELL_FACE_PULL_WITH_EXTERNAL_ROTATION",
+  "name": "Dumbbell Face Pull with External Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "FLOOR_I_RAISE",
+  "name": "Floor I Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "FLOOR_T_RAISE",
+  "name": "Floor T Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "FLOOR_Y_RAISE",
+  "name": "Floor Y Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "INCLINE_I_RAISE",
+  "name": "Incline I Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "INCLINE_L_RAISE",
+  "name": "Incline L Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "INCLINE_T_RAISE",
+  "name": "Incline T Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "INCLINE_W_RAISE",
+  "name": "Incline W Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "INCLINE_Y_RAISE",
+  "name": "Incline Y Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "LYING_EXTERNAL_ROTATION",
+  "name": "Lying External Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "LYING_INTERNAL_ROTATION",
+  "name": "Lying Internal Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SEATED_DUMBBELL_EXTERNAL_ROTATION",
+  "name": "Seated Dumbbell External Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SEATED_DUMBBELL_INTERNAL_ROTATION",
+  "name": "Seated Dumbbell Internal Rotation"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SHOULDER_STABILITY",
+  "name": "Shoulder Stability"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "STANDING_L_RAISE",
+  "name": "Standing L Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SWISS_BALL_I_RAISE",
+  "name": "Swiss Ball I Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SWISS_BALL_T_RAISE",
+  "name": "Swiss Ball T Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SWISS_BALL_W_RAISE",
+  "name": "Swiss Ball W Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "SWISS_BALL_Y_RAISE",
+  "name": "Swiss Ball Y Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_FLOOR_I_RAISE",
+  "name": "Weighted Floor I Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_FLOOR_T_RAISE",
+  "name": "Weighted Floor T Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_FLOOR_Y_RAISE",
+  "name": "Weighted Floor Y Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_INCLINE_I_RAISE",
+  "name": "Weighted Incline I Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_INCLINE_L_RAISE",
+  "name": "Weighted Incline L Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_INCLINE_T_RAISE",
+  "name": "Weighted Incline T Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_INCLINE_W_RAISE",
+  "name": "Weighted Incline W Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_INCLINE_Y_RAISE",
+  "name": "Weighted Incline Y Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_SWISS_BALL_I_RAISE",
+  "name": "Weighted Swiss Ball I Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_SWISS_BALL_T_RAISE",
+  "name": "Weighted Swiss Ball T Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_SWISS_BALL_W_RAISE",
+  "name": "Weighted Swiss Ball W Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "WEIGHTED_SWISS_BALL_Y_RAISE",
+  "name": "Weighted Swiss Ball Y Raise"
+ },
+ {
+  "category": "SHOULDER_STABILITY",
+  "exercise": "_90_DEGREE_CABLE_EXTERNAL_ROTATION",
+  "name": "90-degree Cable External Rotation"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "BARBELL_JUMP_SHRUG",
+  "name": "Barbell Jump Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "BARBELL_SHRUG",
+  "name": "Barbell Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "BARBELL_UPRIGHT_ROW",
+  "name": "Barbell Upright Row"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "BEHIND_THE_BACK_SHRUG",
+  "name": "Behind-the-Back Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "BEHIND_THE_BACK_SMITH_MACHINE_SHRUG",
+  "name": "Behind-the-Back Smith Machine Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "DUMBBELL_JUMP_SHRUG",
+  "name": "Dumbbell Jump Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "DUMBBELL_SHRUG",
+  "name": "Dumbbell Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "DUMBBELL_UPRIGHT_ROW",
+  "name": "Dumbbell Upright Row"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "INCLINE_DUMBBELL_SHRUG",
+  "name": "Incline Dumbbell Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "OVERHEAD_BARBELL_SHRUG",
+  "name": "Overhead Barbell Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "OVERHEAD_DUMBBELL_SHRUG",
+  "name": "Overhead Dumbbell Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "SCAPTION_AND_SHRUG",
+  "name": "Scaption and Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "SCAPULAR_RETRACTION",
+  "name": "Scapular Retraction"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "SERRATUS_CHAIR_SHRUG",
+  "name": "Serratus Chair Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "SERRATUS_SHRUG",
+  "name": "Serratus Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "SHRUG",
+  "name": "Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "UPRIGHT_ROW",
+  "name": "Upright Row"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "WEIGHTED_SERRATUS_CHAIR_SHRUG",
+  "name": "Weighted Serratus Chair Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "WEIGHTED_SERRATUS_SHRUG",
+  "name": "Weighted Serratus Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "WIDE_GRIP_BARBELL_SHRUG",
+  "name": "Wide-grip Barbell Shrug"
+ },
+ {
+  "category": "SHRUG",
+  "exercise": "WIDE_GRIP_JUMP_SHRUG",
+  "name": "Wide-grip Jump Shrug"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "ALTERNATING_SIT_UP",
+  "name": "Alternating Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "BENT_KNEE_V_UP",
+  "name": "Bent-knee V-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "BUTTERFLY_SIT_UP",
+  "name": "Butterfly Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "CROSSED_ARMS_SIT_UP",
+  "name": "Crossed-arms Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "CROSS_PUNCH_ROLL_UP",
+  "name": "Cross Punch Roll-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "GET_UP_SIT_UP",
+  "name": "Get-up Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "GHD_SIT_UPS",
+  "name": "GHD Sit-ups"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "HOVERING_SIT_UP",
+  "name": "Hovering Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "KETTLEBELL_SIT_UP",
+  "name": "Kettlebell Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "MEDICINE_BALL_ALTERNATING_V_UP",
+  "name": "Medicine Ball Alternating V-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "MEDICINE_BALL_SIT_UP",
+  "name": "Medicine Ball Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "MEDICINE_BALL_V_UP",
+  "name": "Medicine Ball V-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "MODIFIED_SIT_UP",
+  "name": "Modified Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "NEGATIVE_SIT_UP",
+  "name": "Negative Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "ONE_ARM_FULL_SIT_UP",
+  "name": "One-arm Full Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "RECLINING_CIRCLE",
+  "name": "Reclining Circle"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "REVERSE_CURL_UP",
+  "name": "Reverse Curl-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "RUSSIAN_TWIST_ON_SWISS_BALL",
+  "name": "Russian Twist on Swiss Ball"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "SINGLE_LEG_SWISS_BALL_JACKKNIFE",
+  "name": "Single-leg Swiss Ball Jackknife"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "SIT_UP",
+  "name": "Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "SIT_UP_TURKISH_GET_UP",
+  "name": "Sit-up Turkish Get-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "THE_TEASER",
+  "name": "The Teaser"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "THE_TEASER_WEIGHTED",
+  "name": "The Teaser, Weighted"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "THREE_PART_ROLL_DOWN",
+  "name": "Three-part Roll-down"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "V_UP",
+  "name": "V-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_ALTERNATING_SIT_UP",
+  "name": "Weighted Alternating Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_BENT_KNEE_V_UP",
+  "name": "Weighted Bent-knee V-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_BUTTERFLY_SITUP",
+  "name": "Weighted Butterfly Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_CROSSED_ARMS_SIT_UP",
+  "name": "Weighted Crossed-arms Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_CROSS_PUNCH_ROLL_UP",
+  "name": "Weighted Cross Punch Roll-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_GET_UP_SIT_UP",
+  "name": "Weighted Get-up Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_HOVERING_SIT_UP",
+  "name": "Weighted Hovering Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_RECLINING_CIRCLE",
+  "name": "Weighted Reclining Circle"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_REVERSE_CURL_UP",
+  "name": "Weighted Reverse Curl-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_RUSSIAN_TWIST_ON_SWISS_BALL",
+  "name": "Weighted Russian Twist on Swiss Ball"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_SINGLE_LEG_SWISS_BALL_JACKKNIFE",
+  "name": "Weighted Single-leg Swiss Ball Jackknife"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_SIT_UP",
+  "name": "Weighted Sit-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_THREE_PART_ROLL_DOWN",
+  "name": "Weighted Three-part Roll-down"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_V_UP",
+  "name": "Weighted V-up"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "WEIGHTED_X_ABS",
+  "name": "Weighted X Abs"
+ },
+ {
+  "category": "SIT_UP",
+  "exercise": "X_ABS",
+  "name": "X Abs"
+ },
+ {
+  "category": "SLED",
+  "exercise": "BACKWARD_DRAG",
+  "name": "Sled Backward Drag"
+ },
+ {
+  "category": "SLED",
+  "exercise": "CHEST_PRESS",
+  "name": "Sled Chest Press"
+ },
+ {
+  "category": "SLED",
+  "exercise": "FORWARD_DRAG",
+  "name": "Sled Forward Drag"
+ },
+ {
+  "category": "SLED",
+  "exercise": "LOW_PUSH",
+  "name": "Sled Low Push"
+ },
+ {
+  "category": "SLED",
+  "exercise": "PUSH",
+  "name": "Sled Push"
+ },
+ {
+  "category": "SLED",
+  "exercise": "ROW",
+  "name": "Sled Row"
+ },
+ {
+  "category": "SLED",
+  "exercise": "SLED",
+  "name": "Sled"
+ },
+ {
+  "category": "SLEDGE_HAMMER",
+  "exercise": "HAMMER_SLAM",
+  "name": "Sledge Hammer Slam"
+ },
+ {
+  "category": "SLEDGE_HAMMER",
+  "exercise": "LATERAL_SWING",
+  "name": "Sledge Hammer Lateral Swing"
+ },
+ {
+  "category": "SLEDGE_HAMMER",
+  "exercise": "SLEDGE_HAMMER",
+  "name": "Sledge Hammer"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "AIR_SQUAT",
+  "name": "Air Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "ALTERNATING_BOX_DUMBBELL_STEP_UPS",
+  "name": "Alternating Box Dumbbell Step-ups"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BACK_SQUATS",
+  "name": "Back Squats"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BACK_SQUAT_WITH_BODY_BAR",
+  "name": "Back Squat with Body Bar"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BALANCING_SQUAT",
+  "name": "Balancing Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_BACK_SQUAT",
+  "name": "Barbell Back Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_BOX_SQUAT",
+  "name": "Barbell Box Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_FRONT_SQUAT",
+  "name": "Barbell Front Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_HACK_SQUAT",
+  "name": "Barbell Hack Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_HANG_SQUAT_SNATCH",
+  "name": "Barbell Hang Squat Snatch"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_LATERAL_STEP_UP",
+  "name": "Barbell Lateral Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_QUARTER_SQUAT",
+  "name": "Barbell Quarter Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_SIFF_SQUAT",
+  "name": "Barbell Siff Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_SQUAT_SNATCH",
+  "name": "Barbell Squat Snatch"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_SQUAT_WITH_HEELS_RAISED",
+  "name": "Barbell Squat with Heels Raised"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_STEPOVER",
+  "name": "Barbell Step-over"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BARBELL_STEP_UP",
+  "name": "Barbell Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BENCH_SQUAT_WITH_ROTATIONAL_CHOP",
+  "name": "Bench Squat with Rotational Chop"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BODY_WEIGHT_WALL_SQUAT",
+  "name": "Body-weight Wall Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BOX_STEP_SQUAT",
+  "name": "Box Step Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "BRACED_SQUAT",
+  "name": "Braced Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "CROSSED_ARM_BARBELL_FRONT_SQUAT",
+  "name": "Crossed-arm Barbell Front Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "CROSSOVER_DUMBBELL_STEP_UP",
+  "name": "Crossover Dumbbell Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_FRONT_SQUAT",
+  "name": "Dumbbell Front Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_OVERHEAD_SQUAT_SINGLE_ARM",
+  "name": "Dumbbell Overhead Squat Single-arm"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_SPLIT_SQUAT",
+  "name": "Dumbbell Split Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_SQUAT",
+  "name": "Dumbbell Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_SQUAT_CLEAN",
+  "name": "Dumbbell Squat Clean"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_SQUAT_SNATCH",
+  "name": "Dumbbell Squat Snatch"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_STEPOVER",
+  "name": "Dumbbell Step-over"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_STEP_UP",
+  "name": "Dumbbell Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "DUMBBELL_THRUSTERS",
+  "name": "Dumbbell Thrusters"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "ELEVATED_SINGLE_LEG_SQUAT",
+  "name": "Elevated Single-leg Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "FIGURE_FOUR_SQUATS",
+  "name": "Figure Four Squats"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "GOBLET_SQUAT",
+  "name": "Goblet Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "KETTLEBELL_SQUAT",
+  "name": "Kettlebell Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "KETTLEBELL_SWING_OVERHEAD",
+  "name": "Kettlebell Swing Overhead"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "KETTLEBELL_SWING_WITH_FLIP_TO_SQUAT",
+  "name": "Kettlebell Swing with Flip to Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "LATERAL_DUMBBELL_STEP_UP",
+  "name": "Lateral Dumbbell Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "LEG_PRESS",
+  "name": "Leg Press"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "MEDICINE_BALL_SQUAT",
+  "name": "Medicine Ball Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "ONE_LEGGED_SQUAT",
+  "name": "One-legged Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "OVERHEAD_BARBELL_SQUAT",
+  "name": "Overhead Barbell Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "OVERHEAD_DUMBBELL_SQUAT",
+  "name": "Overhead Dumbbell Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "OVERHEAD_SQUAT",
+  "name": "Overhead Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "PARTIAL_SINGLE_LEG_SQUAT",
+  "name": "Partial Single-leg Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "PISTOL_SQUAT",
+  "name": "Pistol Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "PLIE_SLIDES",
+  "name": "Pli\u00c3\u00a9 Slides"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "PLIE_SQUAT",
+  "name": "Pli\u00c3\u00a9 Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "PRISONER_SQUAT",
+  "name": "Prisoner Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SINGLE_LEG_BENCH_GET_UP",
+  "name": "Single-leg Bench Get-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SINGLE_LEG_BENCH_SQUAT",
+  "name": "Single-leg Bench Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SINGLE_LEG_SQUAT_ON_SWISS_BALL",
+  "name": "Single-leg Squat on Swiss Ball"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SQUAT",
+  "name": "Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SQUATS_WITH_BAND",
+  "name": "Squats with Band"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SQUAT_AMERICAN_SWING",
+  "name": "American Swing"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SQUAT_AND_SIDE_KICK",
+  "name": "Squat and Side Kick"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SQUAT_JUMPS_IN_N_OUT",
+  "name": "Squat Jumps In N' Out"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "STAGGERED_SQUAT",
+  "name": "Staggered Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "STEP_UP",
+  "name": "Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SUITCASE_SQUATS",
+  "name": "Suitcase Squats"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SUMO_SQUAT",
+  "name": "Sumo Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SUMO_SQUAT_SLIDE_IN",
+  "name": "Sumo Squat Slide-in"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SUMO_SQUAT_TO_HIGH_PULL",
+  "name": "Sumo Squat to High Pull"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SUMO_SQUAT_TO_STAND",
+  "name": "Sumo Squat to Stand"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SUMO_SQUAT_WITH_ROTATION",
+  "name": "Sumo Squat with Rotation"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "SWISS_BALL_BODY_WEIGHT_WALL_SQUAT",
+  "name": "Swiss Ball Body-weight Wall Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "THRUSTERS",
+  "name": "Thrusters"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "UNEVEN_SQUAT",
+  "name": "Uneven Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WAIST_SLIMMING_SQUAT",
+  "name": "Waist-slimming Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WALL_BALL",
+  "name": "Wall Ball"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WALL_BALL_SQUAT_AND_PRESS",
+  "name": "Wall Ball Squat and Press"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_BACK_SQUATS",
+  "name": "Weighted Back Squats"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_BALANCING_SQUAT",
+  "name": "Weighted Balancing Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_BENCH_SQUAT_WITH_ROTATIONAL_CHOP",
+  "name": "Weighted Bench Squat with Rotational Chop"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_BOX_STEP_SQUAT",
+  "name": "Weighted Box Step Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_ELEVATED_SINGLE_LEG_SQUAT",
+  "name": "Weighted Elevated Single-leg Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_FIGURE_FOUR_SQUATS",
+  "name": "Weighted Figure Four Squats"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_PARTIAL_SINGLE_LEG_SQUAT",
+  "name": "Weighted Partial Single-leg Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_PISTOL_SQUAT",
+  "name": "Weighted Pistol Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_PLIE_SLIDES",
+  "name": "Weighted Pli\u00c3\u00a9 Slides"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_PLIE_SQUAT",
+  "name": "Weighted Pli\u00c3\u00a9 Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_PRISONER_SQUAT",
+  "name": "Weighted Prisoner Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SINGLE_LEG_BENCH_GET_UP",
+  "name": "Weighted Single-leg Bench Get-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SINGLE_LEG_BENCH_SQUAT",
+  "name": "Weighted Single-leg Bench Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SINGLE_LEG_SQUAT_ON_SWISS_BALL",
+  "name": "Weighted Single-leg Squat on Swiss Ball"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SQUAT",
+  "name": "Weighted Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_STAGGERED_SQUAT",
+  "name": "Weighted Staggered Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_STEP_UP",
+  "name": "Weighted Step-up"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SUMO_SQUAT_SLIDE_IN",
+  "name": "Weighted Sumo Squat Slide-in"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SUMO_SQUAT_TO_STAND",
+  "name": "Weighted Sumo Squat to Stand"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SUMO_SQUAT_WITH_ROTATION",
+  "name": "Weighted Sumo Squat with Rotation"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_SWISS_BALL_WALL_SQUAT",
+  "name": "Weighted Swiss Ball Wall Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_UNEVEN_SQUAT",
+  "name": "Weighted Uneven Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WEIGHTED_WALL_SQUAT",
+  "name": "Weighted Wall Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WIDE_STANCE_BARBELL_SQUAT",
+  "name": "Wide-stance Barbell Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "WIDE_STANCE_GOBLET_SQUAT",
+  "name": "Wide-stance Goblet Squat"
+ },
+ {
+  "category": "SQUAT",
+  "exercise": "ZERCHER_SQUAT",
+  "name": "Zercher Squat"
+ },
+ {
+  "category": "STAIR_STEPPER",
+  "exercise": "STAIR_STEPPER",
+  "name": "Stair Stepper"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "CHEST_FLY",
+  "name": "Suspension Chest Fly"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "CHEST_PRESS",
+  "name": "Suspension Chest Press"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "CRUNCH",
+  "name": "Suspension Crunch"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "CURL",
+  "name": "Suspension Curl"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "DIP",
+  "name": "Suspension Dip"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "FACE_PULL",
+  "name": "Suspension Face Pull"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "GLUTE_BRIDGE",
+  "name": "Suspension Glute Bridge"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "HAMSTRING_CURL",
+  "name": "Suspension Hamstring Curl"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "HIP_DROP",
+  "name": "Suspension Hip Drop"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "KNEE_DRIVE_JUMP",
+  "name": "Suspension Knee Drive Jump"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "KNEE_TO_CHEST",
+  "name": "Suspension Knee-to-Chest"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "LAT_PULLOVER",
+  "name": "Suspension Lat Pull-over"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "LUNGE",
+  "name": "Suspension Lunge"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "MOUNTAIN_CLIMBER",
+  "name": "Suspension Mountain Climber"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "PENDULUM",
+  "name": "Suspension Pendulum"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "PIKE",
+  "name": "Suspension Pike"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "PLANK",
+  "name": "Suspension Plank"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "POWER_PULL",
+  "name": "Suspension Power Pull"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "PULL_UP",
+  "name": "Suspension Pull-up"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "PUSH_UP",
+  "name": "Suspension Push-up"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "REVERSE_MOUNTAIN_CLIMBER",
+  "name": "Suspension Reverse Mountain Climber"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "REVERSE_PLANK",
+  "name": "Suspension Reverse Plank"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "ROLLOUT",
+  "name": "Suspension Roll-out"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "ROW",
+  "name": "Suspension Row"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SIDE_LUNGE",
+  "name": "Suspension Side Lunge"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SIDE_PLANK",
+  "name": "Suspension Side Plank"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SINGLE_LEG_DEADLIFT",
+  "name": "Suspension Single-leg Deadlift"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SINGLE_LEG_SQUAT",
+  "name": "Suspension Single-leg Squat"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SIT_UP",
+  "name": "Suspension Sit-up"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SQUAT",
+  "name": "Suspension Squat"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SQUAT_JUMP",
+  "name": "Suspension Squat Jump"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "SUSPENSION",
+  "name": "Suspension"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "TRICEP_PRESS",
+  "name": "Suspension Tricep Press"
+ },
+ {
+  "category": "SUSPENSION",
+  "exercise": "Y_FLY",
+  "name": "Suspension Y Fly"
+ },
+ {
+  "category": "TIRE",
+  "exercise": "FLIP",
+  "name": "Tire Flip"
+ },
+ {
+  "category": "TIRE",
+  "exercise": "TIRE",
+  "name": "Tire"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "BARBELL_BURPEE",
+  "name": "Barbell Burpee"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "BURPEE",
+  "name": "Burpee"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "BURPEE_BOX_JUMP",
+  "name": "Burpee Box Jump"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "BURPEE_BOX_JUMP_OVER",
+  "name": "Burpee Box Jump Over"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "BURPEE_BOX_JUMP_STEP_UP_OVER",
+  "name": "Burpee Box Jump Step-up Over"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "HIGH_PULL_BURPEE",
+  "name": "High Pull Burpee"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "LATERAL_BARBELL_BURPEE",
+  "name": "Lateral Barbell Burpee"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "MAN_MAKERS",
+  "name": "Man Makers"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "ONE_ARM_BURPEE",
+  "name": "One-arm Burpee"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "SQUAT_PLANK_PUSH_UP",
+  "name": "Squat, Plank, Push-up"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "SQUAT_THRUSTS",
+  "name": "Squat Thrusts (Up-downs)"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "STANDING_T_ROTATION_BALANCE",
+  "name": "Standing T-rotation Balance"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "TOTAL_BODY",
+  "name": "Total Body"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "TOTAL_BODY_BURPEE_OVER_BAR",
+  "name": "Total Body Burpee Over Bar"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "WEIGHTED_BURPEE",
+  "name": "Weighted Burpee"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "WEIGHTED_BURPEE_BOX_JUMP",
+  "name": "Weighted Burpee Box Jump"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "WEIGHTED_SQUAT_PLANK_PUSH_UP",
+  "name": "Weighted Squat, Plank, Push-up"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "WEIGHTED_SQUAT_THRUSTS",
+  "name": "Weighted Squat Thrusts (Up-downs)"
+ },
+ {
+  "category": "TOTAL_BODY",
+  "exercise": "WEIGHTED_STANDING_T_ROTATION_BALANCE",
+  "name": "Weighted Standing T-rotation Balance"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "ALTERNATING_DUMBBELL_LYING_TRICEPS_EXTENSION",
+  "name": "Alternating Dumbbell Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "BENCH_DIP",
+  "name": "Bench Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "BODY_WEIGHT_DIP",
+  "name": "Body-weight Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "CABLE_KICKBACK",
+  "name": "Cable Tricep Kick-back"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "CABLE_LYING_TRICEPS_EXTENSION",
+  "name": "Cable Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "CABLE_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Cable Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "DUMBBELL_KICKBACK",
+  "name": "Dumbbell Kick-back"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "DUMBBELL_LYING_TRICEPS_EXTENSION",
+  "name": "Dumbbell Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "EZ_BAR_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "EZ-Bar Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "INCLINE_DIP",
+  "name": "Incline Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "INCLINE_EZ_BAR_LYING_TRICEPS_EXTENSION",
+  "name": "Incline EZ-Bar Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "LYING_DUMBBELL_PULLOVER_TO_EXTENSION",
+  "name": "Lying Dumbbell Pull-over to Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "LYING_EZ_BAR_TRICEPS_EXTENSION",
+  "name": "Lying EZ-Bar Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "LYING_TRICEPS_EXTENSION_TO_CLOSE_GRIP_BENCH_PRESS",
+  "name": "Lying Triceps Extension to Close-grip Bench Press"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "OVERHEAD_DUMBBELL_TRICEPS_EXTENSION",
+  "name": "Overhead Dumbbell Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "RECLINING_TRICEPS_PRESS",
+  "name": "Reclining Triceps Press"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "REVERSE_GRIP_PRESSDOWN",
+  "name": "Reverse-grip Press-down"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "REVERSE_GRIP_TRICEPS_PRESSDOWN",
+  "name": "Reverse-grip Triceps Press-down"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "ROPE_PRESSDOWN",
+  "name": "Rope Press-down"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SEATED_BARBELL_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Seated Barbell Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SEATED_DUMBBELL_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Seated Dumbbell Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SEATED_EZ_BAR_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Seated EZ-Bar Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SEATED_SINGLE_ARM_OVERHEAD_DUMBBELL_EXTENSION",
+  "name": "Seated Single-arm Overhead Dumbbell Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SINGLE_ARM_DUMBBELL_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Single-arm Dumbbell Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SINGLE_DUMBBELL_SEATED_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Single-dumbbell Seated Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SINGLE_LEG_BENCH_DIP_AND_KICK",
+  "name": "Single-leg Bench Dip and Kick"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SINGLE_LEG_DIP",
+  "name": "Single-leg Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "STATIC_LYING_TRICEPS_EXTENSION",
+  "name": "Static Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SUSPENDED_DIP",
+  "name": "Suspended Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SWISS_BALL_DUMBBELL_LYING_TRICEPS_EXTENSION",
+  "name": "Swiss Ball Dumbbell Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SWISS_BALL_EZ_BAR_LYING_TRICEPS_EXTENSION",
+  "name": "Swiss Ball EZ-Bar Lying Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "SWISS_BALL_EZ_BAR_OVERHEAD_TRICEPS_EXTENSION",
+  "name": "Swiss Ball EZ-Bar Overhead Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "TABLETOP_DIP",
+  "name": "Tabletop Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "TRICEPS_EXTENSION",
+  "name": "Triceps Extension"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "TRICEPS_EXTENSION_ON_FLOOR",
+  "name": "Triceps Extension on Floor"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "TRICEPS_PRESS",
+  "name": "Triceps Press"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "TRICEPS_PRESSDOWN",
+  "name": "Triceps Press-down"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_BENCH_DIP",
+  "name": "Weighted Bench Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_DIP",
+  "name": "Weighted Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_INCLINE_DIP",
+  "name": "Weighted Incline Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_SINGLE_LEG_BENCH_DIP_AND_KICK",
+  "name": "Weighted Single-leg Bench Dip and Kick"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_SINGLE_LEG_DIP",
+  "name": "Weighted Single-leg Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_SUSPENDED_DIP",
+  "name": "Weighted Suspended Dip"
+ },
+ {
+  "category": "TRICEPS_EXTENSION",
+  "exercise": "WEIGHTED_TABLETOP_DIP",
+  "name": "Weighted Tabletop Dip"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "ANKLE_CIRCLES",
+  "name": "Ankle Circles"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "ANKLE_DORSIFLEXION_WITH_BAND",
+  "name": "Ankle Dorsiflexion with Band"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "ANKLE_INTERNAL_ROTATION",
+  "name": "Ankle Internal Rotation"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "ARM_CIRCLES",
+  "name": "Arm Circles"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "BENT_OVER_REACH_TO_SKY",
+  "name": "Bent-over Reach to Sky"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "BICEPS_STRETCH",
+  "name": "Biceps Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "CAT_CAMEL",
+  "name": "Cat Camel"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "ELBOW_TO_FOOT_LUNGE",
+  "name": "Elbow-to-Foot Lunge"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "FORWARD_AND_BACKWARD_LEG_SWINGS",
+  "name": "Forward and Backward Leg Swings"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "GLUTES_STRETCH",
+  "name": "Glutes Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "GROINERS",
+  "name": "Groiners"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "INVERTED_HAMSTRING_STRETCH",
+  "name": "Inverted Hamstring Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "LATERAL_DUCK_UNDER",
+  "name": "Lateral Duck Under"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "NECK_ROTATIONS",
+  "name": "Neck Rotations"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "NECK_TILTS",
+  "name": "Neck Tilts"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "OPPOSITE_ARM_AND_LEG_BALANCE",
+  "name": "Opposite Arm and Leg Balance"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "QUADRUPED_ROCKING",
+  "name": "Quadruped Rocking"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "REACH_ROLL_AND_LIFT",
+  "name": "Reach, Roll, and Lift"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SHOULDER_CIRCLES",
+  "name": "Shoulder Circles"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SIDE_TO_SIDE_LEG_SWINGS",
+  "name": "Side-to-Side Leg Swings"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SLEEPER_STRETCH",
+  "name": "Sleeper Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SLIDE_OUT",
+  "name": "Slide Out"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STANDING_HAMSTRING_STRETCH",
+  "name": "Standing Hamstring Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_90_90",
+  "name": "90/90 Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_ABS",
+  "name": "Abs Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_BUTTERFLY",
+  "name": "Butterfly Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_CALF",
+  "name": "Calf Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_CAT_COW",
+  "name": "Cat Cow Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_CHILDS_POSE",
+  "name": "Child's Pose Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_COBRA",
+  "name": "Cobra Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_FOREARMS",
+  "name": "Forearm Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_FORWARD_GLUTES",
+  "name": "Forward Glutes Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_FRONT_SPLIT",
+  "name": "Front Split Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_HAMSTRING",
+  "name": "Hamstring Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_HIP_FLEXOR_AND_QUAD",
+  "name": "Hip Flexor and Quad Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LAT",
+  "name": "Lat Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LEVATOR_SCAPULAE",
+  "name": "Levator Scapulae Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LUNGE_WITH_SPINAL_TWIST",
+  "name": "Lunge with Spinal Twist Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LUNGING_HIP_FLEXOR",
+  "name": "Lunging Hip Flexor Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LYING_ABDUCTION",
+  "name": "Stretch Lying Abduction"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LYING_IT_BAND",
+  "name": "Lying IT Band Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LYING_KNEE_TO_CHEST",
+  "name": "Lying Knee-to-Chest Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LYING_PIRIFORMIS",
+  "name": "Lying Piriformis Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_LYING_SPINAL_TWIST",
+  "name": "Lying Spinal Twist Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_NECK",
+  "name": "Neck Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_OBLIQUES",
+  "name": "Obliques Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_OVER_UNDER_SHOULDER",
+  "name": "Over-under Shoulder Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_PECTORAL",
+  "name": "Pectoral Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_PIGEON_POSE",
+  "name": "Pigeon Pose Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_PIRIFORMIS",
+  "name": "Piriformis Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_QUAD",
+  "name": "Quad Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_SCORPION",
+  "name": "Scorpion Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_SHOULDER",
+  "name": "Shoulder Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_SIDE",
+  "name": "Side Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_SIDE_LUNGE",
+  "name": "Side Lunge Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_SIDE_SPLIT",
+  "name": "Side Split Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_STANDING_IT_BAND",
+  "name": "Standing IT Band Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_STRADDLE",
+  "name": "Straddle Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_TRICEPS",
+  "name": "Triceps Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "STRETCH_WALL_CHEST_AND_SHOULDER",
+  "name": "Wall Chest and Shoulder Stretch"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SWISS_BALL_HIP_CROSSOVER",
+  "name": "Swiss Ball Hip Crossover"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SWISS_BALL_REACH_ROLL_AND_LIFT",
+  "name": "Swiss Ball Reach, Roll, and Lift"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "SWISS_BALL_WINDSHIELD_WIPERS",
+  "name": "Swiss Ball Windshield Wipers"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "THORACIC_ROTATION",
+  "name": "Thoracic Rotation"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WALKING_HIGH_KICKS",
+  "name": "Walking High Kicks"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WALKING_HIGH_KNEES",
+  "name": "Walking High Knees"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WALKING_KNEE_HUGS",
+  "name": "Walking Knee Hugs"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WALKING_LEG_CRADLES",
+  "name": "Walking Leg Cradles"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WALKOUT",
+  "name": "Walkout"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WALKOUT_FROM_PUSH_UP_POSITION",
+  "name": "Walkout from Push-up Position"
+ },
+ {
+  "category": "WARM_UP",
+  "exercise": "WARM_UP",
+  "name": "Warm-up"
+ }
+]

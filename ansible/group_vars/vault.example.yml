@@ -1,0 +1,20 @@
+---
+# TEMPLATE for the encrypted secrets file. Do NOT put real secrets here.
+#
+# Create the real, encrypted file (git-ignored as group_vars/all/vault.yml) with:
+#   ansible-vault create group_vars/all/vault.yml
+# then paste these keys with real values. Edit later with:
+#   ansible-vault edit group_vars/all/vault.yml
+#
+# The vault password goes in ansible/.vault_pass (git-ignored; chmod 600),
+# referenced by ansible.cfg.
+
+# Single shared bearer token every MCP request must present. Generate a long
+# random value, e.g.:  openssl rand -hex 32
+vault_mcp_bearer_token: "CHANGE_ME_long_random_token"
+
+# NOTE: the Garmin account link is bootstrapped by hand on the box with
+# `garmin login` (reads GARMIN_EMAIL / GARMIN_PASSWORD transiently, prompts for
+# MFA, persists only OAuth tokens) — no Garmin credentials belong in this vault.
+# Likewise `davidlloyd login` (if davidlloyd_enabled) is run by hand and stores
+# only a session token.

@@ -1,0 +1,115 @@
+---
+# Base setup: non-root deploy user, system upgrade, core packages, automatic
+# security upgrades. Runs before hardening so the deploy user + key exist first.
+
+- name: Fail early if no deploy SSH public key was provided
+  ansible.builtin.assert:
+    that:
+      - deploy_ssh_public_key | length > 0
+    fail_msg: >-
+      deploy_ssh_public_key is empty. Provide it via vault.yml
+      (vault_deploy_ssh_public_key) before running — see HUMAN CHECKPOINT 1A.
+
+- name: Create the deploy group
+  ansible.builtin.group:
+    name: "{{ deploy_user }}"
+    state: present
+
+- name: Create the non-root deploy user
+  ansible.builtin.user:
+    name: "{{ deploy_user }}"
+    group: "{{ deploy_user }}"
+    groups: [sudo]
+    shell: /bin/bash
+    create_home: true
+    state: present
+
+- name: Install the deploy user's authorized key
+  ansible.posix.authorized_key:
+    user: "{{ deploy_user }}"
+    key: "{{ deploy_ssh_public_key }}"
+    state: present
+    exclusive: true
+
+- name: Allow the deploy user passwordless sudo
+  ansible.builtin.copy:
+    dest: "/etc/sudoers.d/90-{{ deploy_user }}"
+    content: "{{ deploy_user }} ALL=(ALL) NOPASSWD:ALL\n"
+    owner: root
+    group: root
+    mode: "0440"
+    validate: "visudo -cf %s"
+
+# The dedicloud OpenVZ image ships without /run/sshd, so sshd fails to start
+# ("Missing privilege separation directory"). Recreate it now and on every boot.
+- name: Ensure sshd privilege-separation dir is recreated on boot
+  ansible.builtin.copy:
+    dest: /etc/tmpfiles.d/sshd.conf
+    content: "d /run/sshd 0755 root root -\n"
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Create /run/sshd now
+  ansible.builtin.file:
+    path: /run/sshd
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Full system upgrade
+  ansible.builtin.apt:
+    upgrade: full
+
+- name: Install core packages
+  ansible.builtin.apt:
+    name: "{{ base_packages }}"
+    state: present
+
+# The dedicloud image ships Apache serving a default page on :80, which would
+# collide with Caddy (the sole public listener). Remove it.
+- name: Stop and disable Apache if present
+  ansible.builtin.systemd:
+    name: apache2
+    state: stopped
+    enabled: false
+  failed_when: false
+
+- name: Remove Apache packages
+  ansible.builtin.apt:
+    name:
+      - apache2
+      - apache2-bin
+      - apache2-data
+      - apache2-utils
+    state: absent
+    purge: true
+    autoremove: true
+
+- name: Enable unattended security upgrades
+  ansible.builtin.copy:
+    dest: /etc/apt/apt.conf.d/20auto-upgrades
+    content: |
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Restrict unattended-upgrades to the security origin
+  ansible.builtin.copy:
+    dest: /etc/apt/apt.conf.d/50unattended-upgrades-garmin_mcp
+    content: |
+      Unattended-Upgrade::Origins-Pattern {
+          "origin=Debian,codename=${distro_codename}-security,label=Debian-Security";
+      };
+      Unattended-Upgrade::Automatic-Reboot "false";
+    owner: root
+    group: root
+    mode: "0644"

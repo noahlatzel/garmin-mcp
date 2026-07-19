@@ -1,0 +1,45 @@
+# ---- Secrets / local config ----
+.env
+.env.*
+!.env.example
+*.secret
+*.pem
+.vault_pass
+vault_pass.txt
+# Ansible local-only files (real inventory, decrypted/secret vars, installed collections)
+ansible/inventory.ini
+ansible/group_vars/vault.yml
+ansible/group_vars/all/vault.yml
+ansible/collections/
+# Staged service binaries (built with GOOS=linux go build -o ansible/roles/app/files/<svc>)
+ansible/roles/app/files/*
+!ansible/roles/app/files/.gitkeep
+
+# ---- Go ----
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.txt
+
+# ---- Editors / OS ----
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Garmin scratch (browser/login/verify snippets + HAR captures may carry
+#      session tokens or account ids; keep out of git) ----
+internal/garmin/*snippet*.txt
+internal/garmin/*.har
+internal/garmin/harvest_swim_capture.jsonl
+internal/garmin/get_workout_response.json
+internal/davidlloyd/*snippet*.txt
+
+# ---- Exercise catalog schema doc (local-only, lives beside the data) ----
+internal/garmin/data/SCHEMA.md
