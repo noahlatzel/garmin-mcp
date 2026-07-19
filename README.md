@@ -1,26 +1,185 @@
-# garmin-mcp
+# garmin-mcp — Garmin Connect MCP server for Claude & other AI assistants
 
-A single-user, self-hostable [Model Context Protocol](https://modelcontextprotocol.io) server for
-[Garmin Connect](https://connect.garmin.com). It writes **native** strength and pool-swim workouts
-(named exercises, reps, weight, strokes, drills, pace targets — never FIT files) and serves the
-Garmin wellness reads. One deployment serves one linked Garmin account.
+> A self-hosted **[Model Context Protocol (MCP)](https://modelcontextprotocol.io)** server for
+> **[Garmin Connect](https://connect.garmin.com)**. Let Claude, Claude Code, and any
+> MCP-compatible AI assistant **build native strength & pool-swim workouts** on your watch and read
+> your wellness data — sleep, HRV, stress, body battery — all from your own device.
 
-It began as one service inside the `gaggle` monorepo and was extracted to stand alone: the
-multi-tenant OAuth2 front door is replaced by a single shared bearer token. The optional David
-Lloyd → Garmin weigh-in sync (`davidlloyd`) rides along as a separate binary + timer.
+![Go](https://img.shields.io/badge/Go-1.25+-00ADD8?logo=go&logoColor=white)
+![Model Context Protocol](https://img.shields.io/badge/MCP-compatible-6E56CF)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
-## Tools
+Ask your AI assistant *"build me a 5×5 squat + bench strength session for tomorrow"* or *"add a
+2km technique swim with drills and 100m pace targets"* and it writes a **real, native** Garmin
+workout — proper exercise names, reps, weights, strokes and drills — straight to Garmin Connect,
+ready on your watch. No FIT-file hacks.
 
-**Writes** (workout builders — the crown jewels): `create_strength_workout`, `create_swim_workout`,
-`delete_workout` (single-id, fetch-then-confirm).
-**Reads**: `list_workouts`, `get_workout`, `get_calendar`, `get_daily_summary`, `get_sleep`,
+---
+
+## Contents
+
+- [Why garmin-mcp](#why-garmin-mcp)
+- [What you can do](#what-you-can-do-tools)
+- [Requirements](#requirements)
+- [Install](#install)
+- [Link your Garmin account (one time)](#link-your-garmin-account-one-time)
+- [Use it on your device (Claude Desktop / Claude Code)](#use-it-on-your-device)
+- [Configuration reference](#configuration-reference)
+- [Verify it works live](#verify-it-works-live)
+- [David Lloyd weight sync (optional)](#david-lloyd-weight-sync-optional)
+- [Self-host over HTTPS (optional)](#self-host-over-https-optional)
+- [Build from source & test](#build-from-source--test)
+- [FAQ](#faq)
+
+---
+
+## Why garmin-mcp
+
+- **Native workouts, not files.** Strength and pool-swim sessions are written through the Garmin
+  Connect API with named exercises, reps, weights, strokes, drills and pace targets — they look and
+  behave exactly like ones you built by hand.
+- **Runs on your machine.** Your Garmin login is used once to mint OAuth tokens that stay on your
+  device; the running server only ever refreshes them.
+- **Read your body metrics too** — daily summary, sleep, HRV, stress and body battery.
+- **Single static binary.** Written in Go; nothing to install at runtime.
+- **Works with any MCP client** — Claude Desktop, Claude Code, and other Model Context Protocol
+  hosts.
+
+## What you can do (tools)
+
+**Write (the workout builders):**
+
+| Tool | What it does |
+|------|--------------|
+| `create_strength_workout` | Build a native strength session (named lifts, sets, reps, weight) |
+| `create_swim_workout` | Build a native pool-swim session (strokes, drills, equipment, pace) |
+| `delete_workout` | Delete a single workout (fetch-then-confirm) |
+
+**Read:** `list_workouts`, `get_workout`, `get_calendar`, `get_daily_summary`, `get_sleep`,
 `get_hrv`, `get_stress`, `get_body_battery`.
 
-The builders enforce hard rules: one exercise per step (never merged), sets/repeats expanded into
-discrete steps (never `Nx` blocks), named exercise + reps + optional weight from the harvested ID
-catalog. The FIT-file route is deliberately rejected — everything goes via the Connect API.
+The builders enforce hard correctness rules: one exercise per step (never merged), sets/repeats
+expanded into discrete steps, named exercise + reps + optional weight from a harvested catalog.
 
-## Build & test
+## Requirements
+
+- A **Garmin Connect** account (email + password; MFA supported).
+- Either **[Go 1.25+](https://go.dev/dl/)** to install with one command, **or** a prebuilt binary.
+- An MCP client such as **[Claude Desktop](https://claude.ai/download)** or
+  **[Claude Code](https://claude.com/claude-code)**.
+
+## Install
+
+### Option A — `go install` (recommended)
+
+```sh
+go install github.com/goosegit97/garmin-mcp/cmd/garmin@latest
+```
+
+This drops a `garmin` (or `garmin.exe` on Windows) binary in your `$(go env GOPATH)/bin`. Add that
+directory to your `PATH` if it isn't already.
+
+### Option B — build from source
+
+```sh
+git clone https://github.com/goosegit97/garmin-mcp.git
+cd garmin-mcp
+go build -o garmin ./cmd/garmin
+```
+
+## Link your Garmin account (one time)
+
+Garmin has no API keys, so you log in **once** to mint OAuth tokens. Your password is used for that
+single login and **never stored** — only the resulting tokens are saved to `GARMIN_TOKEN_PATH`.
+
+```sh
+GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json \
+GARMIN_EMAIL="you@example.com" \
+GARMIN_PASSWORD="your-password" \
+garmin login
+```
+
+You'll be prompted for your MFA code if your account has it enabled. On success, the token file is
+written and you never need your password again on this device.
+
+> **Tip:** keep the token file private (`chmod 600`). Anyone with it can access your Garmin account.
+
+## Use it on your device
+
+The server speaks MCP over **stdio** by default — exactly what desktop MCP clients expect. No ports,
+no bearer tokens, no network exposure.
+
+### Claude Desktop
+
+Open your Claude Desktop config file:
+
+- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Linux:** `~/.config/Claude/claude_desktop_config.json`
+
+Add a `garmin` server (use the **full path** to the binary, and the token path from the login step):
+
+```json
+{
+  "mcpServers": {
+    "garmin": {
+      "command": "/Users/you/go/bin/garmin",
+      "env": {
+        "GARMIN_TOKEN_PATH": "/Users/you/.garmin-mcp/tokens.json"
+      }
+    }
+  }
+}
+```
+
+Save, fully **restart Claude Desktop**, and the garmin tools appear. Ask *"list my upcoming Garmin
+workouts"* to confirm.
+
+### Claude Code
+
+```sh
+claude mcp add garmin \
+  --env GARMIN_TOKEN_PATH=$HOME/.garmin-mcp/tokens.json \
+  -- garmin
+```
+
+Then run `claude` and your assistant can build and read workouts immediately.
+
+## Configuration reference
+
+| Environment variable | Required | Meaning |
+|----------------------|----------|---------|
+| `GARMIN_TOKEN_PATH` | ✅ | File holding your persisted OAuth tokens (keep at `0600`) |
+| `GARMIN_LISTEN_ADDR` | — | Set (e.g. `127.0.0.1:8082`) to serve HTTP instead of stdio |
+| `MCP_BEARER_TOKEN` | HTTP mode | Shared bearer token clients must present over HTTP |
+| `GARMIN_EMAIL` / `GARMIN_PASSWORD` | login only | Read by `garmin login`; never persisted |
+
+## Verify it works live
+
+`garmin verify` round-trips the workout, calendar and wellness tools against your account using a
+throwaway far-future workout it then deletes — the quickest way to confirm everything is wired up:
+
+```sh
+GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify        # strength + reads
+GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify swim   # pool-swim builder
+```
+
+## David Lloyd weight sync (optional)
+
+If you're a **David Lloyd** gym member, the bundled `davidlloyd` binary reads your latest gym scale
+weight and writes it to Garmin Connect (which then syncs onward to your training log). Log in once
+by hand (`davidlloyd login`, stores only a session token), then `davidlloyd sync`. In a server
+deployment it runs as a daily timer behind the `davidlloyd_enabled` Ansible variable.
+
+## Self-host over HTTPS (optional)
+
+Prefer to run it on a VPS and connect a remote MCP client? Set `GARMIN_LISTEN_ADDR` and
+`MCP_BEARER_TOKEN` to serve Streamable HTTP behind a bearer token (bind loopback; terminate TLS
+with Caddy or similar). A hardened Debian 12 Ansible deploy — base + DevSec hardening + firewall +
+Caddy + the garmin service, plus the optional David Lloyd timer — lives in [`ansible/`](ansible/).
+
+## Build from source & test
 
 ```sh
 go build ./...
@@ -28,76 +187,18 @@ go vet ./...
 go test ./...
 ```
 
-## Link the account (one-time, human-gated)
+## FAQ
 
-The one credentialed login is run by hand — it reads `GARMIN_EMAIL` / `GARMIN_PASSWORD`, prompts
-for MFA on stdin, and persists only OAuth tokens to `GARMIN_TOKEN_PATH`:
+**Is my Garmin password stored?** No. It's used for a single `garmin login` to mint OAuth tokens;
+only those tokens are saved locally, and the server only refreshes them.
 
-```sh
-GARMIN_TOKEN_PATH=./garmin-tokens.json GARMIN_EMAIL=... GARMIN_PASSWORD=... \
-go run ./cmd/garmin login
-```
+**Are these real workouts or FIT files?** Real, native Garmin Connect workouts built through the
+API — the FIT-file route is deliberately not used.
 
-## Run
+**Does it work with other AI assistants?** Any host supporting the Model Context Protocol can use
+it; setup mirrors the Claude examples above.
 
-```sh
-# stdio (local MCP clients, no auth):
-GARMIN_TOKEN_PATH=./garmin-tokens.json go run ./cmd/garmin
+---
 
-# Streamable HTTP behind a bearer token (loopback; put Caddy/TLS in front):
-GARMIN_TOKEN_PATH=./garmin-tokens.json \
-GARMIN_LISTEN_ADDR=127.0.0.1:8082 \
-MCP_BEARER_TOKEN=$(openssl rand -hex 32) \
-go run ./cmd/garmin
-```
-
-Every HTTP request must carry `Authorization: Bearer <token>`; `/healthz` is unauthenticated.
-
-## Verify live (on the box)
-
-`garmin verify` round-trips the workout/calendar/wellness tools against the linked account via a
-throwaway far-future workout it then deletes (uses the token store directly — no MCP/JWT). This is
-the check that the Connect API paths still answer live:
-
-```sh
-GARMIN_TOKEN_PATH=... go run ./cmd/garmin verify        # strength + reads
-GARMIN_TOKEN_PATH=... go run ./cmd/garmin verify swim   # pool-swim builder
-```
-
-## Environment
-
-| Var | Required | Meaning |
-|-----|----------|---------|
-| `GARMIN_TOKEN_PATH` | yes | file holding persisted OAuth tokens (0600) |
-| `GARMIN_LISTEN_ADDR` | no | e.g. `127.0.0.1:8082`; unset ⇒ stdio |
-| `MCP_BEARER_TOKEN` | HTTP mode | shared bearer token clients must present |
-| `GARMIN_EMAIL` / `GARMIN_PASSWORD` | login only | read by `garmin login`; never persisted |
-
-## David Lloyd weight sync (optional)
-
-`cmd/davidlloyd` is a headless one-shot that reads your latest David Lloyd gym scale weight and
-writes it to Garmin Connect (which then syncs onward). It shares the garmin token store. Log in
-once by hand (`davidlloyd login`, reads `DL_USERNAME`/`DL_PASSWORD`, stores only a session token),
-then run `davidlloyd sync`. In production it deploys behind the `davidlloyd_enabled` Ansible var as
-a daily systemd timer.
-
-## Deploy
-
-A hardened Debian 12 VPS deploy lives in `ansible/` (base + DevSec hardening + firewall + Caddy +
-the garmin service, plus the optional davidlloyd timer when `davidlloyd_enabled: true`). Stage the
-linux binaries, then run the playbook:
-
-```sh
-GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ansible/roles/app/files/garmin ./cmd/garmin
-# optional:
-GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ansible/roles/app/files/davidlloyd ./cmd/davidlloyd
-cd ansible
-ansible-galaxy collection install -r requirements.yml -p collections
-ansible-vault create group_vars/all/vault.yml   # see group_vars/vault.example.yml
-ansible-playbook site.yml             # full provision
-ansible-playbook site.yml --tags app  # app-only refresh
-```
-
-After the first deploy, link the account on the box (`garmin login`) — the token store is the only
-place credentials-derived tokens ever live. Secrets never enter git: the bearer token lives in
-ansible-vault, deployed as a 0600 systemd `EnvironmentFile`.
+<sub>Keywords: Garmin Connect MCP server · Model Context Protocol · Claude · Anthropic · native
+strength workouts · pool swim workouts · sleep · HRV · stress · body battery · self-hosted · Go.</sub>
