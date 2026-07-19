@@ -9,6 +9,7 @@
 ![Model Context Protocol](https://img.shields.io/badge/MCP-compatible-6E56CF)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 Ask your AI assistant *"build me a 5×5 squat + bench strength session for tomorrow"* or *"add a
 2km technique swim with drills and 100m pace targets"* and it writes a **real, native** Garmin
@@ -189,6 +190,12 @@ API — the FIT-file route is deliberately not used.
 
 **Does it work with other AI assistants?** Any host supporting the Model Context Protocol can use
 it; setup mirrors the Claude examples above.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
 
 ---
 
