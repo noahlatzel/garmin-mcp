@@ -1,7 +1,6 @@
 ---
-# Deploy the garmin MCP binary (and, optionally, the davidlloyd weight-sync
-# timer) as managed, localhost-bound systemd units running as a dedicated,
-# non-login user, with secrets in 0600 EnvironmentFiles.
+# Deploy the garmin MCP binary as a managed, localhost-bound systemd service
+# running as a dedicated, non-login user, with secrets in a 0600 EnvironmentFile.
 
 - name: Create the app bin directory
   ansible.builtin.file:
@@ -90,73 +89,3 @@
     enabled: true
     state: started
     daemon_reload: true
-
-# --- davidlloyd weight sync (optional; headless one-shot + daily timer) --------
-# Runs as the garmin user (shares the garmin state dir / token store). No service
-# user, no credentials in the env file: `davidlloyd login` is run by hand once.
-# Enable by setting davidlloyd_enabled: true.
-- name: Fail if the staged davidlloyd binary is missing
-  ansible.builtin.stat:
-    path: "{{ role_path }}/files/davidlloyd"
-  register: davidlloyd_bin
-  delegate_to: localhost
-  become: false
-  when: davidlloyd_enabled | bool
-
-- name: Assert the davidlloyd binary was staged
-  ansible.builtin.assert:
-    that: davidlloyd_bin.stat.exists
-    fail_msg: >-
-      davidlloyd_enabled is true but ansible/roles/app/files/davidlloyd is missing.
-      Build it: `GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ansible/roles/app/files/davidlloyd ./cmd/davidlloyd`.
-  when: davidlloyd_enabled | bool
-
-- name: Install the davidlloyd binary
-  ansible.builtin.copy:
-    src: davidlloyd
-    dest: "{{ app_bin_dir }}/davidlloyd"
-    owner: root
-    group: root
-    mode: "0755"
-  when: davidlloyd_enabled | bool
-
-- name: Install the davidlloyd EnvironmentFile (paths only; no credentials, 0600)
-  ansible.builtin.copy:
-    dest: "{{ app_etc_dir }}/davidlloyd.env"
-    owner: "{{ garmin_service_user }}"
-    group: "{{ garmin_service_user }}"
-    mode: "0600"
-    content: |
-      DAVIDLLOYD_SESSION_PATH={{ davidlloyd_session_path }}
-      GARMIN_TOKEN_PATH={{ garmin_token_path }}
-      DL_BRAND={{ davidlloyd_brand }}
-  no_log: true
-  when: davidlloyd_enabled | bool
-
-- name: Install the davidlloyd one-shot unit
-  ansible.builtin.template:
-    src: davidlloyd.service.j2
-    dest: /etc/systemd/system/davidlloyd.service
-    owner: root
-    group: root
-    mode: "0644"
-  notify: Reload systemd
-  when: davidlloyd_enabled | bool
-
-- name: Install the davidlloyd timer
-  ansible.builtin.template:
-    src: davidlloyd.timer.j2
-    dest: /etc/systemd/system/davidlloyd.timer
-    owner: root
-    group: root
-    mode: "0644"
-  notify: Reload systemd
-  when: davidlloyd_enabled | bool
-
-- name: Enable and start the davidlloyd timer
-  ansible.builtin.systemd:
-    name: davidlloyd.timer
-    enabled: true
-    state: started
-    daemon_reload: true
-  when: davidlloyd_enabled | bool

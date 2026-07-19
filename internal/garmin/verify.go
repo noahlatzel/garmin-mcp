@@ -31,8 +31,8 @@ func (s *Service) VerifyLive(ctx context.Context, out io.Writer) error {
 	// [1] create throwaway. The step carries a distinctive Notes cue so [3] can
 	// confirm the coaching-cue -> Garmin step description mapping round-trips
 	// (the field name was not in the harvested schema).
-	const notesCue = "gaggle-verify cue: load 2-3 in tank"
-	created, err := s.CreateStrengthWorkout(ctx, "gaggle-verify DELETE ME",
+	const notesCue = "garmin-mcp verify cue: load 2-3 in tank"
+	created, err := s.CreateStrengthWorkout(ctx, "garmin-mcp verify DELETE ME",
 		[]StepSpec{{Exercise: "BARBELL_BACK_SQUAT", Sets: 2, Reps: 5, WeightKg: ptr(60), Notes: notesCue}}, "")
 	if err != nil {
 		return fmt.Errorf("create: %w", err)
@@ -153,7 +153,7 @@ func (s *Service) VerifySwimLive(ctx context.Context, out io.Writer) error {
 	logf := func(format string, a ...any) { fmt.Fprintf(out, format+"\n", a...) }
 	logf("== garmin swim live verify ==")
 
-	const notesCue = "gaggle-verify swim cue: bilateral breathing"
+	const notesCue = "garmin-mcp verify swim cue: bilateral breathing"
 	specs := []SwimStepSpec{
 		{DistanceMeters: 200, Stroke: "free", Warmup: true},
 		{DistanceMeters: 100, Stroke: "free", Repeats: 4, RestSecs: 20,
@@ -162,7 +162,7 @@ func (s *Service) VerifySwimLive(ctx context.Context, out io.Writer) error {
 		{DistanceMeters: 100, Stroke: "backstroke", Cooldown: true},
 	}
 
-	created, err := s.CreateSwimWorkout(ctx, "gaggle-verify swim DELETE ME", 25, specs, "")
+	created, err := s.CreateSwimWorkout(ctx, "garmin-mcp verify swim DELETE ME", 25, specs, "")
 	if err != nil {
 		return fmt.Errorf("create_swim_workout: %w", err)
 	}

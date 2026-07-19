@@ -4,9 +4,9 @@
 #   ansible-playbook site.yml
 #
 # Order matters: base setup first, then DevSec hardening, then Caddy (the only
-# public listener) and the localhost-bound garmin service (and optional davidlloyd timer). Re-running must be
+# public listener) and the localhost-bound garmin service. Re-running must be
 # idempotent.
-- name: Provision and harden the intervals-mcp box
+- name: Provision and harden the garmin-mcp box
   hosts: garmin_mcp
   become: true
 

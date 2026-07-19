@@ -139,7 +139,7 @@ type weightUnit struct {
 var kilogram = &weightUnit{UnitID: 8, UnitKey: "kilogram", Factor: 1000.0}
 
 // executableStep is one ExecutableStepDTO: a single real step (one exercise, or
-// a rest). gaggle rule §1.5: exactly one exercise per step, never merged.
+// a rest). Hard rule: exactly one exercise per step, never merged.
 type executableStep struct {
 	Type              string       `json:"type"`
 	StepOrder         int          `json:"stepOrder"`
@@ -192,9 +192,9 @@ type Workout struct {
 }
 
 // StepSpec is the caller's high-level description of one exercise in a workout.
-// gaggle expands Sets into that many discrete interval steps (never an Nx repeat
-// block — those collapse silently on the watch; see CLAUDE.md §5). A rest step
-// (lap-button) is inserted between sets.
+// Sets are expanded into that many discrete interval steps, never an Nx repeat
+// block — those collapse silently on the watch. A rest step (lap-button) is
+// inserted between sets.
 type StepSpec struct {
 	// Exercise is a display name or key resolvable by the Catalog. Empty means a
 	// pure rest step.
@@ -225,9 +225,9 @@ type StepSpec struct {
 
 // BuildWorkout assembles a strength Workout from a name and a sequence of step
 // specs, resolving each exercise against the catalog and expanding sets into
-// discrete steps. It enforces gaggle's hard rules: one exercise per step,
-// repeats expanded (no RepeatGroupDTO), named exercise + reps (+ optional
-// weight). It is pure: no network, no time, no global state.
+// discrete steps. It enforces the hard rules: one exercise per step, repeats
+// expanded (no RepeatGroupDTO), named exercise + reps (+ optional weight). It is
+// pure: no network, no time, no global state.
 func (c *Catalog) BuildWorkout(name string, specs []StepSpec) (*Workout, error) {
 	name = strings.TrimSpace(name)
 	if name == "" {

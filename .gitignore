@@ -39,7 +39,6 @@ internal/garmin/*snippet*.txt
 internal/garmin/*.har
 internal/garmin/harvest_swim_capture.jsonl
 internal/garmin/get_workout_response.json
-internal/davidlloyd/*snippet*.txt
 
 # ---- Exercise catalog schema doc (local-only, lives beside the data) ----
 internal/garmin/data/SCHEMA.md

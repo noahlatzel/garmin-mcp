@@ -27,7 +27,6 @@ ready on your watch. No FIT-file hacks.
 - [Use it on your device (Claude Desktop / Claude Code)](#use-it-on-your-device)
 - [Configuration reference](#configuration-reference)
 - [Verify it works live](#verify-it-works-live)
-- [David Lloyd weight sync (optional)](#david-lloyd-weight-sync-optional)
 - [Self-host over HTTPS (optional)](#self-host-over-https-optional)
 - [Build from source & test](#build-from-source--test)
 - [FAQ](#faq)
@@ -165,19 +164,12 @@ GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify        # strength + re
 GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify swim   # pool-swim builder
 ```
 
-## David Lloyd weight sync (optional)
-
-If you're a **David Lloyd** gym member, the bundled `davidlloyd` binary reads your latest gym scale
-weight and writes it to Garmin Connect (which then syncs onward to your training log). Log in once
-by hand (`davidlloyd login`, stores only a session token), then `davidlloyd sync`. In a server
-deployment it runs as a daily timer behind the `davidlloyd_enabled` Ansible variable.
-
 ## Self-host over HTTPS (optional)
 
 Prefer to run it on a VPS and connect a remote MCP client? Set `GARMIN_LISTEN_ADDR` and
 `MCP_BEARER_TOKEN` to serve Streamable HTTP behind a bearer token (bind loopback; terminate TLS
 with Caddy or similar). A hardened Debian 12 Ansible deploy — base + DevSec hardening + firewall +
-Caddy + the garmin service, plus the optional David Lloyd timer — lives in [`ansible/`](ansible/).
+Caddy + the garmin service — lives in [`ansible/`](ansible/).
 
 ## Build from source & test
 

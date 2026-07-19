@@ -20,7 +20,6 @@ const (
 	summaryHost  = connectAPIHost + "/usersummary-service/usersummary/daily"
 	wellnessHost = connectAPIHost + "/wellness-service/wellness"
 	hrvHost      = connectAPIHost + "/hrv-service/hrv"
-	weightHost   = connectAPIHost + "/weight-service"
 )
 
 // authedJSON builds a connectapi request with the Bearer + Android UA + JSON
@@ -142,23 +141,6 @@ func (c *Client) GetStress(ctx context.Context, bearer, date string) ([]byte, er
 func (c *Client) GetBodyBattery(ctx context.Context, bearer, start, end string) ([]byte, error) {
 	reqURL := fmt.Sprintf("%s/bodyBattery/reports/daily?startDate=%s&endDate=%s", wellnessHost, url.QueryEscape(start), url.QueryEscape(end))
 	return c.authedJSON(ctx, bearer, http.MethodGet, reqURL, nil)
-}
-
-// AddWeighIn records a body-weight weigh-in for the given date (YYYY-MM-DD),
-// value in kilograms. The path and payload shape are taken from
-// python-garminconnect/garth and must be round-trip-verified live (garmin verify).
-// A weigh-in is date-granularity here: dateTimestamp/gmtTimestamp are set to the
-// date at midnight, which is what Garmin (and the downstream Intervals sync) keys
-// daily weight on.
-func (c *Client) AddWeighIn(ctx context.Context, bearer string, kg float64, date string) ([]byte, error) {
-	ts := date + "T00:00:00.00"
-	payload := map[string]any{
-		"dateTimestamp": ts,
-		"gmtTimestamp":  ts,
-		"unitKey":       "kg",
-		"value":         kg,
-	}
-	return c.authedJSON(ctx, bearer, http.MethodPost, weightHost+"/user-weight", payload)
 }
 
 // workoutIDFromCreate extracts the assigned workoutId from a create-workout

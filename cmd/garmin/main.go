@@ -12,11 +12,12 @@
 //	garmin verify  -- on-box live round-trip of the workout/calendar/wellness
 //	                  tools against the linked account (creates a throwaway
 //	                  far-future workout and deletes it). Uses the token store
-//	                  directly; no MCP/JWT. Run by hand to confirm api.go paths.
+//	                  directly, not the MCP server. Run by hand to confirm the
+//	                  api.go paths still answer live.
 //	garmin verify swim -- like verify, but round-trips the pool-swim builder's
 //	                  enums (stroke/drill/equipment/pace/pool length).
 //	garmin         -- serve the MCP server. Streamable HTTP on GARMIN_LISTEN_ADDR
-//	                  if set (an OAuth2 resource server; see below), else stdio.
+//	                  if set (gated by MCP_BEARER_TOKEN), else stdio.
 //
 // Environment:
 //

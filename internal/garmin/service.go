@@ -218,18 +218,6 @@ func (s *Service) GetBodyBattery(ctx context.Context, start, end string) ([]byte
 	return s.client.GetBodyBattery(ctx, bearer, start, end)
 }
 
-// SetWeight records a body-weight weigh-in (kg) on the given date (YYYY-MM-DD).
-// This is the sink for the David Lloyd weight sync: the davidlloyd service reads
-// the scale weight, the caller hands it here, and it flows on to Intervals via
-// the existing Garmin sync.
-func (s *Service) SetWeight(ctx context.Context, kg float64, date string) ([]byte, error) {
-	bearer, err := s.bearer(ctx)
-	if err != nil {
-		return nil, err
-	}
-	return s.client.AddWeighIn(ctx, bearer, kg, date)
-}
-
 // displayName returns the user's Garmin displayName, fetching the social profile
 // once and caching it. Sleep and daily-summary embed it in their paths.
 func (s *Service) displayName(ctx context.Context, bearer string) (string, error) {

@@ -29,10 +29,6 @@ caddy_acme_email: ""
 # credentials are ever deployed.
 mcp_bearer_token: "{{ vault_mcp_bearer_token }}"
 
-# --- davidlloyd weight sync (optional) ---------------------------------------
-# Set true to also deploy the David Lloyd -> Garmin weigh-in sync (timer + binary).
-davidlloyd_enabled: false
-
 # --- DevSec os_hardening overrides for OpenVZ --------------------------------
 # auditd cannot run in an OpenVZ container (no access to the kernel audit
 # subsystem), and its restart handler aborts the play. Disable it; AIDE + lynis

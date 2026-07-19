@@ -7,8 +7,8 @@ import (
 
 // SwimStepSpec is the caller's high-level description of one pool-swim step.
 // Repeats are expanded into discrete steps (never a RepeatGroupDTO — those
-// collapse silently on the watch; see CLAUDE.md §5), with a rest step between
-// repeats when RestSecs > 0.
+// collapse silently on the watch), with a rest step between repeats when
+// RestSecs > 0.
 type SwimStepSpec struct {
 	// DistanceMeters ends the step on distance. Exactly one of DistanceMeters
 	// and DurationSecs must be set for a swim step; a step with neither is a

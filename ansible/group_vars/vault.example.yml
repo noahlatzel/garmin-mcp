@@ -16,5 +16,3 @@ vault_mcp_bearer_token: "CHANGE_ME_long_random_token"
 # NOTE: the Garmin account link is bootstrapped by hand on the box with
 # `garmin login` (reads GARMIN_EMAIL / GARMIN_PASSWORD transiently, prompts for
 # MFA, persists only OAuth tokens) — no Garmin credentials belong in this vault.
-# Likewise `davidlloyd login` (if davidlloyd_enabled) is run by hand and stores
-# only a session token.

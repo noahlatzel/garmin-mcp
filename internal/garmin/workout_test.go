@@ -49,7 +49,7 @@ func TestCatalogResolve(t *testing.T) {
 func TestBuildWorkout_WorkedExample(t *testing.T) {
 	c := testCatalog(t)
 	weight := 10.0
-	w, err := c.BuildWorkout("gaggle test", []StepSpec{
+	w, err := c.BuildWorkout("strength test", []StepSpec{
 		{Exercise: "INDOOR_ROW", Warmup: true, DurationSecs: 300},
 		{Exercise: "BARBELL_BICEPS_CURL", Sets: 3, Reps: 12, WeightKg: &weight},
 	})
@@ -114,7 +114,7 @@ func TestBuildWorkout_WorkedExample(t *testing.T) {
 func TestBuildWorkout_NotesSeparateFromRepsWeight(t *testing.T) {
 	c := testCatalog(t)
 	weight := 60.0
-	w, err := c.BuildWorkout("gaggle notes test", []StepSpec{
+	w, err := c.BuildWorkout("notes test", []StepSpec{
 		{Exercise: "BARBELL_BACK_SQUAT", Sets: 2, Reps: 5, WeightKg: &weight, Notes: "find load 2-3 in tank"},
 		{Exercise: "STANDING_CALF_RAISE", Reps: 15},
 	})
