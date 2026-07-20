@@ -225,6 +225,145 @@ func (s *Service) VerifySwimLive(ctx context.Context, out io.Writer) error {
 	return nil
 }
 
+// VerifyBatchLive round-trips the create_workouts batch path (and the
+// unschedule/rename tools) against the real Garmin account: it builds a
+// two-item batch (one strength, one swim) scheduled on far-future dates via
+// the same buildBatchItem + CreateBuilt path the tool uses, asserts both
+// appear in list_workouts and the calendar, renames one, unschedules one by
+// its workoutScheduleId, then deletes both. Run by hand via
+// `garmin verify batch`; never from the MCP server path or unit tests.
+func (s *Service) VerifyBatchLive(ctx context.Context, out io.Writer) error {
+	logf := func(format string, a ...any) { fmt.Fprintf(out, format+"\n", a...) }
+	logf("== garmin batch live verify ==")
+
+	now := time.Now()
+	dateA := now.AddDate(5, 0, 0).Format("2006-01-02")
+	dateB := now.AddDate(5, 0, 1).Format("2006-01-02")
+	schedYear, schedMonth := parseYearMonth(dateA)
+
+	items := []WorkoutSpecInput{
+		{Type: "strength", Name: "garmin-mcp verify batch A DELETE ME", ScheduleDate: dateA,
+			Steps: StepInputs{{Exercise: "BARBELL_BACK_SQUAT", Sets: 2, Reps: 5}}},
+		{Type: "swim", Name: "garmin-mcp verify batch B DELETE ME", ScheduleDate: dateB,
+			SwimSteps: SwimStepInputs{{DistanceMeters: 200, Stroke: "free"}}},
+	}
+
+	// Build all items first — the exact validate-all-first path of the tool.
+	built := make([]builtWorkout, len(items))
+	for i, it := range items {
+		b, err := buildBatchItem(s.Catalog, it)
+		if err != nil {
+			return fmt.Errorf("building batch item %d: %w", i+1, err)
+		}
+		built[i] = b
+	}
+	logf("[1/6] built %d items locally (dates %s, %s)", len(built), dateA, dateB)
+
+	var ids []string
+	var scheduleID string
+	deleted := map[string]bool{}
+	defer func() {
+		for _, id := range ids {
+			if deleted[id] {
+				continue
+			}
+			if _, derr := s.DeleteWorkout(ctx, id); derr != nil {
+				logf("  ⚠ cleanup: could not delete %s: %v", id, derr)
+			} else {
+				logf("  cleanup: deleted leftover workout %s", id)
+			}
+		}
+	}()
+
+	for i, b := range built {
+		created, err := s.CreateBuilt(ctx, b.workout, b.scheduleDate)
+		if err != nil {
+			return fmt.Errorf("creating batch item %d: %w", i+1, err)
+		}
+		id, err := workoutIDFromCreate(created)
+		if err != nil {
+			return fmt.Errorf("parsing batch item %d workoutId: %w", i+1, err)
+		}
+		ids = append(ids, id)
+		if i == 0 {
+			if scheduleID, err = scheduleIDFromCreate(created); err != nil {
+				return fmt.Errorf("parsing batch item 1 workoutScheduleId: %w", err)
+			}
+		}
+	}
+	logf("[2/6] created+scheduled workoutIds=%v (scheduleId=%s)", ids, scheduleID)
+
+	list, err := s.ListWorkouts(ctx, 50)
+	if err != nil {
+		return fmt.Errorf("list_workouts: %w", err)
+	}
+	for _, id := range ids {
+		if !containsWorkoutID(list, id) {
+			return fmt.Errorf("workout %s not found in list_workouts", id)
+		}
+	}
+	logf("[3/6] list_workouts ✓ both found")
+
+	cal, err := s.GetCalendar(ctx, schedYear, schedMonth-1)
+	if err != nil {
+		return fmt.Errorf("get_calendar: %w", err)
+	}
+	for _, id := range ids {
+		if !containsWorkoutID(cal, id) {
+			logf("[4/6] get_calendar ⚠ %s not found — inspect calendarItems shape", id)
+		}
+	}
+	logf("[4/6] get_calendar checked")
+
+	// Rename item 2, then unschedule item 1 by its scheduleId — proving the new
+	// PUT and DELETE-schedule paths live.
+	newName := "garmin-mcp verify batch B RENAMED DELETE ME"
+	oldName, err := s.RenameWorkout(ctx, ids[1], newName)
+	if err != nil {
+		return fmt.Errorf("update_workout_name: %w", err)
+	}
+	logf("[5/6] update_workout_name ✓ (%q -> %q)", oldName, newName)
+
+	if _, err := s.UnscheduleWorkout(ctx, scheduleID); err != nil {
+		return fmt.Errorf("unschedule_workout: %w", err)
+	}
+	cal2, err := s.GetCalendar(ctx, schedYear, schedMonth-1)
+	if err != nil {
+		return fmt.Errorf("get_calendar (post-unschedule): %w", err)
+	}
+	if containsWorkoutID(cal2, ids[0]) {
+		logf("[6/6] unschedule_workout ⚠ %s still on calendar — inspect schedule path", ids[0])
+	} else {
+		logf("[6/6] unschedule_workout ✓ calendar entry gone (workout kept)")
+	}
+
+	for _, id := range ids {
+		if _, err := s.DeleteWorkout(ctx, id); err != nil {
+			return fmt.Errorf("delete_workout %s: %w", id, err)
+		}
+		deleted[id] = true
+	}
+	logf("\n== done. Batch of %d created, verified, renamed/unscheduled, and deleted. ==", len(ids))
+	return nil
+}
+
+// scheduleIDFromCreate extracts the workoutScheduleId from the "schedule" key a
+// create+schedule call merges into the created-workout JSON.
+func scheduleIDFromCreate(created []byte) (string, error) {
+	var env struct {
+		Schedule struct {
+			WorkoutScheduleID json.Number `json:"workoutScheduleId"`
+		} `json:"schedule"`
+	}
+	if err := json.Unmarshal(created, &env); err != nil {
+		return "", fmt.Errorf("parsing create+schedule response: %w", err)
+	}
+	if env.Schedule.WorkoutScheduleID == "" {
+		return "", fmt.Errorf("create+schedule response had no schedule.workoutScheduleId")
+	}
+	return env.Schedule.WorkoutScheduleID.String(), nil
+}
+
 // compactJSON re-encodes a JSON body without whitespace so substring checks are
 // formatting-independent; on parse failure it returns the input unchanged.
 func compactJSON(body []byte) []byte {

@@ -54,13 +54,21 @@ ready on your watch. No FIT-file hacks.
 |------|--------------|
 | `create_strength_workout` | Build a native strength session (named lifts, sets, reps, weight) |
 | `create_swim_workout` | Build a native pool-swim session (strokes, drills, equipment, pace) |
+| `create_workouts` | Build a whole training week in **one call** — up to 14 strength/swim workouts, each with its own optional schedule date |
+| `schedule_workout` / `unschedule_workout` | Put a saved workout on a calendar date, or remove one calendar entry (the workout is kept) |
+| `update_workout_name` | Rename a saved workout (read-modify-write, confirm-gated) |
 | `delete_workout` | Delete a single workout (fetch-then-confirm) |
 
-**Read:** `list_workouts`, `get_workout`, `get_calendar`, `get_daily_summary`, `get_sleep`,
-`get_hrv`, `get_stress`, `get_body_battery`.
+**Read:** `search_exercises` (resolve exact exercise names before building), `list_workouts`,
+`get_workout`, `get_calendar`, `get_daily_summary`, `get_sleep`, `get_hrv`, `get_stress`,
+`get_body_battery`.
 
 The builders enforce hard correctness rules: one exercise per step (never merged), sets/repeats
 expanded into discrete steps, named exercise + reps + optional weight from a harvested catalog.
+Creates return a compact `{workout_id, name, sport, schedule_date, scheduled}` summary by default
+(pass `verbose=true` on the single-workout builders for the full Garmin JSON); `create_workouts`
+validates and builds every item locally before writing anything, then reports per-item results so
+only failed items need retrying.
 
 ## Requirements
 
@@ -163,6 +171,7 @@ throwaway far-future workout it then deletes — the quickest way to confirm eve
 ```sh
 GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify        # strength + reads
 GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify swim   # pool-swim builder
+GARMIN_TOKEN_PATH=~/.garmin-mcp/tokens.json garmin verify batch  # batch create + unschedule + rename
 ```
 
 ## Self-host over HTTPS (optional)

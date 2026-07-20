@@ -89,6 +89,30 @@ func (c *Catalog) Resolve(query string) (Exercise, error) {
 	return Exercise{}, fmt.Errorf("unknown exercise %q (no close matches in the %d-entry catalog)", query, len(c.all))
 }
 
+// Search returns up to limit catalog entries whose normalized display name
+// contains the normalized query as a substring, sorted by name. An empty query
+// is an error (the catalog is too large to dump whole).
+func (c *Catalog) Search(query string, limit int) ([]Exercise, error) {
+	needle := normalize(query)
+	if needle == "" {
+		return nil, fmt.Errorf("query is required (a substring of the exercise name)")
+	}
+	if limit <= 0 {
+		limit = 20
+	}
+	var hits []Exercise
+	for _, e := range c.all {
+		if strings.Contains(normalize(e.Name), needle) {
+			hits = append(hits, e)
+		}
+	}
+	sort.Slice(hits, func(i, j int) bool { return hits[i].Name < hits[j].Name })
+	if len(hits) > limit {
+		hits = hits[:limit]
+	}
+	return hits, nil
+}
+
 // suggest returns up to limit display names whose normalized form contains the
 // normalized query as a substring (cheap, dependency-free fuzzy matching).
 func (c *Catalog) suggest(query string, limit int) []string {

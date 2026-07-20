@@ -16,6 +16,8 @@
 //	                  api.go paths still answer live.
 //	garmin verify swim -- like verify, but round-trips the pool-swim builder's
 //	                  enums (stroke/drill/equipment/pace/pool length).
+//	garmin verify batch -- like verify, but round-trips the create_workouts
+//	                  batch path plus unschedule_workout and update_workout_name.
 //	garmin         -- serve the MCP server. Streamable HTTP on GARMIN_LISTEN_ADDR
 //	                  if set (gated by MCP_BEARER_TOKEN), else stdio.
 //
@@ -101,8 +103,10 @@ func runVerify(mode string) error {
 		return svc.VerifyLive(ctx, os.Stdout)
 	case "swim":
 		return svc.VerifySwimLive(ctx, os.Stdout)
+	case "batch":
+		return svc.VerifyBatchLive(ctx, os.Stdout)
 	default:
-		return fmt.Errorf("unknown verify mode %q (want empty or swim)", mode)
+		return fmt.Errorf("unknown verify mode %q (want empty, swim or batch)", mode)
 	}
 }
 

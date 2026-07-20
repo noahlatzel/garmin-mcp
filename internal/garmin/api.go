@@ -97,6 +97,23 @@ func (c *Client) DeleteWorkout(ctx context.Context, bearer, workoutID string) ([
 	return c.authedJSON(ctx, bearer, http.MethodDelete, reqURL, nil)
 }
 
+// UnscheduleWorkout removes one scheduled calendar entry by its
+// workoutScheduleId (the id returned by ScheduleWorkout / carried on calendar
+// items). The saved workout itself is untouched. Path taken from
+// python-garminconnect and must be round-trip-verified live (garmin verify batch).
+func (c *Client) UnscheduleWorkout(ctx context.Context, bearer, scheduleID string) ([]byte, error) {
+	reqURL := fmt.Sprintf("%s/schedule/%s", workoutHost, url.PathEscape(scheduleID))
+	return c.authedJSON(ctx, bearer, http.MethodDelete, reqURL, nil)
+}
+
+// UpdateWorkout PUTs a full workout JSON body back to Garmin Connect for the
+// given id. Callers must send a complete read-modify-write body (never a
+// partial document, which could blank fields).
+func (c *Client) UpdateWorkout(ctx context.Context, bearer, workoutID string, body json.RawMessage) ([]byte, error) {
+	reqURL := fmt.Sprintf("%s/workout/%s", workoutHost, url.PathEscape(workoutID))
+	return c.authedJSON(ctx, bearer, http.MethodPut, reqURL, body)
+}
+
 // GetCalendar reads scheduled items for a month. month is 0-indexed (Jan=0) to
 // match the Garmin calendar-service contract.
 func (c *Client) GetCalendar(ctx context.Context, bearer string, year, month int) ([]byte, error) {

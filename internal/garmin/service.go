@@ -93,6 +93,28 @@ func (s *Service) CreateSwimWorkout(ctx context.Context, name string, poolLength
 	return s.createWorkout(ctx, workout, scheduleDate)
 }
 
+// CreateBuilt writes an already-built workout (strength or swim) to Garmin
+// Connect, optionally scheduling it. It exists so the batch tool can validate
+// and build every item before the first network call, then reuse the exact
+// create+schedule path of the single-workout tools.
+func (s *Service) CreateBuilt(ctx context.Context, workout *Workout, scheduleDate string) ([]byte, error) {
+	return s.createWorkout(ctx, workout, scheduleDate)
+}
+
+// ScheduleFailedError reports a workout that was created but could not be
+// scheduled, carrying the assigned id so the caller can schedule it separately
+// instead of re-creating it.
+type ScheduleFailedError struct {
+	WorkoutID string
+	Err       error
+}
+
+func (e *ScheduleFailedError) Error() string {
+	return fmt.Sprintf("workout %s created but scheduling failed: %v", e.WorkoutID, e.Err)
+}
+
+func (e *ScheduleFailedError) Unwrap() error { return e.Err }
+
 // createWorkout ensures a valid bearer, writes a built workout, and — when
 // scheduleDate is non-empty — schedules it, attaching the schedule response to
 // the returned created-workout JSON.
@@ -115,7 +137,7 @@ func (s *Service) createWorkout(ctx context.Context, workout *Workout, scheduleD
 	}
 	schedule, err := s.client.ScheduleWorkout(ctx, bearer, workoutID, scheduleDate)
 	if err != nil {
-		return nil, fmt.Errorf("workout %s created but scheduling failed: %w", workoutID, err)
+		return nil, &ScheduleFailedError{WorkoutID: workoutID, Err: err}
 	}
 	return mergeCreateSchedule(created, schedule)
 }
@@ -145,6 +167,68 @@ func (s *Service) GetWorkout(ctx context.Context, workoutID string) ([]byte, err
 		return nil, err
 	}
 	return s.client.GetWorkout(ctx, bearer, workoutID)
+}
+
+// UnscheduleWorkout removes one scheduled calendar entry by its
+// workoutScheduleId; the saved workout is untouched.
+func (s *Service) UnscheduleWorkout(ctx context.Context, scheduleID string) ([]byte, error) {
+	bearer, err := s.bearer(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return s.client.UnscheduleWorkout(ctx, bearer, scheduleID)
+}
+
+// RenameWorkout renames one saved workout via read-modify-write: it fetches
+// the full workout JSON, changes only workoutName, PUTs the complete body
+// back, then re-fetches and verifies the new name took. It returns the
+// previous name.
+func (s *Service) RenameWorkout(ctx context.Context, workoutID, newName string) (string, error) {
+	bearer, err := s.bearer(ctx)
+	if err != nil {
+		return "", err
+	}
+	current, err := s.client.GetWorkout(ctx, bearer, workoutID)
+	if err != nil {
+		return "", err
+	}
+	var obj map[string]json.RawMessage
+	if err := json.Unmarshal(current, &obj); err != nil {
+		return "", fmt.Errorf("parsing workout %s: %w", workoutID, err)
+	}
+	var oldName string
+	if raw, ok := obj["workoutName"]; ok {
+		if err := json.Unmarshal(raw, &oldName); err != nil {
+			return "", fmt.Errorf("parsing workoutName of %s: %w", workoutID, err)
+		}
+	}
+	encoded, err := json.Marshal(newName)
+	if err != nil {
+		return "", fmt.Errorf("encoding new name: %w", err)
+	}
+	obj["workoutName"] = encoded
+	body, err := json.Marshal(obj)
+	if err != nil {
+		return "", fmt.Errorf("encoding workout %s: %w", workoutID, err)
+	}
+	if _, err := s.client.UpdateWorkout(ctx, bearer, workoutID, body); err != nil {
+		return "", err
+	}
+
+	after, err := s.client.GetWorkout(ctx, bearer, workoutID)
+	if err != nil {
+		return "", fmt.Errorf("rename applied but verification fetch failed: %w", err)
+	}
+	var check struct {
+		WorkoutName string `json:"workoutName"`
+	}
+	if err := json.Unmarshal(after, &check); err != nil {
+		return "", fmt.Errorf("rename applied but verification parse failed: %w", err)
+	}
+	if check.WorkoutName != newName {
+		return "", fmt.Errorf("rename did not take: workout %s still named %q", workoutID, check.WorkoutName)
+	}
+	return oldName, nil
 }
 
 // DeleteWorkout deletes one workout by id.
