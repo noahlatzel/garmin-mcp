@@ -100,6 +100,9 @@ The Python servers work well. For a small, always-on MCP server, Go has a few mo
 **Read:** `search_exercises`, `list_workouts`, `get_workout`, `get_calendar`,
 `get_daily_summary`, `get_sleep`, `get_hrv`, `get_stress`, `get_body_battery`.
 
+Creates return a short summary (`workout_id`, name, sport, schedule date) rather than the full
+Garmin JSON; pass `verbose=true` to the single-workout builders to get the full response.
+
 ## Run it with Docker
 
 Build the image once:
