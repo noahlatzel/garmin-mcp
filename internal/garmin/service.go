@@ -8,9 +8,10 @@ import (
 )
 
 // Service ties the exercise catalog, the auth Client, and the token store into
-// the operations the MCP layer exposes. It refreshes the OAuth2 token on demand
-// from the stored OAuth1 token, never performing a credentialed login itself
-// (that is the human-gated bootstrap; see cmd/garmin login).
+// the operations the MCP layer exposes. It refreshes the access token on demand
+// from the stored DI refresh token or OAuth1 token, never performing a
+// credentialed login itself (that is the human-gated bootstrap; see cmd/garmin
+// login).
 type Service struct {
 	Catalog *Catalog
 	client  *Client
@@ -40,9 +41,9 @@ func NewService(tokenPath string) (*Service, error) {
 	}, nil
 }
 
-// bearer returns a valid OAuth2 access token, refreshing from the stored OAuth1
-// token if the access token is missing or expired and persisting the refreshed
-// token. It returns a clear error if no login has been bootstrapped.
+// bearer returns a valid access token, refreshing it if it is missing or
+// expired and persisting the refreshed token. It returns a clear error if no
+// login has been bootstrapped.
 func (s *Service) bearer(ctx context.Context) (string, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
@@ -51,22 +52,36 @@ func (s *Service) bearer(ctx context.Context) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	if tokens == nil || tokens.OAuth1 == nil {
-		return "", fmt.Errorf("garmin is not linked yet: run the one-time `garmin login` bootstrap")
-	}
-	if !tokens.OAuth2.Expired() {
-		return tokens.OAuth2.AccessToken, nil
-	}
+	switch {
+	case tokens != nil && tokens.DI != nil:
+		if !tokens.DI.Expired() {
+			return tokens.DI.AccessToken, nil
+		}
+		refreshed, err := s.client.RefreshDI(ctx, tokens.DI)
+		if err != nil {
+			return "", fmt.Errorf("refreshing Garmin access token: %w", err)
+		}
+		tokens.DI = refreshed
+		if err := s.store.Save(tokens); err != nil {
+			return "", fmt.Errorf("persisting refreshed token: %w", err)
+		}
+		return refreshed.AccessToken, nil
 
-	refreshed, err := s.client.Refresh(ctx, tokens.OAuth1)
-	if err != nil {
-		return "", fmt.Errorf("refreshing Garmin access token: %w", err)
+	case tokens != nil && tokens.OAuth1 != nil:
+		if !tokens.OAuth2.Expired() {
+			return tokens.OAuth2.AccessToken, nil
+		}
+		refreshed, err := s.client.Refresh(ctx, tokens.OAuth1)
+		if err != nil {
+			return "", fmt.Errorf("refreshing Garmin access token: %w", err)
+		}
+		tokens.OAuth2 = refreshed
+		if err := s.store.Save(tokens); err != nil {
+			return "", fmt.Errorf("persisting refreshed token: %w", err)
+		}
+		return refreshed.AccessToken, nil
 	}
-	tokens.OAuth2 = refreshed
-	if err := s.store.Save(tokens); err != nil {
-		return "", fmt.Errorf("persisting refreshed token: %w", err)
-	}
-	return refreshed.AccessToken, nil
+	return "", fmt.Errorf("garmin is not linked yet: run the one-time `garmin login` bootstrap")
 }
 
 // CreateStrengthWorkout builds a strength workout from the spec and writes it
@@ -93,6 +108,28 @@ func (s *Service) CreateSwimWorkout(ctx context.Context, name string, poolLength
 	return s.createWorkout(ctx, workout, scheduleDate)
 }
 
+// CreateBuilt writes an already-built workout (strength or swim) to Garmin
+// Connect, optionally scheduling it. It exists so the batch tool can validate
+// and build every item before the first network call, then reuse the exact
+// create+schedule path of the single-workout tools.
+func (s *Service) CreateBuilt(ctx context.Context, workout *Workout, scheduleDate string) ([]byte, error) {
+	return s.createWorkout(ctx, workout, scheduleDate)
+}
+
+// ScheduleFailedError reports a workout that was created but could not be
+// scheduled, carrying the assigned id so the caller can schedule it separately
+// instead of re-creating it.
+type ScheduleFailedError struct {
+	WorkoutID string
+	Err       error
+}
+
+func (e *ScheduleFailedError) Error() string {
+	return fmt.Sprintf("workout %s created but scheduling failed: %v", e.WorkoutID, e.Err)
+}
+
+func (e *ScheduleFailedError) Unwrap() error { return e.Err }
+
 // createWorkout ensures a valid bearer, writes a built workout, and — when
 // scheduleDate is non-empty — schedules it, attaching the schedule response to
 // the returned created-workout JSON.
@@ -115,7 +152,7 @@ func (s *Service) createWorkout(ctx context.Context, workout *Workout, scheduleD
 	}
 	schedule, err := s.client.ScheduleWorkout(ctx, bearer, workoutID, scheduleDate)
 	if err != nil {
-		return nil, fmt.Errorf("workout %s created but scheduling failed: %w", workoutID, err)
+		return nil, &ScheduleFailedError{WorkoutID: workoutID, Err: err}
 	}
 	return mergeCreateSchedule(created, schedule)
 }
@@ -145,6 +182,68 @@ func (s *Service) GetWorkout(ctx context.Context, workoutID string) ([]byte, err
 		return nil, err
 	}
 	return s.client.GetWorkout(ctx, bearer, workoutID)
+}
+
+// UnscheduleWorkout removes one scheduled calendar entry by its
+// workoutScheduleId; the saved workout is untouched.
+func (s *Service) UnscheduleWorkout(ctx context.Context, scheduleID string) ([]byte, error) {
+	bearer, err := s.bearer(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return s.client.UnscheduleWorkout(ctx, bearer, scheduleID)
+}
+
+// RenameWorkout renames one saved workout via read-modify-write: it fetches
+// the full workout JSON, changes only workoutName, PUTs the complete body
+// back, then re-fetches and verifies the new name took. It returns the
+// previous name.
+func (s *Service) RenameWorkout(ctx context.Context, workoutID, newName string) (string, error) {
+	bearer, err := s.bearer(ctx)
+	if err != nil {
+		return "", err
+	}
+	current, err := s.client.GetWorkout(ctx, bearer, workoutID)
+	if err != nil {
+		return "", err
+	}
+	var obj map[string]json.RawMessage
+	if err := json.Unmarshal(current, &obj); err != nil {
+		return "", fmt.Errorf("parsing workout %s: %w", workoutID, err)
+	}
+	var oldName string
+	if raw, ok := obj["workoutName"]; ok {
+		if err := json.Unmarshal(raw, &oldName); err != nil {
+			return "", fmt.Errorf("parsing workoutName of %s: %w", workoutID, err)
+		}
+	}
+	encoded, err := json.Marshal(newName)
+	if err != nil {
+		return "", fmt.Errorf("encoding new name: %w", err)
+	}
+	obj["workoutName"] = encoded
+	body, err := json.Marshal(obj)
+	if err != nil {
+		return "", fmt.Errorf("encoding workout %s: %w", workoutID, err)
+	}
+	if _, err := s.client.UpdateWorkout(ctx, bearer, workoutID, body); err != nil {
+		return "", err
+	}
+
+	after, err := s.client.GetWorkout(ctx, bearer, workoutID)
+	if err != nil {
+		return "", fmt.Errorf("rename applied but verification fetch failed: %w", err)
+	}
+	var check struct {
+		WorkoutName string `json:"workoutName"`
+	}
+	if err := json.Unmarshal(after, &check); err != nil {
+		return "", fmt.Errorf("rename applied but verification parse failed: %w", err)
+	}
+	if check.WorkoutName != newName {
+		return "", fmt.Errorf("rename did not take: workout %s still named %q", workoutID, check.WorkoutName)
+	}
+	return oldName, nil
 }
 
 // DeleteWorkout deletes one workout by id.
@@ -267,9 +366,9 @@ func mergeCreateSchedule(created, schedule []byte) ([]byte, error) {
 // tokens. It is invoked only by the human-gated `garmin login` path, never by
 // the running MCP server.
 func (s *Service) Bootstrap(ctx context.Context, creds Credentials) error {
-	oauth1, oauth2, err := s.client.Login(ctx, creds)
+	tokens, err := s.client.Login(ctx, creds)
 	if err != nil {
 		return err
 	}
-	return s.store.Save(&StoredTokens{OAuth1: oauth1, OAuth2: oauth2})
+	return s.store.Save(tokens)
 }

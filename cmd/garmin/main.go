@@ -1,7 +1,7 @@
 // Command garmin is a single-user Garmin Connect MCP service. It writes native
 // strength and pool-swim workouts (named exercises, reps, weight, strokes,
 // drills, pace targets) to Garmin Connect and serves the Garmin wellness reads
-// (daily summary, sleep, HRV, stress, body battery). One deployment serves one
+// (daily summary, sleep, HRV, stress, body battery). One instance serves one
 // linked Garmin account.
 //
 // Modes:
@@ -9,13 +9,15 @@
 //	garmin login   -- one-time credentialed account link.
 //	                  Reads GARMIN_EMAIL/GARMIN_PASSWORD, prompts for MFA on
 //	                  stdin, and persists OAuth tokens to GARMIN_TOKEN_PATH.
-//	garmin verify  -- on-box live round-trip of the workout/calendar/wellness
+//	garmin verify  -- live round-trip of the workout/calendar/wellness
 //	                  tools against the linked account (creates a throwaway
 //	                  far-future workout and deletes it). Uses the token store
 //	                  directly, not the MCP server. Run by hand to confirm the
 //	                  api.go paths still answer live.
 //	garmin verify swim -- like verify, but round-trips the pool-swim builder's
 //	                  enums (stroke/drill/equipment/pace/pool length).
+//	garmin verify batch -- like verify, but round-trips the create_workouts
+//	                  batch path plus unschedule_workout and update_workout_name.
 //	garmin         -- serve the MCP server. Streamable HTTP on GARMIN_LISTEN_ADDR
 //	                  if set (gated by MCP_BEARER_TOKEN), else stdio.
 //
@@ -83,8 +85,8 @@ func tokenPath() (string, error) {
 
 // runVerify drives the new connectapi tools end-to-end against the real account
 // behind the token store, on a throwaway far-future workout it then deletes. It
-// is the turnkey on-box check that the api.go paths answer live (no MCP/JWT). It
-// makes real API calls, so it is run by hand on the box, never by the server.
+// is the check that the api.go paths still answer live, bypassing the MCP
+// layer. It makes real API calls, so it is run by hand, never by the server.
 func runVerify(mode string) error {
 	path, err := tokenPath()
 	if err != nil {
@@ -101,8 +103,10 @@ func runVerify(mode string) error {
 		return svc.VerifyLive(ctx, os.Stdout)
 	case "swim":
 		return svc.VerifySwimLive(ctx, os.Stdout)
+	case "batch":
+		return svc.VerifyBatchLive(ctx, os.Stdout)
 	default:
-		return fmt.Errorf("unknown verify mode %q (want empty or swim)", mode)
+		return fmt.Errorf("unknown verify mode %q (want empty, swim or batch)", mode)
 	}
 }
 
@@ -142,7 +146,7 @@ func runLogin() error {
 	return nil
 }
 
-// promptMFA reads a TOTP code from stdin — the code shown by the operator's
+// promptMFA reads a TOTP code from stdin — the code shown by the user's
 // authenticator app.
 func promptMFA(ctx context.Context) (string, error) {
 	fmt.Fprint(os.Stderr, "Enter Garmin MFA code: ")

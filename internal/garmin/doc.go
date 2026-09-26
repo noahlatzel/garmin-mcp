@@ -9,5 +9,5 @@
 //
 // The one credentialed login (password + MFA) is human-gated, driven by
 // `cmd/garmin login`; the running server only ever refreshes from the stored
-// OAuth1 token.
+// DI refresh token or OAuth1 token.
 package garmin

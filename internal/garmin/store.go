@@ -7,12 +7,14 @@ import (
 	"github.com/goosegit97/garmin-mcp/internal/atomfile"
 )
 
-// StoredTokens is the persisted Garmin auth state: the long-lived OAuth1 token
-// (used to refresh) and the most recent OAuth2 access token. Credentials
-// (username/password) are NEVER stored.
+// StoredTokens is the persisted Garmin auth state: either DI tokens, or the
+// long-lived OAuth1 token (used to refresh) with the most recent OAuth2 access
+// token. DI wins when both are present. Credentials (username/password) are
+// NEVER stored.
 type StoredTokens struct {
-	OAuth1 *OAuth1Token `json:"oauth1"`
-	OAuth2 *OAuth2Token `json:"oauth2"`
+	DI     *DIToken     `json:"di,omitempty"`
+	OAuth1 *OAuth1Token `json:"oauth1,omitempty"`
+	OAuth2 *OAuth2Token `json:"oauth2,omitempty"`
 }
 
 // TokenStore persists StoredTokens to a single file with 0600 permissions and

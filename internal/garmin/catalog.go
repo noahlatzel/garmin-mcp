@@ -9,7 +9,7 @@ import (
 )
 
 // exercisesJSON is the Garmin strength-exercise catalog harvested from the live
-// Connect web builder. See data/SCHEMA.md. Each row is a
+// Connect web builder's exercise picker. Each row is a
 // unique (category, exercise, name) triple; exercise and category are Garmin's
 // string keys (e.g. SQUAT / BARBELL_BACK_SQUAT), name is the display label.
 //
@@ -87,6 +87,30 @@ func (c *Catalog) Resolve(query string) (Exercise, error) {
 		return Exercise{}, fmt.Errorf("unknown exercise %q; did you mean: %s", query, strings.Join(suggestions, ", "))
 	}
 	return Exercise{}, fmt.Errorf("unknown exercise %q (no close matches in the %d-entry catalog)", query, len(c.all))
+}
+
+// Search returns up to limit catalog entries whose normalized display name
+// contains the normalized query as a substring, sorted by name. An empty query
+// is an error (the catalog is too large to dump whole).
+func (c *Catalog) Search(query string, limit int) ([]Exercise, error) {
+	needle := normalize(query)
+	if needle == "" {
+		return nil, fmt.Errorf("query is required (a substring of the exercise name)")
+	}
+	if limit <= 0 {
+		limit = 20
+	}
+	var hits []Exercise
+	for _, e := range c.all {
+		if strings.Contains(normalize(e.Name), needle) {
+			hits = append(hits, e)
+		}
+	}
+	sort.Slice(hits, func(i, j int) bool { return hits[i].Name < hits[j].Name })
+	if len(hits) > limit {
+		hits = hits[:limit]
+	}
+	return hits, nil
 }
 
 // suggest returns up to limit display names whose normalized form contains the

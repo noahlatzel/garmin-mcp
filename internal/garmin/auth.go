@@ -3,9 +3,11 @@ package garmin
 import (
 	"context"
 	"crypto/hmac"
+	"crypto/rand"
 	"crypto/sha1"
 	"encoding/base64"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log/slog"
@@ -40,6 +42,14 @@ const (
 	exchangeURL    = "https://connectapi.garmin.com/oauth-service/oauth/exchange/user/2.0"
 	connectAPIHost = "https://connectapi.garmin.com"
 
+	// DI OAuth2, the Garmin Connect app's current token service. Its refresh
+	// tokens renew on use, so a link in use needs no yearly OAuth1 re-login.
+	// Endpoint, grant and client ids mirror python-garminconnect 0.3.16.
+	diTokenURL    = "https://diauth.garmin.com/di-oauth2-service/oauth/token"
+	diTicketGrant = "https://connectapi.garmin.com/di-oauth2-service/oauth/grant/service_ticket"
+	// diServiceURL must match the service the SSO ticket was issued for.
+	diServiceURL = embedHost
+
 	// Garmin Connect Mobile (Android) OAuth1 consumer credentials. These are the
 	// Garmin app's own credentials, baked into the APK — public and not a secret
 	// of ours or any user data. Vendored so login doesn't depend on an external
@@ -53,7 +63,26 @@ const (
 	browserUA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
 		"(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 	androidUA = "com.garmin.android.apps.connectmobile"
+
+	// nativeUA and nativeGarminUA are what the Connect Android app sends to the
+	// DI token service.
+	nativeUA       = "GCM-Android-5.23"
+	nativeGarminUA = "com.garmin.android.apps.connectmobile/5.23; ; Google/sdk_gphone64_arm64/google; " +
+		"Android/33; Dalvik/2.1.0"
 )
+
+// diClientIDs are the Connect app's DI client ids, newest first. Garmin retires
+// old ones, so the exchange tries each in turn.
+var diClientIDs = []string{
+	"GARMIN_CONNECT_MOBILE_ANDROID_DI_2025Q2",
+	"GARMIN_CONNECT_MOBILE_ANDROID_DI_2024Q4",
+	"GARMIN_CONNECT_MOBILE_ANDROID_DI",
+	"GARMIN_CONNECT_MOBILE_IOS_DI",
+}
+
+// ErrRelinkRequired reports stored Garmin tokens that Garmin no longer accepts,
+// so only a fresh credentialed login can restore access.
+var ErrRelinkRequired = errors.New("garmin rejected the stored sign-in; run `garmin login` again")
 
 // signinParams is the SSO widget parameter set. It carries no clientId, which
 // puts it in a different Cloudflare rate-limit bucket than the mobile endpoints.
@@ -79,7 +108,7 @@ type HTTPDoer interface {
 }
 
 // MFAFunc supplies the TOTP code when Garmin demands MFA. It is invoked only if
-// the login response asks for it, so the operator can enter the code. Returning
+// the login response asks for it, so the user can enter the code. Returning
 // an error aborts the login.
 type MFAFunc func(ctx context.Context) (string, error)
 
@@ -94,7 +123,8 @@ type Credentials struct {
 }
 
 // OAuth1Token is the long-lived (≈1 year) Garmin OAuth1 token used to mint fresh
-// OAuth2 access tokens without re-running the credentialed SSO login.
+// OAuth2 access tokens without re-running the credentialed SSO login. Links made
+// before the DI exchange still hold one.
 type OAuth1Token struct {
 	Token       string `json:"oauth_token"`
 	TokenSecret string `json:"oauth_token_secret"`
@@ -113,7 +143,26 @@ type OAuth2Token struct {
 // Expired reports whether the access token is at or past its expiry, with a
 // 60-second safety margin.
 func (t *OAuth2Token) Expired() bool {
-	return t == nil || time.Now().Add(60*time.Second).After(t.ExpiresAt)
+	return t == nil || expiresSoon(t.ExpiresAt)
+}
+
+// DIToken is a DI OAuth2 bearer and its refresh token. ClientID is the DI
+// client that issued it, which every refresh must present again.
+type DIToken struct {
+	AccessToken  string    `json:"access_token"`
+	RefreshToken string    `json:"refresh_token"`
+	ClientID     string    `json:"client_id"`
+	ExpiresAt    time.Time `json:"expires_at"`
+}
+
+// Expired reports whether the access token is at or past its expiry, with a
+// 60-second safety margin.
+func (t *DIToken) Expired() bool {
+	return t == nil || expiresSoon(t.ExpiresAt)
+}
+
+func expiresSoon(at time.Time) bool {
+	return time.Now().Add(60 * time.Second).After(at)
 }
 
 // consumer holds the public Garmin Android OAuth consumer key/secret. It
@@ -197,29 +246,29 @@ func NewClientWithDoer(doer HTTPDoer) *Client {
 	return &Client{http: doer}
 }
 
-// Login runs the full web-widget SSO flow and OAuth exchange, returning both the
-// long-lived OAuth1 token (for later refresh) and a fresh OAuth2 access token.
-// It performs exactly one credentialed POST; callers must avoid retry storms
-// (fresh-login misfires can trigger ~48h account blocks).
-func (c *Client) Login(ctx context.Context, creds Credentials) (*OAuth1Token, *OAuth2Token, error) {
+// Login runs the full web-widget SSO flow and trades the resulting ticket for
+// DI OAuth2 tokens, falling back to the older OAuth1 → OAuth2 pair if the DI
+// service refuses it. It performs exactly one credentialed POST; callers must
+// avoid retry storms (fresh-login misfires can trigger ~48h account blocks).
+func (c *Client) Login(ctx context.Context, creds Credentials) (*StoredTokens, error) {
 	if strings.TrimSpace(creds.Username) == "" || creds.Password == "" {
-		return nil, nil, fmt.Errorf("username and password are required")
+		return nil, fmt.Errorf("username and password are required")
 	}
 
 	// 1. Seed session cookies.
 	if _, err := c.get(ctx, embedURL, browserUA, ""); err != nil {
-		return nil, nil, fmt.Errorf("seeding SSO cookies: %w", err)
+		return nil, fmt.Errorf("seeding SSO cookies: %w", err)
 	}
 
 	// 2. Fetch the signin form and extract the CSRF token.
 	signinHTML, err := c.get(ctx, signinURL, browserUA, embedURL)
 	if err != nil {
-		return nil, nil, fmt.Errorf("fetching signin form: %w", err)
+		return nil, fmt.Errorf("fetching signin form: %w", err)
 	}
 	c.dump("signin", signinHTML)
 	csrf, err := extract(csrfRe, signinHTML, "CSRF token")
 	if err != nil {
-		return nil, nil, fmt.Errorf("%w (signin page title: %q)", err, pageTitle(signinHTML))
+		return nil, fmt.Errorf("%w (signin page title: %q)", err, pageTitle(signinHTML))
 	}
 
 	// 3. Submit credentials as a form POST.
@@ -231,7 +280,7 @@ func (c *Client) Login(ctx context.Context, creds Credentials) (*OAuth1Token, *O
 	}
 	loginHTML, err := c.postForm(ctx, signinURL, form, browserUA, signinURL)
 	if err != nil {
-		return nil, nil, fmt.Errorf("submitting credentials: %w", err)
+		return nil, fmt.Errorf("submitting credentials: %w", err)
 	}
 	c.dump("login", loginHTML)
 
@@ -239,7 +288,7 @@ func (c *Client) Login(ctx context.Context, creds Credentials) (*OAuth1Token, *O
 	if mfaRequested(loginHTML) {
 		loginHTML, err = c.submitMFA(ctx, creds, loginHTML)
 		if err != nil {
-			return nil, nil, err
+			return nil, err
 		}
 		c.dump("mfa", loginHTML)
 	}
@@ -247,25 +296,30 @@ func (c *Client) Login(ctx context.Context, creds Credentials) (*OAuth1Token, *O
 	// 5. Extract the service ticket from the success page.
 	ticket, err := extract(ticketRe, loginHTML, "service ticket")
 	if err != nil {
-		return nil, nil, fmt.Errorf("%w (login likely failed: bad credentials, undetected MFA, "+
+		return nil, fmt.Errorf("%w (login likely failed: bad credentials, undetected MFA, "+
 			"or an unexpected page; response title: %q, %d bytes — set GARMIN_DEBUG to a private "+
 			"directory to capture it)",
 			err, pageTitle(loginHTML), len(loginHTML))
 	}
 
-	// 6. Exchange the ticket for OAuth1, then OAuth2 tokens.
+	// 6. Exchange the ticket for tokens.
+	di, diErr := c.exchangeDI(ctx, ticket)
+	if diErr == nil {
+		return &StoredTokens{DI: di}, nil
+	}
+	slog.Warn("garmin: DI token exchange failed; falling back to OAuth1", "err", diErr)
 	if err := c.ensureConsumer(ctx); err != nil {
-		return nil, nil, err
+		return nil, err
 	}
 	oauth1, err := c.preauthorize(ctx, ticket)
 	if err != nil {
-		return nil, nil, err
+		return nil, err
 	}
 	oauth2, err := c.exchange(ctx, oauth1)
 	if err != nil {
-		return nil, nil, err
+		return nil, err
 	}
-	return oauth1, oauth2, nil
+	return &StoredTokens{OAuth1: oauth1, OAuth2: oauth2}, nil
 }
 
 // Refresh mints a fresh OAuth2 access token from a stored OAuth1 token, without
@@ -280,10 +334,106 @@ func (c *Client) Refresh(ctx context.Context, oauth1 *OAuth1Token) (*OAuth2Token
 	return c.exchange(ctx, oauth1)
 }
 
+// RefreshDI mints a fresh DI access token from a stored refresh token. Garmin
+// may rotate the refresh token, so the caller must persist the result before
+// anything refreshes from the old one again.
+func (c *Client) RefreshDI(ctx context.Context, t *DIToken) (*DIToken, error) {
+	if t == nil || t.RefreshToken == "" || t.ClientID == "" {
+		return nil, ErrRelinkRequired
+	}
+	tok, status, err := c.diToken(ctx, t.ClientID, url.Values{
+		"grant_type":    {"refresh_token"},
+		"client_id":     {t.ClientID},
+		"refresh_token": {t.RefreshToken},
+	})
+	if status == http.StatusBadRequest || status == http.StatusUnauthorized {
+		return nil, fmt.Errorf("%w (%v)", ErrRelinkRequired, err)
+	}
+	if err != nil {
+		return nil, fmt.Errorf("refreshing DI token: %w", err)
+	}
+	if tok.RefreshToken == "" {
+		tok.RefreshToken = t.RefreshToken
+	}
+	return tok, nil
+}
+
+// exchangeDI trades an SSO service ticket for DI tokens, trying each client id
+// until one is accepted.
+func (c *Client) exchangeDI(ctx context.Context, ticket string) (*DIToken, error) {
+	var errs []error
+	for _, id := range diClientIDs {
+		tok, status, err := c.diToken(ctx, id, url.Values{
+			"client_id":      {id},
+			"service_ticket": {ticket},
+			"grant_type":     {diTicketGrant},
+			"service_url":    {diServiceURL},
+		})
+		if err == nil {
+			return tok, nil
+		}
+		errs = append(errs, fmt.Errorf("%s: %w", id, err))
+		if status == http.StatusTooManyRequests {
+			break
+		}
+	}
+	return nil, fmt.Errorf("DI token exchange: %w", errors.Join(errs...))
+}
+
+// diToken posts one grant to the DI token service as clientID (a public client:
+// Basic auth with an empty secret). It returns the HTTP status alongside any
+// error so callers can tell a refused grant from an outage.
+func (c *Client) diToken(ctx context.Context, clientID string, form url.Values) (*DIToken, int, error) {
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, diTokenURL, strings.NewReader(form.Encode()))
+	if err != nil {
+		return nil, 0, err
+	}
+	req.SetBasicAuth(clientID, "")
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("Cache-Control", "no-cache")
+	applyNativeHeaders(req)
+
+	body, status, err := c.do(req)
+	if err != nil {
+		// Error bodies are OAuth error objects, which carry no token.
+		return nil, status, fmt.Errorf("%w: %.200s", err, body)
+	}
+	var resp struct {
+		AccessToken  string `json:"access_token"`
+		RefreshToken string `json:"refresh_token"`
+		ExpiresIn    int    `json:"expires_in"`
+	}
+	if err := json.Unmarshal([]byte(body), &resp); err != nil {
+		return nil, status, fmt.Errorf("parsing DI token: %w", err)
+	}
+	if resp.AccessToken == "" {
+		return nil, status, errors.New("DI token response had no access token")
+	}
+	return &DIToken{
+		AccessToken:  resp.AccessToken,
+		RefreshToken: resp.RefreshToken,
+		ClientID:     clientID,
+		ExpiresAt:    time.Now().Add(time.Duration(resp.ExpiresIn) * time.Second),
+	}, status, nil
+}
+
+// applyNativeHeaders sets the Connect Android app's identifying headers.
+func applyNativeHeaders(req *http.Request) {
+	req.Header.Set("User-Agent", nativeUA)
+	req.Header.Set("X-Garmin-User-Agent", nativeGarminUA)
+	req.Header.Set("X-Garmin-Paired-App-Version", "10861")
+	req.Header.Set("X-Garmin-Client-Platform", "Android")
+	req.Header.Set("X-App-Ver", "10861")
+	req.Header.Set("X-Lang", "en")
+	req.Header.Set("X-GCExperience", "GC5")
+	req.Header.Set("Accept-Language", "en-US,en;q=0.9")
+}
+
 // submitMFA invokes the MFA callback and posts the resulting code.
 func (c *Client) submitMFA(ctx context.Context, creds Credentials, prevHTML string) (string, error) {
 	if creds.MFA == nil {
-		return "", fmt.Errorf("Garmin requires an MFA code but no MFA callback was provided")
+		return "", errors.New("an MFA code is required by Garmin but no MFA callback was provided")
 	}
 	code, err := creds.MFA(ctx)
 	if err != nil {
@@ -447,8 +597,6 @@ func sign(method, baseURL string, params map[string]string, consumerSecret, toke
 	return base64.StdEncoding.EncodeToString(mac.Sum(nil))
 }
 
-// --- low-level HTTP helpers ---------------------------------------------------
-
 func (c *Client) get(ctx context.Context, rawURL, ua, referer string) (string, error) {
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, rawURL, nil)
 	if err != nil {
@@ -510,8 +658,6 @@ func (c *Client) do(req *http.Request) (string, int, error) {
 	return string(body), resp.StatusCode, nil
 }
 
-// --- pure helpers -------------------------------------------------------------
-
 func mfaRequested(html string) bool {
 	if m := titleRe.FindStringSubmatch(html); m != nil {
 		return strings.Contains(strings.ToLower(m[1]), "mfa")
@@ -527,8 +673,10 @@ func extract(re *regexp.Regexp, body, what string) (string, error) {
 	return m[1], nil
 }
 
+// nonce returns a random OAuth1 nonce; RFC 5849 requires it be unique per
+// timestamp, which the clock alone does not guarantee.
 func nonce() string {
-	return strconv.FormatInt(time.Now().UnixNano(), 36) + strconv.FormatInt(time.Now().Unix(), 36)
+	return rand.Text()
 }
 
 // oauthEscape percent-encodes per RFC 5849 (OAuth1): unreserved chars are
