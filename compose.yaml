@@ -1,0 +1,23 @@
+# Serves garmin-mcp over Streamable HTTP for remote MCP clients. Link your
+# account into the same volume first (see the README), and put a
+# TLS-terminating reverse proxy in front before exposing it beyond this host.
+services:
+  garmin-mcp:
+    build: .
+    restart: unless-stopped
+    environment:
+      MCP_BEARER_TOKEN: ${MCP_BEARER_TOKEN:?set MCP_BEARER_TOKEN in .env}
+      # Inside the container the server must listen on all interfaces; the port
+      # mapping below keeps it on the host's loopback.
+      GARMIN_LISTEN_ADDR: 0.0.0.0:8082
+    volumes:
+      - garmin-mcp:/data
+    ports:
+      - "127.0.0.1:8082:8082"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+
+volumes:
+  garmin-mcp:
+    name: garmin-mcp
