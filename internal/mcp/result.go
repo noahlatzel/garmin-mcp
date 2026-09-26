@@ -1,5 +1,5 @@
-// Package mcp holds the shared HTTP-serving and tool-result helpers for the
-// garmin MCP service. It is deliberately transport-agnostic.
+// Package mcp holds the HTTP-serving, bearer-token and tool-result helpers for
+// the garmin MCP server.
 package mcp
 
 import (

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// Garmin strength enum values, harvested from the live builder (data/SCHEMA.md).
+// Garmin strength enum values, harvested from the live builder.
 const (
 	sportStrengthID  = 5
 	sportStrengthKey = "strength_training"
@@ -29,7 +29,7 @@ const (
 )
 
 // Swim enum values, harvested 2026-07-09 from a real pool-swim save in the
-// Garmin Connect web builder (see data/SCHEMA.md "Swim (pool)").
+// Garmin Connect web builder.
 const (
 	sportSwimID  = 4
 	sportSwimKey = "swimming"
@@ -79,7 +79,7 @@ type distanceUnit struct {
 var meter = &distanceUnit{UnitKey: "meter"}
 
 // strokeTypes/equipmentTypes/drillTypes map the tool-level lowercase names to
-// Garmin's enum values. DRAFT ids (see data/SCHEMA.md).
+// Garmin's enum values. DRAFT ids: re-check with `garmin verify swim`.
 var (
 	strokeTypes = map[string]strokeType{
 		"any_stroke":   {StrokeTypeID: 1, StrokeTypeKey: strPtr("any_stroke"), DisplayOrder: 1},
@@ -153,7 +153,7 @@ type executableStep struct {
 	TargetType        targetType   `json:"targetType"`
 	// Description carries a per-step coaching cue (Garmin's step "Notes" field).
 	// It is independent of reps/weight and is omitted when empty. The field name
-	// was not in the harvested schema (data/SCHEMA.md) — round-trip verify against
+	// was not in the harvested schema — round-trip verify against
 	// the live workout-service (create then get_workout) before trusting it.
 	Description *string `json:"description,omitempty"`
 

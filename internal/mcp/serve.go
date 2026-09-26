@@ -15,15 +15,15 @@ import (
 )
 
 // shutdownTimeout bounds how long in-flight requests may drain after SIGTERM;
-// systemd's own stop timeout is the backstop.
+// the supervisor's own stop timeout (Docker, systemd) is the backstop.
 const shutdownTimeout = 10 * time.Second
 
 // ResourceServerConfig configures ServeResourceServer. The caller resolves the
 // values from its service-specific environment (documented in each cmd's doc
 // comment).
 type ResourceServerConfig struct {
-	// Addr is the listen address, e.g. 127.0.0.1:8081 (loopback only; Caddy is
-	// the sole public listener).
+	// Addr is the listen address, e.g. 127.0.0.1:8081. The bearer token travels
+	// in clear, so only a TLS-terminating proxy should be reachable publicly.
 	Addr string
 	// Service names the service in the health payload and startup log.
 	Service string
@@ -35,8 +35,8 @@ type ResourceServerConfig struct {
 // ServeResourceServer serves an MCP server over Streamable HTTP. MCP traffic is
 // gated by cfg.Auth, while /healthz stays unauthenticated for probes. It blocks
 // until the listener fails or a SIGINT/SIGTERM arrives, then drains in-flight
-// requests (bounded by shutdownTimeout) so systemd restarts don't kill active
-// tool calls.
+// requests (bounded by shutdownTimeout) so restarts don't kill active tool
+// calls.
 func ServeResourceServer(cfg ResourceServerConfig, server *mcp.Server) error {
 	handler := mcp.NewStreamableHTTPHandler(func(*http.Request) *mcp.Server { return server }, nil)
 

@@ -6,9 +6,8 @@ import (
 	"strings"
 )
 
-// Garmin workout target enums, DRAFT — sourced from reference implementations
-// (see data/SCHEMA.md "swim (DRAFT)"); confirm against a manual harvest before
-// trusting new values. no.target=1 is live-verified by the strength builder.
+// Garmin workout target enums, DRAFT — sourced from reference implementations;
+// confirm against a manual harvest before trusting new values. no.target=1 is live-verified by the strength builder.
 const (
 	targetPowerZoneID  = 2
 	targetPowerZoneKey = "power.zone"

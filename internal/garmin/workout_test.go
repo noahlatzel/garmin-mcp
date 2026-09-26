@@ -43,7 +43,7 @@ func TestCatalogResolve(t *testing.T) {
 	}
 }
 
-// TestBuildWorkout_WorkedExample reproduces the harvested session (SCHEMA.md):
+// TestBuildWorkout_WorkedExample reproduces a session harvested from the web builder:
 // warmup INDOOR_ROW (time 300s) then 3 sets of BARBELL_BICEPS_CURL (12 reps,
 // 10 kg) with lap-button rests between sets. Sets are expanded (no repeat block).
 func TestBuildWorkout_WorkedExample(t *testing.T) {

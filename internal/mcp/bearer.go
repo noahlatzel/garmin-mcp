@@ -18,8 +18,8 @@ func bearerToken(r *http.Request) (string, bool) {
 	return strings.TrimSpace(auth[len(prefix):]), true
 }
 
-// HealthHandler returns an unauthenticated health handler for /healthz, useful
-// behind Caddy/systemd. It never exposes data. When healthy it responds 200 with
+// HealthHandler returns an unauthenticated health handler for /healthz, for
+// container and proxy health checks. It never exposes data. When healthy it responds 200 with
 // {"status":"ok","service":<service>}; if any check returns an error it responds
 // 503 with {"status":"error","service":<service>,"reason":<detail>}. Checks are
 // for hard service dependencies (e.g. a database ping) — not per-user state.

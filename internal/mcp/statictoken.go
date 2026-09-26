@@ -5,12 +5,10 @@ import (
 	"net/http"
 )
 
-// StaticTokenMiddleware gates MCP traffic on a single shared bearer token. It is
-// the single-user replacement for the multi-tenant OAuth2 resource-server flow:
-// the deployment holds one secret (MCP_BEARER_TOKEN), and every request must
-// present it. A missing or mismatched token yields 401 with a WWW-Authenticate
-// challenge; the comparison is constant-time to avoid leaking the token by
-// timing.
+// StaticTokenMiddleware gates MCP traffic on a single shared bearer token
+// (MCP_BEARER_TOKEN) that every request must present. A missing or mismatched
+// token yields 401 with a WWW-Authenticate challenge; the comparison is
+// constant-time to avoid leaking the token by timing.
 func StaticTokenMiddleware(token string) func(http.Handler) http.Handler {
 	want := []byte(token)
 	return func(next http.Handler) http.Handler {

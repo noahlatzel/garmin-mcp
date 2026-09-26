@@ -15,16 +15,14 @@ func RequireEnv(name string) (string, error) {
 	value := strings.TrimSpace(os.Getenv(name))
 	if value == "" {
 		return "", fmt.Errorf(
-			"environment variable %s is not set: export it, or set it in .env for local "+
-				"development (see .env.example; production uses the systemd EnvironmentFile)", name)
+			"environment variable %s is not set: export it, or set it in .env (see .env.example)", name)
 	}
 	return value, nil
 }
 
 // LoadDotEnv reads key=value pairs from a .env file in the working directory, if
 // present, without overriding variables already set in the environment. It is
-// best-effort and silently ignores a missing file. Production deployments set
-// real environment variables (via systemd EnvironmentFile) and need no .env.
+// best-effort and silently ignores a missing file.
 func LoadDotEnv() {
 	data, err := os.ReadFile(".env")
 	if err != nil {
