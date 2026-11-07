@@ -22,6 +22,11 @@ type healthDay struct {
 	TotalExpenditureKcal  *float64 `json:"total_expenditure_kcal,omitempty"`
 	ActiveExpenditureKcal *float64 `json:"active_expenditure_kcal,omitempty"`
 	WeightKG              *float64 `json:"weight_kg,omitempty"`
+	BMI                   *float64 `json:"bmi,omitempty"`
+	BodyFatPercent        *float64 `json:"body_fat_percent,omitempty"`
+	BodyWaterPercent      *float64 `json:"body_water_percent,omitempty"`
+	SkeletalMuscleMassKG  *float64 `json:"skeletal_muscle_mass_kg,omitempty"`
+	BoneMassKG            *float64 `json:"bone_mass_kg,omitempty"`
 	Weight7DayMeanKG      *float64 `json:"weight_7_day_mean_kg,omitempty"`
 	Weight7DaySamples     int      `json:"weight_7_day_samples,omitempty"`
 	ReadinessScore        *int     `json:"training_readiness_score,omitempty"`
@@ -121,6 +126,11 @@ func (s *Service) healthSummary(ctx context.Context, r coachingRange) (healthSum
 			Timestamp  json.RawMessage `json:"timestampGMT"`
 			RecordedAt json.RawMessage `json:"date"`
 			Weight     *float64        `json:"weight"`
+			BMI        *float64        `json:"bmi"`
+			BodyFat    *float64        `json:"bodyFat"`
+			BodyWater  *float64        `json:"bodyWater"`
+			MuscleMass *float64        `json:"muscleMass"`
+			BoneMass   *float64        `json:"boneMass"`
 		} `json:"dateWeightList"`
 	}
 	if read("weight", connectAPIHost+"/weight-service/weight/daterangesnapshot"+rangeQuery, &weights) {
@@ -129,6 +139,9 @@ func (s *Service) healthSummary(ctx context.Context, r coachingRange) (healthSum
 			timestamp := max(coachingWeightTimestamp(v.Timestamp), coachingWeightTimestamp(v.RecordedAt))
 			if d := byDate[v.Date]; d != nil && v.Weight != nil && *v.Weight > 0 && (d.WeightKG == nil || timestamp > last[v.Date]) {
 				d.WeightKG = new(*v.Weight / 1000)
+				d.BMI, d.BodyFatPercent, d.BodyWaterPercent = v.BMI, v.BodyFat, v.BodyWater
+				d.SkeletalMuscleMassKG = optionalMassKG(v.MuscleMass)
+				d.BoneMassKG = optionalMassKG(v.BoneMass)
 				last[v.Date] = timestamp
 			}
 		}
@@ -181,6 +194,13 @@ func (s *Service) healthSummary(ctx context.Context, r coachingRange) (healthSum
 		}
 	}
 	return result, ctx.Err()
+}
+
+func optionalMassKG(grams *float64) *float64 {
+	if grams == nil {
+		return nil
+	}
+	return new(*grams / 1000)
 }
 
 func coachingWeightTimestamp(raw json.RawMessage) int64 {

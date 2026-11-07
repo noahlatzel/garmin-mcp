@@ -41,7 +41,7 @@ type coachingIssue struct {
 func registerCoachingTools(server *mcp.Server, svc *Service) {
 	mcp.AddTool(server, &mcp.Tool{
 		Name: "get_health_summary", Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read up to 42 days of compact daily recovery data. Sleep is in seconds, HRV in milliseconds, resting heart rate in bpm, energy expenditure in kcal, weight in kg, and stress, Body Battery, sleep and readiness are Garmin scores. Includes the last weigh-in per day and its trailing seven-day average within the requested range. Missing measurements are omitted; source failures are listed.",
+		Description: "Read up to 42 days of compact daily recovery data. Sleep is in seconds, HRV in milliseconds, resting heart rate in bpm, energy expenditure in kcal, and stress, Body Battery, sleep and readiness are Garmin scores. The last weigh-in per day includes weight, skeletal muscle mass and bone mass in kg, BMI in kg/m², and body fat and body water in percent when recorded. Includes a trailing seven-day weight average within the requested range. Missing measurements are omitted; source failures are listed.",
 	}, func(ctx context.Context, _ *mcp.CallToolRequest, in coachingRange) (*mcp.CallToolResult, any, error) {
 		result, err := svc.healthSummary(ctx, in)
 		if err != nil {
