@@ -15,8 +15,8 @@ func TestCoachingHealthSummary(t *testing.T) {
 		"/daterangesnapshot":         `{"dateWeightList":[{"calendarDate":"2026-11-02","timestampGMT":"2026-11-02T08:00:00","weight":72000,"bmi":23,"bodyFat":18.5,"bodyWater":55,"muscleMass":34000,"boneMass":3200},{"calendarDate":"2026-11-02","timestampGMT":"2026-11-02T07:00:00","weight":73000,"bodyFat":99}]}`,
 		"/dailySleepSummariesByDate": `[{"calendarDate":"2026-11-02","sleepTimeSeconds":27000,"sleepScores":{"overall":{"value":90}}}]`,
 	}}
-	got, err := testService(t, doer).healthSummary(context.Background(), coachingRange{"2026-11-02", "2026-11-03"})
-	if err != nil || len(got.Issues) != 0 || len(got.Days) != 2 {
+	got, err := testService(t, doer).healthSummary(context.Background(), coachingRange{"2026-11-02", "2026-11-09"})
+	if err != nil || len(got.Issues) != 0 || len(got.Days) != 8 {
 		t.Fatalf("health summary: %+v, %v", got, err)
 	}
 	encoded, err := json.Marshal(got)
@@ -31,6 +31,25 @@ func TestCoachingHealthSummary(t *testing.T) {
 	}
 	if strings.Contains(body, "2400") || got.Days[1].BodyFatPercent != nil || got.Days[1].WeightKG != nil || got.Days[1].Weight7DaySamples != 1 {
 		t.Fatalf("unexpected intake or invented weigh-in in %s", body)
+	}
+	day := got.Days[6]
+	for _, metric := range []struct {
+		mean    *float64
+		samples int
+		want    float64
+	}{
+		{day.BMI7DayMean, day.BMI7DaySamples, 23},
+		{day.BodyFat7DayMeanPercent, day.BodyFat7DaySamples, 18.5},
+		{day.BodyWater7DayMeanPercent, day.BodyWater7DaySamples, 55},
+		{day.SkeletalMuscleMass7DayMeanKG, day.SkeletalMuscleMass7DaySamples, 34},
+		{day.BoneMass7DayMeanKG, day.BoneMass7DaySamples, 3.2},
+	} {
+		if metric.mean == nil || *metric.mean != metric.want || metric.samples != 1 {
+			t.Fatalf("unexpected trailing average or sample count for %g", metric.want)
+		}
+	}
+	if got.Days[7].BodyFat7DayMeanPercent != nil || got.Days[7].BodyFat7DaySamples != 0 {
+		t.Fatal("body fat measurement should expire after seven days")
 	}
 }
 

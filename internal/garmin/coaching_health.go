@@ -9,28 +9,38 @@ import (
 )
 
 type healthDay struct {
-	Date                  string   `json:"date"`
-	SleepSeconds          *int     `json:"sleep_seconds,omitempty"`
-	SleepScore            *int     `json:"sleep_score,omitempty"`
-	HRVLastNightMS        *float64 `json:"hrv_last_night_ms,omitempty"`
-	HRVWeeklyMS           *float64 `json:"hrv_weekly_ms,omitempty"`
-	HRVStatus             string   `json:"hrv_status,omitempty"`
-	RestingHeartRateBPM   *int     `json:"resting_heart_rate_bpm,omitempty"`
-	AverageStress         *int     `json:"average_stress_score,omitempty"`
-	BodyBatteryHigh       *int     `json:"body_battery_high_score,omitempty"`
-	BodyBatteryLow        *int     `json:"body_battery_low_score,omitempty"`
-	TotalExpenditureKcal  *float64 `json:"total_expenditure_kcal,omitempty"`
-	ActiveExpenditureKcal *float64 `json:"active_expenditure_kcal,omitempty"`
-	WeightKG              *float64 `json:"weight_kg,omitempty"`
-	BMI                   *float64 `json:"bmi,omitempty"`
-	BodyFatPercent        *float64 `json:"body_fat_percent,omitempty"`
-	BodyWaterPercent      *float64 `json:"body_water_percent,omitempty"`
-	SkeletalMuscleMassKG  *float64 `json:"skeletal_muscle_mass_kg,omitempty"`
-	BoneMassKG            *float64 `json:"bone_mass_kg,omitempty"`
-	Weight7DayMeanKG      *float64 `json:"weight_7_day_mean_kg,omitempty"`
-	Weight7DaySamples     int      `json:"weight_7_day_samples,omitempty"`
-	ReadinessScore        *int     `json:"training_readiness_score,omitempty"`
-	ReadinessMeasuredAt   string   `json:"training_readiness_measured_at,omitempty"`
+	Date                          string   `json:"date"`
+	SleepSeconds                  *int     `json:"sleep_seconds,omitempty"`
+	SleepScore                    *int     `json:"sleep_score,omitempty"`
+	HRVLastNightMS                *float64 `json:"hrv_last_night_ms,omitempty"`
+	HRVWeeklyMS                   *float64 `json:"hrv_weekly_ms,omitempty"`
+	HRVStatus                     string   `json:"hrv_status,omitempty"`
+	RestingHeartRateBPM           *int     `json:"resting_heart_rate_bpm,omitempty"`
+	AverageStress                 *int     `json:"average_stress_score,omitempty"`
+	BodyBatteryHigh               *int     `json:"body_battery_high_score,omitempty"`
+	BodyBatteryLow                *int     `json:"body_battery_low_score,omitempty"`
+	TotalExpenditureKcal          *float64 `json:"total_expenditure_kcal,omitempty"`
+	ActiveExpenditureKcal         *float64 `json:"active_expenditure_kcal,omitempty"`
+	WeightKG                      *float64 `json:"weight_kg,omitempty"`
+	BMI                           *float64 `json:"bmi,omitempty"`
+	BodyFatPercent                *float64 `json:"body_fat_percent,omitempty"`
+	BodyWaterPercent              *float64 `json:"body_water_percent,omitempty"`
+	SkeletalMuscleMassKG          *float64 `json:"skeletal_muscle_mass_kg,omitempty"`
+	BoneMassKG                    *float64 `json:"bone_mass_kg,omitempty"`
+	Weight7DayMeanKG              *float64 `json:"weight_7_day_mean_kg,omitempty"`
+	Weight7DaySamples             int      `json:"weight_7_day_samples,omitempty"`
+	BMI7DayMean                   *float64 `json:"bmi_7_day_mean,omitempty"`
+	BMI7DaySamples                int      `json:"bmi_7_day_samples,omitempty"`
+	BodyFat7DayMeanPercent        *float64 `json:"body_fat_7_day_mean_percent,omitempty"`
+	BodyFat7DaySamples            int      `json:"body_fat_7_day_samples,omitempty"`
+	BodyWater7DayMeanPercent      *float64 `json:"body_water_7_day_mean_percent,omitempty"`
+	BodyWater7DaySamples          int      `json:"body_water_7_day_samples,omitempty"`
+	SkeletalMuscleMass7DayMeanKG  *float64 `json:"skeletal_muscle_mass_7_day_mean_kg,omitempty"`
+	SkeletalMuscleMass7DaySamples int      `json:"skeletal_muscle_mass_7_day_samples,omitempty"`
+	BoneMass7DayMeanKG            *float64 `json:"bone_mass_7_day_mean_kg,omitempty"`
+	BoneMass7DaySamples           int      `json:"bone_mass_7_day_samples,omitempty"`
+	ReadinessScore                *int     `json:"training_readiness_score,omitempty"`
+	ReadinessMeasuredAt           string   `json:"training_readiness_measured_at,omitempty"`
 }
 
 type healthSummaryResult struct {
@@ -147,18 +157,14 @@ func (s *Service) healthSummary(ctx context.Context, r coachingRange) (healthSum
 		}
 	}
 	for i := range result.Days {
-		var sum float64
-		var samples int
-		for j := max(0, i-6); j <= i; j++ {
-			if weight := result.Days[j].WeightKG; weight != nil {
-				sum += *weight
-				samples++
-			}
-		}
-		if samples > 0 {
-			result.Days[i].Weight7DayMeanKG = new(sum / float64(samples))
-			result.Days[i].Weight7DaySamples = samples
-		}
+		day := &result.Days[i]
+		window := result.Days[max(0, i-6) : i+1]
+		day.Weight7DayMeanKG, day.Weight7DaySamples = healthMean(window, func(d healthDay) *float64 { return d.WeightKG })
+		day.BMI7DayMean, day.BMI7DaySamples = healthMean(window, func(d healthDay) *float64 { return d.BMI })
+		day.BodyFat7DayMeanPercent, day.BodyFat7DaySamples = healthMean(window, func(d healthDay) *float64 { return d.BodyFatPercent })
+		day.BodyWater7DayMeanPercent, day.BodyWater7DaySamples = healthMean(window, func(d healthDay) *float64 { return d.BodyWaterPercent })
+		day.SkeletalMuscleMass7DayMeanKG, day.SkeletalMuscleMass7DaySamples = healthMean(window, func(d healthDay) *float64 { return d.SkeletalMuscleMassKG })
+		day.BoneMass7DayMeanKG, day.BoneMass7DaySamples = healthMean(window, func(d healthDay) *float64 { return d.BoneMassKG })
 	}
 
 	var sleep []coachingSleepRecord
@@ -194,6 +200,21 @@ func (s *Service) healthSummary(ctx context.Context, r coachingRange) (healthSum
 		}
 	}
 	return result, ctx.Err()
+}
+
+func healthMean(days []healthDay, measurement func(healthDay) *float64) (*float64, int) {
+	var sum float64
+	var samples int
+	for _, day := range days {
+		if value := measurement(day); value != nil {
+			sum += *value
+			samples++
+		}
+	}
+	if samples == 0 {
+		return nil, 0
+	}
+	return new(sum / float64(samples)), samples
 }
 
 func optionalMassKG(grams *float64) *float64 {
