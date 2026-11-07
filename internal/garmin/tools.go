@@ -15,8 +15,11 @@ import (
 )
 
 const (
-	serverName    = "garmin"
-	serverVersion = "0.1.0"
+	serverName         = "garmin"
+	serverVersion      = "0.1.0"
+	nativeWorkoutUnits = " Garmin's estimatedDurationInSecs is in seconds and estimatedDistanceInMeters is in metres. " +
+		"Step values depend on their endCondition, targetType and unit metadata. Time is in seconds, distance in metres, " +
+		"pace/speed targets in m/s, heart rate in bpm, power in watts, and reps and zone numbers are counts."
 )
 
 // dateRe matches an ISO calendar date (YYYY-MM-DD), validated client-side before
@@ -371,7 +374,8 @@ func NewMCPServer(svc *Service) *mcp.Server {
 			"calendar in one call. Returns a compact {workout_id, name, sport, schedule_date, " +
 			"scheduled} summary by default; pass verbose=true for the full Garmin JSON. For " +
 			"several workouts (e.g. a training week) prefer create_workouts. Supports dry_run. " +
-			"Requires the one-time Garmin account link.",
+			"In dry-run previews, duration is in seconds, reps are counts, and weight is in kilograms. " +
+			"Requires the one-time Garmin account link." + nativeWorkoutUnits,
 		InputSchema: strengthWorkoutInputSchema(),
 	}, handleCreateStrengthWorkout(svc))
 
@@ -386,7 +390,8 @@ func NewMCPServer(svc *Service) *mcp.Server {
 			"also put it on the calendar in one call. Returns a compact {workout_id, name, sport, " +
 			"schedule_date, scheduled} summary by default; pass verbose=true for the full Garmin " +
 			"JSON. For several workouts (e.g. a training week) prefer create_workouts. Supports " +
-			"dry_run. Requires the one-time Garmin account link.",
+			"dry_run. In previews, distance and pool length are in metres, time is in seconds, pace targets are in m/s, " +
+			"and heart-rate zones are numbered. Requires the one-time Garmin account link." + nativeWorkoutUnits,
 		InputSchema: swimWorkoutInputSchema(),
 	}, handleCreateSwimWorkout(svc))
 
@@ -402,7 +407,7 @@ func NewMCPServer(svc *Service) *mcp.Server {
 			"returning a compact per-item {index, name, status, workout_id} report so only failed " +
 			"items need retrying (status created_unscheduled means the workout exists — use " +
 			"schedule_workout, don't re-create). Supports dry_run. Requires the one-time Garmin " +
-			"account link.",
+			"account link. Batch results report item counts and statuses.",
 		InputSchema: createWorkoutsInputSchema(),
 	}, handleCreateWorkouts(svc))
 
@@ -446,14 +451,14 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "list_workouts",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "List the user's saved Garmin workouts (id, name, type), newest first.",
+		Description: "List the user's saved Garmin workouts, newest first. Garmin reports estimatedDurationInSecs in seconds and estimatedDistanceInMeters in metres when present.",
 		InputSchema: mcputil.InputSchema[ListWorkoutsInput]("list_workouts", "limit"),
 	}, handleListWorkouts(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_workout",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Fetch one Garmin workout's full JSON by workoutId.",
+		Description: "Fetch one Garmin workout's full JSON by workoutId." + nativeWorkoutUnits,
 		InputSchema: mcputil.InputSchema[GetWorkoutInput]("get_workout"),
 	}, handleGetWorkout(svc))
 
@@ -462,46 +467,47 @@ func NewMCPServer(svc *Service) *mcp.Server {
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(true)},
 		Description: "Delete one Garmin workout by workoutId. First fetches and returns the " +
 			"workout; only deletes the single given id with confirm=true (default false). " +
-			"Supports dry_run. Never bulk-deletes.",
+			"Supports dry_run. Never bulk-deletes." + nativeWorkoutUnits,
 		InputSchema: mcputil.InputSchema[DeleteWorkoutInput]("delete_workout", "confirm", "dry_run"),
 	}, handleDeleteWorkout(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_calendar",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read scheduled Garmin calendar items for a given year and month (1-indexed).",
+		Description: "Read scheduled Garmin calendar items for a given year and month (1-indexed). Dates are YYYY-MM-DD. Optional raw item fields use Garmin's native units.",
 		InputSchema: mcputil.InputSchema[CalendarInput]("get_calendar", "year", "month"),
 	}, handleGetCalendar(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_daily_summary",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read a day's Garmin daily summary: steps, calories, intensity minutes, " +
-			"resting HR, body battery range. date is YYYY-MM-DD.",
+		Description: "Read a Garmin daily summary for date (YYYY-MM-DD). Steps are counts, distance is in metres, energy is in kcal, " +
+			"intensity minutes are in minutes, heart rate is in bpm, and Body Battery and stress are unitless scores.",
 	}, handleDateRead(svc.GetDailySummary))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_sleep",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read Garmin sleep stages, duration and sleep score for a date (YYYY-MM-DD).",
+		Description: "Read Garmin sleep for date (YYYY-MM-DD). Sleep and stage durations are in seconds, sleep score is on a 0–100 scale, " +
+			"heart rate is in bpm, HRV in milliseconds, respiration in breaths/min, and SpO2 in percent when present.",
 	}, handleDateRead(svc.GetSleep))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_hrv",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read overnight HRV (status + readings) for a date (YYYY-MM-DD).",
+		Description: "Read overnight HRV status and readings for date (YYYY-MM-DD). HRV readings, averages and baseline bounds are in milliseconds.",
 	}, handleDateRead(svc.GetHRV))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_body_battery",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read the Garmin body-battery timeline over an inclusive date range (YYYY-MM-DD).",
+		Description: "Read the Garmin Body Battery timeline over an inclusive date range (YYYY-MM-DD). Values are unitless Garmin scores and numeric sample timestamps are Unix epoch milliseconds.",
 	}, handleGetBodyBattery(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_stress",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
-		Description: "Read the Garmin daily stress timeline for a date (YYYY-MM-DD).",
+		Description: "Read the Garmin daily stress timeline for date (YYYY-MM-DD). Stress levels are unitless Garmin scores; negative sample codes indicate unavailable readings. Numeric sample timestamps are Unix epoch milliseconds.",
 	}, handleDateRead(svc.GetStress))
 
 	return server

@@ -28,9 +28,9 @@ func registerPerformanceTools(server *mcp.Server, svc *Service) {
 	for _, tool := range []struct {
 		name, description, path string
 	}{
-		{"get_vo2_max", "Read the latest Garmin running and cycling VO2 max estimates as of date (YYYY-MM-DD).", "/maxmet/latest/"},
-		{"get_training_status", "Read Garmin Training Status and acute/chronic training load for date (YYYY-MM-DD).", "/trainingstatus/daily/"},
-		{"get_training_readiness", "Read Garmin Training Readiness scores and contributing factors recorded on date (YYYY-MM-DD). Multiple entries may be returned.", "/trainingreadiness/"},
+		{"get_vo2_max", "Read the latest Garmin running and cycling VO2 max estimates as of date (YYYY-MM-DD). Values are in mL/kg/min.", "/maxmet/latest/"},
+		{"get_training_status", "Read Garmin Training Status for date (YYYY-MM-DD). Training loads are unitless Garmin scores, trainingStatus is a category code, and acute-to-chronic workload is a unitless ratio (acwrPercent is expressed as a percentage).", "/trainingstatus/daily/"},
+		{"get_training_readiness", "Read Garmin Training Readiness for date (YYYY-MM-DD). Readiness and sleep scores are on a 0–100 scale, recoveryTime is in minutes, hrvWeeklyAverage is in milliseconds, factorPercent fields are percentages, and acuteLoad is a unitless Garmin score. Multiple entries may be returned.", "/trainingreadiness/"},
 	} {
 		mcp.AddTool(server, &mcp.Tool{
 			Name: tool.name, Description: tool.description,
@@ -84,7 +84,7 @@ func registerPerformanceTools(server *mcp.Server, svc *Service) {
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_lactate_threshold",
-		Description: "Read Garmin's latest running lactate threshold estimate, including heart rate, speed in m/s, and pace in seconds per kilometre when available.",
+		Description: "Read Garmin's latest running lactate threshold estimate. Heart rate is in bpm, speed is in m/s, and pace is in seconds per kilometre when available.",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 	}, func(ctx context.Context, _ *mcp.CallToolRequest, _ struct{}) (*mcp.CallToolResult, any, error) {
 		body, err := svc.readPerformanceMetric(ctx, lactateThresholdURL)

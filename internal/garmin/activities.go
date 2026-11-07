@@ -14,10 +14,12 @@ import (
 )
 
 const (
-	activitySearchURL = connectAPIHost + "/activitylist-service/activities/search/activities"
-	activityURL       = connectAPIHost + "/activity-service/activity"
-	maxActivityPage   = 50
-	maxActivityLaps   = 100
+	activitySearchURL   = connectAPIHost + "/activitylist-service/activities/search/activities"
+	activityURL         = connectAPIHost + "/activity-service/activity"
+	maxActivityPage     = 50
+	maxActivityLaps     = 100
+	activityOutputUnits = " Distances and elevation are in metres, durations in seconds, speed in m/s, " +
+		"heart rate in bpm and power in watts. Training Effect and training load are unitless Garmin scores."
 )
 
 type activityListInput struct {
@@ -84,7 +86,7 @@ func registerActivityTools(server *mcp.Server, svc *Service) {
 	mcp.AddTool(server, &mcp.Tool{
 		Name: "list_activities",
 		Description: "List completed Garmin activities, newest first, with optional sport and date filters. " +
-			"Returns activity IDs and training metrics. Units: metres, seconds, metres per second, bpm and watts.",
+			"Returns activity IDs and training metrics." + activityOutputUnits,
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		InputSchema: mcputil.InputSchema[activityListInput]("list_activities", "start", "limit"),
 	}, func(ctx context.Context, _ *mcp.CallToolRequest, in activityListInput) (*mcp.CallToolResult, any, error) {
@@ -97,7 +99,7 @@ func registerActivityTools(server *mcp.Server, svc *Service) {
 	mcp.AddTool(server, &mcp.Tool{
 		Name: "get_activity_details",
 		Description: "Read one completed Garmin activity by ID. Returns training metrics and optionally " +
-			"recorded laps when available. Units: metres, seconds, metres per second, bpm and watts.",
+			"recorded laps when available." + activityOutputUnits,
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		InputSchema: mcputil.InputSchema[activityDetailInput]("get_activity_details", "activity_id", "include_laps"),
 	}, func(ctx context.Context, _ *mcp.CallToolRequest, in activityDetailInput) (*mcp.CallToolResult, any, error) {

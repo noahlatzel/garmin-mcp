@@ -58,7 +58,8 @@ func registerEnduranceTools(server *mcp.Server, svc *Service) {
 		mcp.AddTool(server, &mcp.Tool{
 			Name: tool.name,
 			Description: tool.description + " Supports timed, distance and lap-button steps, repeats, " +
-				"dry_run and optional calendar scheduling.",
+				"dry_run and optional calendar scheduling. In previews, time is in seconds, distance in metres, pace/speed targets in m/s, " +
+				"heart-rate targets in bpm, power targets in watts, and zones are numbered." + nativeWorkoutUnits,
 			InputSchema: schema,
 			Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(false)},
 		}, func(ctx context.Context, _ *mcp.CallToolRequest, in enduranceWorkoutInput) (*mcp.CallToolResult, any, error) {
