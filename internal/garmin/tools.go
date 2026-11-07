@@ -363,6 +363,7 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	registerActivityTools(server, svc)
 	registerEnduranceTools(server, svc)
 	registerPerformanceTools(server, svc)
+	registerCoachingTools(server, svc)
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "create_strength_workout",
