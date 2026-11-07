@@ -357,6 +357,7 @@ type DateRangeInput struct {
 // wellness reads.
 func NewMCPServer(svc *Service) *mcp.Server {
 	server := mcp.NewServer(&mcp.Implementation{Name: serverName, Version: serverVersion}, nil)
+	registerActivityTools(server, svc)
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name: "create_strength_workout",
