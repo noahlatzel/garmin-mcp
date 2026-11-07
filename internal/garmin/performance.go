@@ -84,7 +84,7 @@ func registerPerformanceTools(server *mcp.Server, svc *Service) {
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_lactate_threshold",
-		Description: "Read Garmin's latest running lactate threshold estimate, including heart rate and speed when available.",
+		Description: "Read Garmin's latest running lactate threshold estimate, including heart rate, speed in m/s, and pace in seconds per kilometre when available.",
 		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 	}, func(ctx context.Context, _ *mcp.CallToolRequest, _ struct{}) (*mcp.CallToolResult, any, error) {
 		body, err := svc.readPerformanceMetric(ctx, lactateThresholdURL)
@@ -106,14 +106,28 @@ func registerPerformanceTools(server *mcp.Server, svc *Service) {
 			if record.HeartRate == nil {
 				record.HeartRate = record.LegacyHR
 			}
-			if record.Speed != nil || record.HeartRate != nil {
+			speed, pace := lactateThresholdSpeedAndPace(record.Speed)
+			if speed != nil || record.HeartRate != nil {
 				out = append(out, map[string]any{
-					"date": record.Date, "speed_mps": record.Speed, "heart_rate_bpm": record.HeartRate,
+					"date": record.Date, "speed_mps": speed, "pace_seconds_per_km": pace, "heart_rate_bpm": record.HeartRate,
 				})
 			}
 		}
 		return mcputil.DataResult(out)
 	})
+}
+
+func lactateThresholdSpeedAndPace(raw *float64) (speed, pace *float64) {
+	if raw == nil || *raw <= 0 {
+		return nil, nil
+	}
+	mps := *raw
+	// Garmin's threshold endpoint can encode speed in tens of m/s.
+	// Values already in m/s are left as-is.
+	if mps < 1 {
+		mps *= 10
+	}
+	return new(mps), new(1000 / mps)
 }
 
 func (s *Service) readPerformanceMetric(ctx context.Context, target string) ([]byte, error) {
