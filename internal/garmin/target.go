@@ -44,6 +44,8 @@ type TargetSpec struct {
 // allowedTargets lists the target kinds each sport's builder accepts.
 var allowedTargets = map[string]map[string]bool{
 	sportSwimKey: {TargetPace: true, TargetHeartRate: true},
+	"running":    {TargetPace: true, TargetHeartRate: true},
+	"cycling":    {TargetPower: true, TargetHeartRate: true, TargetSpeed: true},
 }
 
 // Validate checks the spec is internally consistent and its kind is allowed for

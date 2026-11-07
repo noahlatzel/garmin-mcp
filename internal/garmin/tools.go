@@ -358,9 +358,11 @@ type DateRangeInput struct {
 func NewMCPServer(svc *Service) *mcp.Server {
 	server := mcp.NewServer(&mcp.Implementation{Name: serverName, Version: serverVersion}, nil)
 	registerActivityTools(server, svc)
+	registerEnduranceTools(server, svc)
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "create_strength_workout",
+		Name:        "create_strength_workout",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(false)},
 		Description: "Create a native strength workout in Garmin Connect. Each step is one " +
 			"named exercise with reps and optional weight (kg); sets are expanded into discrete " +
 			"steps (never merged, never an Nx block). Use search_exercises first to resolve exact " +
@@ -373,7 +375,8 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	}, handleCreateStrengthWorkout(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "create_swim_workout",
+		Name:        "create_swim_workout",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(false)},
 		Description: "Create a native pool-swim workout in Garmin Connect. Each step is a swim " +
 			"(distance in metres or a time), with optional stroke (free/backstroke/breaststroke/fly), " +
 			"drill (kick/pull/drill), equipment (fins/kickboard/paddles/pull_buoy), a pace-per-100m or " +
@@ -387,7 +390,8 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	}, handleCreateSwimWorkout(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "create_workouts",
+		Name:        "create_workouts",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(false)},
 		Description: "Create several Garmin workouts (strength and/or swim, max 14) in ONE call — " +
 			"prefer this over repeated create_strength_workout/create_swim_workout calls when " +
 			"building a training week. Each item follows the same step rules as the single-workout " +
@@ -402,7 +406,8 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	}, handleCreateWorkouts(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "search_exercises",
+		Name:        "search_exercises",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true, OpenWorldHint: new(false)},
 		Description: "Search the embedded Garmin strength-exercise catalog by name substring " +
 			"(case-insensitive). Returns matching {name, category, exercise} entries. Use this to " +
 			"resolve exact exercise names BEFORE calling create_strength_workout or " +
@@ -411,14 +416,16 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	}, handleSearchExercises(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "schedule_workout",
+		Name:        "schedule_workout",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(false)},
 		Description: "Schedule an existing Garmin workout on the calendar by workoutId + date " +
 			"(YYYY-MM-DD). Reversible via unschedule_workout. Supports dry_run.",
 		InputSchema: mcputil.InputSchema[ScheduleWorkoutInput]("schedule_workout", "dry_run"),
 	}, handleScheduleWorkout(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "unschedule_workout",
+		Name:        "unschedule_workout",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(true)},
 		Description: "Remove one scheduled entry from the Garmin calendar by its " +
 			"workoutScheduleId (from schedule_workout's response or get_calendar items). The " +
 			"saved workout itself is untouched. Only removes the single given id with " +
@@ -427,7 +434,8 @@ func NewMCPServer(svc *Service) *mcp.Server {
 	}, handleUnscheduleWorkout(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "update_workout_name",
+		Name:        "update_workout_name",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(true)},
 		Description: "Rename one saved Garmin workout by workoutId (read-modify-write of the " +
 			"full workout body; steps are untouched, and the rename is verified by re-fetching). " +
 			"Applies only with confirm=true (default false). Supports dry_run.",
@@ -436,18 +444,21 @@ func NewMCPServer(svc *Service) *mcp.Server {
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "list_workouts",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "List the user's saved Garmin workouts (id, name, type), newest first.",
 		InputSchema: mcputil.InputSchema[ListWorkoutsInput]("list_workouts", "limit"),
 	}, handleListWorkouts(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_workout",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Fetch one Garmin workout's full JSON by workoutId.",
 		InputSchema: mcputil.InputSchema[GetWorkoutInput]("get_workout"),
 	}, handleGetWorkout(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "delete_workout",
+		Name:        "delete_workout",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: false, DestructiveHint: new(true)},
 		Description: "Delete one Garmin workout by workoutId. First fetches and returns the " +
 			"workout; only deletes the single given id with confirm=true (default false). " +
 			"Supports dry_run. Never bulk-deletes.",
@@ -456,33 +467,39 @@ func NewMCPServer(svc *Service) *mcp.Server {
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_calendar",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Read scheduled Garmin calendar items for a given year and month (1-indexed).",
 		InputSchema: mcputil.InputSchema[CalendarInput]("get_calendar", "year", "month"),
 	}, handleGetCalendar(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
-		Name: "get_daily_summary",
+		Name:        "get_daily_summary",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Read a day's Garmin daily summary: steps, calories, intensity minutes, " +
 			"resting HR, body battery range. date is YYYY-MM-DD.",
 	}, handleDateRead(svc.GetDailySummary))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_sleep",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Read Garmin sleep stages, duration and sleep score for a date (YYYY-MM-DD).",
 	}, handleDateRead(svc.GetSleep))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_hrv",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Read overnight HRV (status + readings) for a date (YYYY-MM-DD).",
 	}, handleDateRead(svc.GetHRV))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_body_battery",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Read the Garmin body-battery timeline over an inclusive date range (YYYY-MM-DD).",
 	}, handleGetBodyBattery(svc))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "get_stress",
+		Annotations: &mcp.ToolAnnotations{ReadOnlyHint: true},
 		Description: "Read the Garmin daily stress timeline for a date (YYYY-MM-DD).",
 	}, handleDateRead(svc.GetStress))
 
